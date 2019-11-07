@@ -6,38 +6,19 @@ Ethernet II, Src: HonHaiPr_bf:63:47 (34:23:87:bf:63:47), Dst: AsustekC_67:19:61 
 Internet Protocol Version 4, Src: 192.168.116.159, Dst: 128.119.245.12
 Transmission Control Protocol, Src Port: 61653, Dst Port: 80, Seq: 1, Ack: 1, Len: 591
 Hypertext Transfer Protocol
-    GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n
-    Host: gaia.cs.umass.edu\r\n
-    Connection: keep-alive\r\n
-    Cache-Control: max-age=0\r\n
-    Upgrade-Insecure-Requests: 1\r\n
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36\r\n
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-    Accept-Encoding: gzip, deflate\r\n
-    Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+    GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n (Тип запроса на сервер и имя ресурса, протокол и его версия)
+    Host: gaia.cs.umass.edu\r\n (Хост)
+    Connection: keep-alive\r\n  (не разрывать соединение)
+    Cache-Control: max-age=0\r\n ( определяет какие файлы нужно кэштровать)
+    Upgrade-Insecure-Requests: 1\r\n (Браузер говорит серверу что хочет получать инфу в защищенном режиме)
+    User-Agent: Mozilla/5.0   (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36\r\n     (Вся информация о машине клиента, браузере и т д)
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n (Это означает с какими форматами может работать сервер)
+    Accept-Encoding: gzip, deflate\r\n   (форматы в которых сервер сжимает информацию)
+    Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n (языки которые распознает сервер, определяет язык отображения)
     If-None-Match: "2ca-596bc33423538"\r\n
-    If-Modified-Since: Thu, 07 Nov 2019 06:59:01 GMT\r\n
-    \r\n
-    [Full request URI: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html]
-    [HTTP request 1/1]
-    [Response in frame: 61]
+    If-Modified-Since: Thu, 07 Nov 2019 06:59:01 GMT\r\n (Это точное время последненго изменения страницы)
+    \r\n    
+    [Full request URI: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html](Полный URI по которому был запрос) 
+    [HTTP request 1/1] ( количество сделаных и удачно обработаных запросов)
+    [Response in frame: 61] ( Количество фреймов )
 
-No.     Time           Source                Destination           Protocol Length Info
-     61 4.365099       128.119.245.12        192.168.116.159       HTTP     294    HTTP/1.1 304 Not Modified 
-
-Frame 61: 294 bytes on wire (2352 bits), 294 bytes captured (2352 bits) on interface 0
-Ethernet II, Src: AsustekC_67:19:61 (00:18:f3:67:19:61), Dst: HonHaiPr_bf:63:47 (34:23:87:bf:63:47)
-Internet Protocol Version 4, Src: 128.119.245.12, Dst: 192.168.116.159
-Transmission Control Protocol, Src Port: 80, Dst Port: 61653, Seq: 1, Ack: 592, Len: 240
-Hypertext Transfer Protocol
-    HTTP/1.1 304 Not Modified\r\n
-    Date: Thu, 07 Nov 2019 18:23:29 GMT\r\n
-    Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-    Connection: Keep-Alive\r\n
-    Keep-Alive: timeout=5, max=100\r\n
-    ETag: "2ca-596bc33423538"\r\n
-    \r\n
-    [HTTP response 1/1]
-    [Time since request: 0.152808000 seconds]
-    [Request in frame: 56]
-    [Request URI: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html]
