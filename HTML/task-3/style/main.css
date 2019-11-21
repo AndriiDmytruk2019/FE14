@@ -1,0 +1,43 @@
+body {
+	background: #faebd7;
+}
+
+nav ul {
+	display: flex;
+	margin: 0 auto;
+}
+
+nav ul li {
+	display: flex;
+	list-style-type: circle;
+	margin: 10px 10px;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+}
+
+#skills table {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	border: 1px solid;
+}
+
+#skills table th {
+	color: #008000;
+}
+
+#skills table td,
+tr {
+	text-decoration: underline;
+}
+
+#contact ul li {
+	list-style-type: none;
+}
