@@ -8,15 +8,23 @@
   </head>
 <body>
     <header>
+        
+        <section id="audio-video">
 
-        <audio controls>
-            <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis">
-            <source src="audio/music.mp3" type="audio/mpeg">
+            <video controls>
+                <source src="video/Mercury.mp4">
+            </video>
 
-        </audio>
+            <audio controls>
+                <source src="audio/Mercury.mp3">
+            </audio>
+
+        </section>
+
         <nav>
 
             <ul>
+                <li><a href="#audio-video">AUDIO/VIDEO</a></li>
                 <li><a href="#objective">MAIN OBJECTIVE</a></li>
                 <li><a href="#education">EDUCATION</a></li>
                 <li><a href="#skills">TECHNICAL SKILLS</a></li>
@@ -62,10 +70,10 @@
                 <article>
 
                     <p>
-                        <mark>GoIT course</mark>
-                        Go Frontend Developer | 2016
+                        <mark>GoIT course<br></mark>
+                        Go Frontend Developer | 2016<br>
                         Ukrainian State University of Finance and
-                        International Trade
+                        International Trade<br>
                         Master’s Degree in Finance and Credit | 2008-2013
                     </p>
 
@@ -85,7 +93,7 @@
                     <thead>
 
                         <tr>
-                            <th>Skills</th>
+                            <th>Skills:</th>
                         </tr>
 
                     </thead>
@@ -154,6 +162,8 @@
 
         <div id="form">
             
+            <h1>Форма обратной связи</h1>
+
             <form action="#" method="post">
                 <div>
                     <label for="name">ФИО отправителя:</label>
@@ -187,11 +197,9 @@
                 <div>
                     <label for="checkbox">Подтвердите отправку:</label>
                     <input type="checkbox" name="checkbox" id="checkbox" />
-                </div>
-            
-                <div>
                     <input type="submit" value="Отправить приглашение" />
                 </div>
+            
             </form>
 
         </div>

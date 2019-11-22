@@ -1,16 +1,6 @@
 body {
 	background: #faebd7;
-}
-
-nav ul {
-	display: flex;
-	margin: 0 auto;
-}
-
-nav ul li {
-	display: flex;
-	list-style-type: circle;
-	margin: 10px 10px;
+	margin: 0 0 0 25px;
 }
 
 h1 {
@@ -18,8 +8,63 @@ h1 {
 	text-decoration: underline;
 }
 
-img {
+P {
+	font-size: 17px;
+}
+
+header {
+	text-align: center;
+}
+
+video {
+	width: 50%;
+	margin: 20px;
+}
+
+audio {
+	width: 50%;
+    height: 30px;
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    left: -195px;
+    background: #9E9E9E;
+    border-radius: 30px;
+}
+
+nav:hover {
+	left: -25px;
+	transition: 1s;
+}
+
+nav ul {
+	margin-left: 25px;
+    margin-right: 25px;
+    padding: 0;
+}
+
+nav ul li {
+	list-style-type: none;
+	margin: 10px 10px;
+}
+
+nav ul li a {
+	color: #fff;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	color: #673ab7;
+}
+
+#photo img {
 	width: 100%;
+}
+
+#photo figcaption {
+	text-align: center;
 }
 
 #skills table {
@@ -37,6 +82,40 @@ img {
 tr {
 	text-decoration: underline;
 }
+
+#form {
+	width: 60%;
+    margin: 0 auto;
+}
+
+#form h4 {
+	display: inline-block;
+	margin: 0;
+}
+
+#form div {
+	margin-bottom: 20px;
+}
+
+#form div label{
+	font-weight: bold;
+}
+
+#form div input[type='submit'] {
+	background: #4a22224a;
+    padding: 5px 25px;
+    color: #fff;
+    border: 0;
+    border-radius: 20px 3px;
+    margin-left: 10px;
+}
+
+#form div input[type='submit']:hover {
+    background: #4a22229c;
+    border-radius: 3px 20px;
+    transition: 0.5s;
+}
+
 
 #contact ul li {
 	list-style-type: none;
