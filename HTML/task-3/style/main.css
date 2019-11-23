@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #faebd7;
 	margin: 0 0 0 25px;
@@ -59,6 +63,16 @@ nav ul li a:hover {
 	color: #673ab7;
 }
 
+#objective article {
+	width: 65%;
+    margin: 20px auto;
+}
+
+#education article {
+	width: 65%;
+    margin: 20px auto;
+}
+
 #photo img {
 	width: 100%;
 }
@@ -69,7 +83,7 @@ nav ul li a:hover {
 
 #skills table {
 	text-align: center;
-	width: 50%;
+	width: 40%;
 	margin: 0 auto;
 	border: 1px solid;
 }
@@ -81,6 +95,10 @@ nav ul li a:hover {
 #skills table td,
 tr {
 	text-decoration: underline;
+}
+
+.table-main {
+	text-decoration: none;
 }
 
 #form {
@@ -116,6 +134,10 @@ tr {
     transition: 0.5s;
 }
 
+#contact ul {
+	width: 65%;
+    margin: 20px auto;
+}
 
 #contact ul li {
 	list-style-type: none;
