@@ -1,0 +1,105 @@
+@font-face {
+    font-family: HelveticaNeue, LeagueGothicRegular, OpenSans-ExtraBold;
+    src: url(../fonts/helveticaneue-thin-webfont.woff);
+    src: url(../fonts/helveticaneue-thin-webfont.woff2);
+    src: url(../fonts/LeagueGothicRegular.woff);
+    src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
+
+.nav {
+    font-size: 16px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+    border-right: 10px solid #daeef7;
+    background: #73d1fb;
+}
+
+ul li:hover {
+    background: #0475a7;
+}
+
+ul li:last-child {
+    background: #0475a7;
+    border-right: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    margin: 25px;
+    color: #daeef7;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 2px solid #008000;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #ccc8c8;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.container input:not(:checked) ~ .checkmark::after {
+  display: block;
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #bdbaba;
+}
+
+.container .checkmark::after {
+  display: block;
+}
+
+.container .checkmark::after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #008000;
+}
+
