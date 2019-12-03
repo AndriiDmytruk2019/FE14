@@ -7,33 +7,61 @@
 }
 
 .nav {
-    font-size: 16px;
+  font-size: 16px;
+  margin-left: 40%;
 }
 
 ul {
-    display: flex;
+  display: flex;
+  width: 300px;
+  padding: 0;
+  border: 2px solid #d0f5fb;
 }
 
 ul li {
-    list-style-type: none;
-    border-right: 10px solid #daeef7;
-    background: #73d1fb;
+  list-style-type: none;
+  background: #00bddb;
+}
+
+
+li .one-top {
+  background: #d0f5fb;
+  width: 5px;
+  height: 51px;
+  transform: rotate(136deg);
+  margin: 0;
+  position: absolute;
+  top: 10px;
+}
+
+li .one-bottom {
+  background: #d0f5fb;
+  width: 5px;
+  height: 51px;
+  transform: rotate(44deg);
+  margin: 0;
+  position: absolute;
+  top: 43px;
 }
 
 ul li:hover {
-    background: #0475a7;
+  background: #1d3e8a;
 }
 
 ul li:last-child {
-    background: #0475a7;
-    border-right: none;
+  background: #1d3e8a;
+  border-right: none;
 }
 
 ul li a {
-    display: block;
-    text-decoration: none;
-    margin: 25px;
-    color: #daeef7;
+  display: block;
+  text-decoration: none;
+  margin: 25px;
+  color: #daeef7;
+}
+
+.radio {
+  margin-left: 50%;
 }
 
 .container input {
@@ -54,12 +82,10 @@ ul li a {
 }
 
 .container {
-  display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 50px;
   cursor: pointer;
-  font-size: 22px;
 }
 
 .container:hover input ~ .checkmark {
@@ -82,12 +108,12 @@ ul li a {
 
 .container input:not(:checked) ~ .checkmark::after {
   display: block;
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #bdbaba;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bdbaba;
 }
 
 .container .checkmark::after {
@@ -95,11 +121,68 @@ ul li a {
 }
 
 .container .checkmark::after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #008000;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #008000;
+}
+
+.toggle {
+  margin-left: 50%;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 34px;
+  margin: 30px;
+  margin-left: 0;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #24bb22;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider{
+  border-radius: 34px;
+}
+
+.slider::before {
+  border-radius: 50%;
 }
 
