@@ -6,62 +6,81 @@
     src: url(../fonts/OpenSans-ExtraBold.ttf);
 }
 
-.nav {
-  font-size: 16px;
-  margin-left: 40%;
+body {
+  margin: 40px 60px;
+  font-family: OpenSans-ExtraBold;
 }
 
-ul {
-  display: flex;
-  width: 300px;
+#crumbs {
+  padding-bottom: 80px;
+}
+
+#crumbs ul {
+  margin: 0;
   padding: 0;
-  border: 2px solid #d0f5fb;
 }
 
-ul li {
-  list-style-type: none;
+#crumbs ul li a {
+  float: left;
+  justify-content: space-evenly;
   background: #00bddb;
-}
-
-
-li .one-top {
-  background: #d0f5fb;
-  width: 5px;
-  height: 51px;
-  transform: rotate(136deg);
-  margin: 0;
-  position: absolute;
-  top: 10px;
-}
-
-li .one-bottom {
-  background: #d0f5fb;
-  width: 5px;
-  height: 51px;
-  transform: rotate(44deg);
-  margin: 0;
-  position: absolute;
-  top: 43px;
-}
-
-ul li:hover {
-  background: #1d3e8a;
-}
-
-ul li:last-child {
-  background: #1d3e8a;
-  border-right: none;
-}
-
-ul li a {
-  display: block;
+  text-align: center;
+  padding: 16px 50px;
+  position: relative;
+  margin: 0 10px 0 0;
+  font-size: 20px;
   text-decoration: none;
-  margin: 25px;
-  color: #daeef7;
+  color: #fff;
+}
+#crumbs ul li{
+  list-style: none;
 }
 
-.radio {
-  margin-left: 50%;
+#crumbs ul li a::after {
+  content: "";
+  border-top: 29px solid transparent;
+  border-bottom: 26px solid transparent;
+  border-left: 20px solid #00bddb;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  z-index: 2;
+}
+
+#crumbs ul li a::before {
+  content: "";  
+  border-top: 29px solid transparent;
+  border-bottom: 26px solid transparent;
+  border-left: 20px solid #fff;
+  position: absolute; 
+  left: 0; 
+  top: 0;    
+}
+
+#crumbs ul li:first-child a {
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+#crumbs ul li:first-child a::before {
+  display: none; 
+}
+ 
+#crumbs ul li:last-child a {
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+  background: #1d3e8a;
+}
+
+#crumbs ul li:last-child a::after {
+  display: none;
+}
+
+#crumbs ul li a:hover {
+    background: #1d3e8a;
+}
+
+#crumbs ul li a:hover::after {
+    border-left-color: #1d3e8a;
 }
 
 .container input {
@@ -127,10 +146,6 @@ ul li a {
   height: 8px;
   border-radius: 50%;
   background: #008000;
-}
-
-.toggle {
-  margin-left: 50%;
 }
 
 .switch {
