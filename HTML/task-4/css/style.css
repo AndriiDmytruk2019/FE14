@@ -1,18 +1,22 @@
 @font-face {
-    font-family: HelveticaNeue, LeagueGothicRegular, OpenSans-ExtraBold;
-    src: url(../fonts/helveticaneue-thin-webfont.woff);
-    src: url(../fonts/helveticaneue-thin-webfont.woff2);
-    src: url(../fonts/LeagueGothicRegular.woff);
-    src: url(../fonts/OpenSans-ExtraBold.ttf);
+    font-family: HelveticaNeue, LeagueGothicRegular, OpenSans-ExtraBold, Montserrat-bold, Roboto-black-italic;
+    src: url(/fonts/helveticaneue-thin-webfont.woff) format("woff"),
+    src: url(/fonts/helveticaneue-thin-webfont.woff2) format("woff2"),
+    src: url(/fonts/LeagueGothicRegular.woff) format("woff"),
+    src: url(/fonts/Montserrat-bold.woff2) format("woff2"),
+    src: url(/fonts/Roboto-black-italic.woff2) format("woff2"),
+    src: url( /fonts/OpenSans-ExtraBold.ttf) format("ttf");
 }
 
 body {
   margin: 40px 60px;
-  font-family: OpenSans-ExtraBold;
+  font-family: Roboto-black-italic;
+  font-size: 20px;
 }
 
 #crumbs {
   padding-bottom: 80px;
+  font-size: inherit;
 }
 
 #crumbs ul {
@@ -22,7 +26,6 @@ body {
 
 #crumbs ul li a {
   float: left;
-  justify-content: space-evenly;
   background: #00bddb;
   text-align: center;
   padding: 16px 50px;
@@ -66,6 +69,7 @@ body {
 }
  
 #crumbs ul li:last-child a {
+  margin-right: 0;
   border-top-right-radius: 5px; 
   border-bottom-right-radius: 5px;
   background: #1d3e8a;
@@ -89,17 +93,6 @@ body {
   cursor: pointer;
 }
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-  border: 2px solid #008000;
-}
-
 .container {
   position: relative;
   padding-left: 35px;
@@ -113,12 +106,6 @@ body {
 
 .container input:checked ~ .checkmark {
   background-color: #ccc8c8;
-}
-
-.checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
 }
 
 .container input:checked ~ .checkmark::after {
@@ -146,6 +133,23 @@ body {
   height: 8px;
   border-radius: 50%;
   background: #008000;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 2px solid #008000;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .switch {
