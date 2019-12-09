@@ -45,22 +45,18 @@ header {
 }
 
 .sub-menu{
+  width: 185px;
   position: absolute;
-  display: flex;
-  width: 300px;
-  flex-direction: column;
+  display: none;
   padding: 0;
-  position: absolute;
   opacity: 0;
 }
 
 .sub-menu-price {
-  width: 300px;
+  width: 185px;
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  display: none;
   padding: 0;
-  opacity: 0;
 }
 
 .sub-menu .sub-menu-roll {
@@ -68,11 +64,12 @@ header {
 }
 
 .menu-two-line:hover .sub-menu {
+  display: block;
   opacity: 1;
 }
 
 .sub-menu-roll:hover .sub-menu-price {
-  opacity: 1;
+  display: block;
 }
 
 .logo img {
