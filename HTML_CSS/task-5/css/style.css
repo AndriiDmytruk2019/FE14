@@ -20,14 +20,10 @@
 
 body {
   font-family: 'OpenSans-Light';
+  background: #dedcdc;
 }
 
 /*HEADER*/
-
-.container-width {
-  margin: 0 auto;
-  width: 960px;
-}
 
 header {
   background: url('../img/bg.png') ;
