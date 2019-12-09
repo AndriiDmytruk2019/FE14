@@ -143,7 +143,7 @@
     /*CONTENT*/
 
     .content {
-        height: 599px;
+        height: 1000px;
         padding:0;
     }
 
@@ -321,6 +321,10 @@
 
     .head_updates span {
         font-size: 1.6em;   
+    }
+
+    .form-about-event {
+     display: none;
     }
 
     /*FOOTER*/

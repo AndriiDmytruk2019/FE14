@@ -176,6 +176,7 @@ header {
 .map-responsive iframe{
     width: 100%;
     height: 315px;
+    border:none;
 }
 
 /*CONTENT*/
@@ -364,6 +365,7 @@ header {
   background:#fff;
   padding-bottom: 27px;
   border-top: 1px solid #f5efef;
+  border-bottom: 1px solid #f5efef;
 }
 
 img.logos {
@@ -458,6 +460,46 @@ img.logos320 {
   display: inline-block;
   font-family: 'league-gothic.regular';
   font-size: 3em;
+}
+
+/*FEEDBACK FORM*/
+
+#form_feedback {
+  width: 60%;
+  margin: 0 auto;
+  font-family: initial;
+}
+
+#form_feedback h1 {
+  text-decoration: underline;
+}
+
+#form_feedback h4 {
+  display: inline-block;
+  margin: 0;
+}
+
+#form_feedback div {
+  margin-bottom: 20px;
+}
+
+#form_feedback div label{
+  font-weight: bold;
+}
+
+#form_feedback div input[type='submit'] {
+  background: #4a22224a;
+  padding: 5px 25px;
+  color: #fff;
+  border: 0;
+  border-radius: 20px 3px;
+  margin-left: 10px;
+}
+
+#form_feedback div input[type='submit']:hover {
+  background: #4a22229c;
+  border-radius: 3px 20px;
+  transition: 0.5s;
 }
 
 /*FOOTER*/

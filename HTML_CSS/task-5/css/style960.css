@@ -1,6 +1,10 @@
 
 
-@media (max-width: 960px) and (max-width: 1440px) {
+@media (min-width: 960px) and (max-width: 1440px) {
+
+    .container-width {
+    width: 960px;
+    }
 
     .nav_menu {
         margin-left: 94px;
@@ -23,5 +27,11 @@
     }
     .news {
         padding-bottom: 90px;
+    }
+
+    .nav_menu_footer ul {
+        margin: 0;
+        padding: 44px 0 0 15px;
+        width: 72%;
     }
 }

@@ -6,6 +6,7 @@
     <title>Task-5</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style960.css">
     <link rel="stylesheet" href="css/style768.css">
     <link rel="stylesheet" href="css/style480.css">
     <link rel="stylesheet" href="css/style320.css">
@@ -174,6 +175,51 @@
             </div>
         </div>
     </div>
+
+    <div id="form_feedback">
+            
+            <h1>Feedback form</h1>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Full name:</label>
+                    <input type="text" placeholder="Full name"/>
+                </div>
+            
+                <div>
+                    <h4>To invite:</h4>
+            
+                    <label for="invitation-1">Yes</label>
+                    <input type="radio" name="invitation-1"/>
+            
+                    <label for="invitation-1">No</label>
+                    <input type="radio" name="invitation-1"/>
+                </div>
+            
+                <div>
+                    <label for="select-time">Meeting time:</label>
+                    <select name="select-time">
+                        <option value="Choice 1"><time>10.00</time></option>
+                        <option value="Choice 2"><time>14.00</time></option>
+                        <option value="Choice 3"><time>19.00</time></option>
+                    </select>
+                </div>
+                
+                <div class="form-about-event">
+                    <label for="textarea">Briefly about the event:</label>
+                    <textarea cols="60" rows="3" name="textarea" id="textarea"></textarea>
+                </div>
+                
+                <div>
+                    <label for="checkbox">Confirm Shipment:</label>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <input type="submit" value="Send an invitation" />
+                </div>
+            
+            </form>
+
+        </div>
+
 
         <footer>
             <div class="container-width">

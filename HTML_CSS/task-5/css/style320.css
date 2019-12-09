@@ -129,10 +129,14 @@
         margin-left: 38px;
     }
 
+    .form-about-event {
+     display: none;
+    }
+
     /*CONTENT*/
 
     .content {
-        height: 599px;
+        height: 1000px;
         padding:0;
     }
 
@@ -286,7 +290,7 @@
         width: 100%;
         font-size: 12px;
         text-align: center;
-        margin: 0 0 0 13px;
+        margin: 0;
     }
 
     .designer_by p,
