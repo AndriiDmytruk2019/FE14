@@ -1,0 +1,27 @@
+
+
+@media (max-width: 960px) and (max-width: 1440px) {
+
+    .nav_menu {
+        margin-left: 94px;
+    } 
+
+    .nav_menu li {
+        margin-left: 45px;
+    }
+
+    .banner{
+        margin-top: 151px;
+    }
+
+    .banner_content {
+        padding-bottom: 81px;
+    }
+
+    .banner_text {
+        margin: 54px 0 0 0;
+    }
+    .news {
+        padding-bottom: 90px;
+    }
+}
