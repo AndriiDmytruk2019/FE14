@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'league-gothic.condensed-regular';
+  src: url('../fonts/league-gothic.condensed-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'league-gothic.regular';
+  src: url('../fonts/LeagueGothicRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+}
+
+body {
+  background: #ccc5c5;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  /* left: -200px; */
+  height: 100%;
+  top: 0;
+  overflow: scroll;
+  background: #12658acf;
+  border-radius: 0 40px 40px 0;
+}
+
+nav li {
+  list-style-type: none;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #000000;
+  display: block;
+}
+
+nav h2 {
+  text-align: center;
+}
+
+article {
+  display: flex;
+}
+
+footer {
+  text-align: center;
+}
