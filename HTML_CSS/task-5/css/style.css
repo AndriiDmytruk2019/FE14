@@ -172,6 +172,77 @@ header {
     border:none;
 }
 
+/*SLIDER*/
+.slide_box {
+  height: 435px;
+  margin: 40px auto;
+  position: relative;
+  width: 730px;
+}
+.slide_box > input {
+  display: none;
+}
+.slider {
+  background-color: #333;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  border-radius: 50px;
+}
+.slides {
+  height: inherit;
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+  z-index: 0;
+  transform: rotate(55deg);
+  -webkit-filter: hue-rotate(90deg);
+  transition: 1s;
+}
+.img1 { background-image: url('../img/10.jpg'); }
+.img2 { background-image: url('../img/11.jpg'); }
+.img3 { background-image: url('../img/12.jpg'); }
+
+.slide_box .control {
+  position: absolute;
+  margin-left: -50px;
+  left: 50%;
+}
+.slide_box label {
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 10px;
+  position: relative;
+  width: 8px;
+  border-radius: 20%;
+}
+.slide_box label:after {
+  border: 2px solid #704d7e;
+  content: " ";
+  display: block;
+  height: 12px;
+  left: -4px;
+  position: absolute;
+  top: -4px;
+  width: 12px;
+  border-radius: 20%;
+}
+
+#point1:checked ~ .control label:nth-of-type(1),
+#point2:checked ~ .control label:nth-of-type(2),
+#point3:checked ~ .control label:nth-of-type(3) {
+  background: #704d7e;
+}
+#point1:checked ~ .slider > .img1,
+#point2:checked ~ .slider > .img2,
+#point3:checked ~ .slider > .img3 {
+  opacity: 1;
+  z-index: 1;
+  transform: none;
+  -webkit-filter: none;
+}
 /*CONTENT*/
 
 .our_company {

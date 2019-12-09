@@ -130,7 +130,12 @@
     }
 
     .form-about-event {
-     display: none;
+        display: none;
+    }
+
+    /*SLIDER*/
+    .slide_box {
+        display: none;
     }
 
     /*CONTENT*/

@@ -140,6 +140,11 @@
         font-size: 1.2em;
     }
     
+    /*SLIDER*/
+    .slide_box {
+        display: none;
+    }
+
     /*CONTENT*/
 
     .content {
