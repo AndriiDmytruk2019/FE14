@@ -28,12 +28,16 @@ header h1 {
 
 nav {
   position: absolute;
-  /* left: -200px; */
+  left: -200px;
   height: 100%;
   top: 0;
   overflow: scroll;
   background: #12658acf;
   border-radius: 0 40px 40px 0;
+}
+
+nav:hover {
+  left: 0;
 }
 
 nav li {
