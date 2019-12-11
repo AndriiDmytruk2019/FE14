@@ -57,6 +57,17 @@ nav ul {
   padding-left: 15%;
 }
 
+nav ul a:nth-child(2n)::before {
+  content: 'from';
+  display: inline-block;
+  width: 25px;
+  height: 16px;
+}
+
+nav ul a:nth-child(2n) {
+  margin-top: 5px;
+}
+
 nav li {
   list-style-type: none;
   text-decoration: none;
