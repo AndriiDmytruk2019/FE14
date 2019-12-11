@@ -24,20 +24,34 @@ body {
 
 header h1 {
   text-align: center;
+  font-family: 'league-gothic.regular';
+  font-size: 43px;
+}
+
+header h1:hover {
+  color:#12658acf;
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   left: -200px;
   height: 100%;
+  width: 225px;
   top: 0;
-  overflow: scroll;
-  background: #12658acf;
+  overflow: auto;
+  background: #a9e5ffd1;
   border-radius: 0 40px 40px 0;
+  transition: 1s;
 }
 
 nav:hover {
+  background: #12658acf;
   left: 0;
+  transition: 1s;
+}
+
+nav ul {
+  padding-left: 15%;
 }
 
 nav li {
@@ -49,6 +63,13 @@ nav li {
 nav a {
   color: #000000;
   display: block;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-style: italic;
+  transition: 1s;
+  text-decoration: underline;
 }
 
 nav h2 {
@@ -57,6 +78,32 @@ nav h2 {
 
 article {
   display: flex;
+  width: 95%;
+  margin: 0 auto;
+}
+
+article h2 {
+  text-decoration: underline;
+}
+
+article header,
+article section {
+  height: min-content;
+}
+
+article header:hover,
+article section:hover {
+  position: absolute;
+  background: #729472;
+  width: 95%;
+  height: 70%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
+  box-shadow: 0 0 15px 10px;
+  border-radius: 30px 30px;
 }
 
 footer {
