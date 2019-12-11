@@ -23,6 +23,8 @@ body {
 }
 
 header h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   font-family: 'league-gothic.regular';
   font-size: 43px;
@@ -40,6 +42,7 @@ nav {
   top: 0;
   overflow: auto;
   background: #a9e5ffd1;
+  font-family: 'league-gothic.regular';
   border-radius: 0 40px 40px 0;
   transition: 1s;
 }
@@ -61,9 +64,9 @@ nav li {
 }
 
 nav a {
-  color: #000000;
   display: block;
   text-decoration: none;
+  color: #fbd194;
 }
 
 nav a:hover {
@@ -74,6 +77,8 @@ nav a:hover {
 
 nav h2 {
   text-align: center;
+  color: #fbd194;
+  text-decoration: underline;
 }
 
 article {
@@ -87,23 +92,53 @@ article h2 {
 }
 
 article header,
-article section {
+article section,
+footer {
+  font-family: 'OpenSans-Light';
   height: min-content;
+}
+
+article header a,
+article section a,
+footer a {
+  color: #f0f8ff;
+}
+
+article header h2,
+article section h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 article header:hover,
 article section:hover {
+  font-weight: bold;
   position: absolute;
-  background: #729472;
+  background: #6f8e6f;
   width: 95%;
   height: 70%;
-  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
   transition: 1s;
-  box-shadow: 0 0 15px 10px;
+  box-shadow: 0 0 15px 10px #a9e5ffd1;
   border-radius: 30px 30px;
+}
+
+article header p {
+  width: 90%;
+  margin: 25px auto;
+}
+
+article section ol {
+  width: 80%;
+  margin: 0 auto;
+}
+
+article section p {
+  width: 90%;
+  margin: 25px auto;
 }
 
 footer {
