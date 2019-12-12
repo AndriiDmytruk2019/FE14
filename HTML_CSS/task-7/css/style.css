@@ -1,0 +1,47 @@
+body {
+  background: grey;
+}
+
+.main-diablo {
+  background: url('../img/back-big.png') no-repeat;
+  background-size: 805px;
+  height: 610px;
+}
+
+header {
+  display: flex;
+  padding-top: 56px;
+  padding-left: 78px;
+}
+
+.heder__left-block {
+  height: 434px;
+  width: 326px;
+  background: url('../img/bg_item.png') no-repeat; 
+}
+
+.header__right-block {
+  width: 340px;
+  height: 435px;
+  background: url('../img/bg_item-right.png') no-repeat; 
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-left: 41px;
+}
+
+.footer__red,
+.footer__blue {
+  width: 150px;
+}
+
+.footer__red::before {
+  content: url('../img/circle-red.png');
+}
+
+.footer__blue::after {
+  content: url('../img/circle-blue.png');
+}
