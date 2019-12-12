@@ -5,7 +5,8 @@ body {
 .main-diablo {
   background: url('../img/back-big.png') no-repeat;
   background-size: 805px;
-  height: 610px;
+  height: 600px;
+  width: 805px;
 }
 
 header {
@@ -28,20 +29,29 @@ header {
 
 footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  margin-left: 41px;
+  justify-content: space-between;
+  margin-left: 27px;
 }
 
 .footer__red,
 .footer__blue {
-  width: 150px;
+  width: 123px;
 }
 
 .footer__red::before {
-  content: url('../img/circle-red.png');
+  content: '';
+  background: url(../img/circle-red.png) no-repeat;
+  background-size: 95px;
+  height: 95px;
+  width: 98px;
+  display: block;
 }
 
 .footer__blue::after {
-  content: url('../img/circle-blue.png');
+  content: '';
+  background: url(../img/circle-blue.png) no-repeat;
+  background-size: 95px;
+  height: 95px;
+  width: 98px;
+  display: block;
 }
