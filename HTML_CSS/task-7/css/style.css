@@ -31,26 +31,23 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-left: 27px;
+  margin-right: 27px;
 }
 
-.footer__red,
-.footer__blue {
+.bg-block {
+  display: flex;
+  background: url(../img/bottom-line.png) bottom no-repeat;
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+}
+
+.bg-block__red,
+.bg-block__blue {
   width: 123px;
 }
 
-.footer__red::before {
-  content: '';
-  background: url(../img/circle-red.png) no-repeat;
-  background-size: 95px;
-  height: 95px;
-  width: 98px;
-  display: block;
-}
-
-.footer__blue::after {
-  content: '';
-  background: url(../img/circle-blue.png) no-repeat;
-  background-size: 95px;
+footer img {
   height: 95px;
   width: 98px;
   display: block;
