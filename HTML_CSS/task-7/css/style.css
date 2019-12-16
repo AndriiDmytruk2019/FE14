@@ -26,6 +26,16 @@ header {
   margin: 20px 0 0 75px;
 }
 
+.header__left-block__center {
+  background: url(../img/bg.png) no-repeat;
+  width: 297px;
+  margin-left: 17px;
+  margin-top: 11px;
+}
+
+table td {
+}
+
 .header__left-block__top__input-first,
 .header__left-block__top__input-second {
   display: block;
