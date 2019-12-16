@@ -21,10 +21,52 @@ header {
   background: url('../img/bg_item.png') no-repeat; 
 }
 
+.header__right-block__center {
+  position: absolute;
+  top: 208px;
+  left: 13px;
+  background: url(../img/cubic-block.png) no-repeat;
+  background-size: 299px;
+  width: 299px;
+  height: 181px;
+}
+
 .header__right-block {
+  position: relative;
   width: 340px;
   height: 435px;
   background: url('../img/bg_item-right.png') no-repeat; 
+}
+
+.header__right-block__top {
+  margin-top: 6px;
+  margin-left: 13px;
+}
+
+.header__right-block__top img {
+  display: block;
+}
+
+.header__right-block__top__digits {
+  height: 22px;
+}
+
+.header__right-block__top__gloves {
+  height: 62px;
+}
+
+
+.header__right-block__bottom {
+  position: absolute;
+  bottom: 9px;
+  left: 14px;
+}
+
+.header__right-block__bottom__gear {
+  height: 24px;
+  position: absolute;
+  left: 61px;
+  top: 3px;
 }
 
 footer {
@@ -38,13 +80,49 @@ footer {
   display: flex;
   background: url(../img/bottom-line.png) bottom no-repeat;
   margin-top: 45px;
-  width: 100%;
+  width: 555px;
   background-size: contain;
 }
 
 .bg-block__red,
 .bg-block__blue {
   width: 255px;
+  position: relative;
+}
+
+.bg-block__blue .bg-block__blue__botle {
+  height: 35px;
+  position: absolute;
+  left: 41px;
+  top: 13px; 
+}
+
+.bg-block__blue .bg-block__blue__btn {
+  height: 35px;
+  position: absolute;
+  left: 177px;
+  top: 13px; 
+}
+
+.bg-block__red .bg-block__red__btn {
+  height: 35px;
+  position: absolute;
+  left: 84px;
+  top: 13px; 
+}
+
+.bg-block__red__helth__block__top {
+  left: 126px;
+  top: 9px;
+  position: absolute;
+  height: 11px; 
+}
+
+.bg-block__red__helth__block__bottom {
+  left: 129px;
+  top: 22px;
+  position: absolute;
+  height: 25px;
 }
 
 .bg-block__red::after {
@@ -59,7 +137,21 @@ footer {
   background-repeat: no-repeat;
 }
 
-footer img {
+.bg-block__blue::after {
+  position: relative;
+  top: 5px;
+  left: 248px;
+  display: block;
+  content: "";
+  background-image: url(../img/bottom-right.jpg);
+  background-size: 49px 45px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+footer .img_red,
+footer .img_blue {
   height: 95px;
   width: 98px;
   display: block;
