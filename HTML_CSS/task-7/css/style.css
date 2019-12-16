@@ -51,7 +51,11 @@ table td {
 .table__runa-branch,
 .table__runa-fire,
 .table__runa-pear,
-.table__runa-time {
+.table__runa-time,
+.table__paper,
+.table__runa-cristall,
+.table__runa-cristall,
+.table__runa-fang {
   position: relative;
 }
 
@@ -59,7 +63,11 @@ table td {
 .table__runa-branch img,
 .table__runa-fire img,
 .table__runa-pear img,
-.table__runa-time img {
+.table__runa-time img,
+.table__paper img,
+.table__runa-cristall img,
+.table__runa-cristall img,
+.table__runa-fang img {
   position: absolute;
   height: 28px;
   left: 0;
