@@ -16,9 +16,27 @@ header {
 }
 
 .heder__left-block {
+  position: relative;
   height: 434px;
   width: 326px;
   background: url('../img/bg_item.png') no-repeat; 
+}
+
+.header__left-block__top {
+  margin: 20px 0 0 75px;
+}
+
+.header__left-block__top__input-first,
+.header__left-block__top__input-second {
+  display: block;
+  height: 26px;
+  width: 179px;
+}
+
+.header__left-block__bottom {
+  position: absolute;
+  bottom: 11px;
+  left: 275px;
 }
 
 .header__right-block__center {
