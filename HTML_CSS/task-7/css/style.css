@@ -33,7 +33,18 @@ header {
   margin-top: 11px;
 }
 
+table {
+  position: relative;
+}
+
 table td {
+  border: 1px solid #b5acac;
+}
+
+.table__cube {
+  position: absolute;
+  top: 5px;
+  left: 2px;
 }
 
 .header__left-block__top__input-first,
