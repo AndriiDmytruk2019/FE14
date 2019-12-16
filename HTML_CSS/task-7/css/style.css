@@ -39,6 +39,7 @@ header {
 }
 
 .header__right-block__top {
+  display: flex;
   margin-top: 6px;
   margin-left: 13px;
 }
@@ -47,14 +48,65 @@ header {
   display: block;
 }
 
-.header__right-block__top__digits {
+.header__right-block__top__first,
+.header__right-block__top__second{
+  position: relative;
+  width: 117px;
+  height: 200px;
+}
+
+.header__right-block__top__first__gold-ring {
+  position: absolute;
+  top: 174px;
+  left: 75px;
+  height: 35px;
+}
+
+.header__right-block__top__first__digits {
   height: 22px;
 }
 
-.header__right-block__top__gloves {
+.header__right-block__top__first__gloves {
   height: 62px;
 }
 
+.header__right-block__top__second::after {
+  position: absolute;
+  top: -1px;
+  left: -19px;
+  content: "";
+  background-image: url(../img/triangle.png);
+  background-size: 19px 11px;
+  width: 21px;
+  height: 11px;
+}
+
+.header__right-block__top__second__belt {
+  height: 62px;
+}
+
+.header__right-block__top__second__armor {
+  height: 93px;
+}
+
+.header__right-block__top__second__rope {
+  height: 35px;
+  margin-top: 11px;
+}
+
+.header__right-block__top__second__orange-ring {
+  position: absolute;
+  top: 27px;
+  left: 75px;
+  height: 35px;
+}
+
+.header__right-block__top__second__gold-ring {
+  position: absolute;
+  top: 174px;
+  left: 75px;
+  height: 35px;
+}
 
 .header__right-block__bottom {
   position: absolute;
