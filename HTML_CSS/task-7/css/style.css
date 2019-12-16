@@ -49,20 +49,23 @@ header {
 }
 
 .header__right-block__top__first,
-.header__right-block__top__second{
+.header__right-block__top__second,
+.header__right-block__top__third {
   position: relative;
   width: 117px;
   height: 200px;
 }
 
-.header__right-block__top__first__gold-ring {
+.header__right-block__top__first__gold-ring,
+.header__right-block__top__second__gold-ring {
   position: absolute;
-  top: 174px;
+  top: 167px;
   left: 75px;
   height: 35px;
 }
 
-.header__right-block__top__first__digits {
+.header__right-block__top__first__digits,
+.header__right-block__top__third__digits {
   height: 22px;
 }
 
@@ -101,11 +104,19 @@ header {
   height: 35px;
 }
 
-.header__right-block__top__second__gold-ring {
+.header__right-block__top__third {
+  position: relative;
+  left: 8px;
+}
+
+.header__right-block__top__third__staff {
+  height: 117px;
+}
+
+.header__right-block__top__third__boots {
   position: absolute;
-  top: 174px;
-  left: 75px;
-  height: 35px;
+  left: 10px;
+  height: 61px;
 }
 
 .header__right-block__bottom {
