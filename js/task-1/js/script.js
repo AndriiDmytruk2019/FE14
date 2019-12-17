@@ -1,5 +1,3 @@
-let c = prompt('Введите true для порядка вперёд и false - назад!');
-
 function* fibonacci(num) {
 
 if (c == 'true') {
@@ -27,8 +25,8 @@ if (c == 'true') {
 	}
 }
 
+let c = prompt('Введите true для порядка вперёд и false - назад!');
 let valueFib = fibonacci(prompt('Введите число'));
 let val = valueFib.next().value;
 	alert('Твое число ' + val +'!' + '  Заглини в консоль :)')
 	console.log (valueFib.next().value);
-
