@@ -89,6 +89,21 @@ table td {
 }
 
 .header__right-block__center {
+  background: url(../img/bg.png) no-repeat;
+  width: 297px;
+  margin-left: 12px;
+  margin-top: 25px;
+}
+
+.header__right-block__center__table-right {
+  position: relative;
+}
+
+.header__right-block__center__table-right td {
+  border: 1px solid #b5acac;
+}
+
+/*.header__right-block__center {
   position: absolute;
   top: 208px;
   left: 13px;
@@ -96,7 +111,7 @@ table td {
   background-size: 299px;
   width: 299px;
   height: 181px;
-}
+}*/
 
 .header__right-block {
   position: relative;
