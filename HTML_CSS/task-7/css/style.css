@@ -40,6 +40,7 @@ table {
 
 table td {
   border: 1px solid #b5acac;
+  box-shadow: 0 0 8px 4px;
 }
 
 .table__cube {
@@ -95,12 +96,41 @@ table td {
   margin-top: 25px;
 }
 
-.header__right-block__center__table-right {
+.header__right-block__center__table {
   position: relative;
 }
 
-.header__right-block__center__table-right td {
+.header__right-block__center__table td {
   border: 1px solid #b5acac;
+  
+}
+
+.header__right-block__center__table__blue-book img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+}
+
+.header__right-block__center__table__gold-book img {
+  position: absolute;
+  top: 53px;
+  right: 0;
+  height: 50px;
+}
+
+.header__right-block__center__table__key img {
+  position: absolute;
+  top: 105px;
+  right: 6px;
+  height: 27px;
+}
+
+.header__right-block__center__table__fire img {
+  position: absolute;
+  top: 130px;
+  right: 8px;
+  height: 25px;
 }
 
 /*.header__right-block__center {
