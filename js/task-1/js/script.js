@@ -22,7 +22,7 @@ function* fibonacci(num) {
 };
 
 
-let valueFib = fibonacci(prompt('Введите число'));
+let valueFib =  fibonacci(prompt('Введите число'));
 let guestion = prompt('Введите true для порядка вперёд и false - назад!'); 
     console.log(valueFib.next(guestion));
     console.log(valueFib.next(guestion));
