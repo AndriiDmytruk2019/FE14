@@ -1,17 +1,19 @@
-function getRandom() {
-  return Math.floor(Math.random() * (1 - 1 + 1)) + 1;
-  };
-
 function guessingGame(num) {
 
-  let randomNumber = getRandom(),
-      number = Number(num),
-      counter = 0;
+  let number = Number(num),
+      counter = 0,
+      min = 1,
+      max = 10,
+      randomNumber = getRandom(min, max);
+
+  function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
 
   while (number !== randomNumber) {
-    console.log(number); console.log(randomNumber);console.log(counter);
-    number = +prompt('Неверное число, попробуйте еще в диапазоне')
     counter++;
+    console.log(number); console.log(randomNumber);console.log(counter);
+    number = +prompt(`Неверное число, попробуйте еще в новом диапазоне! Попытка № ${counter}`)
   }
 
   if ( number == randomNumber && counter > 0) {
