@@ -14,7 +14,7 @@ function guessingGame(num) {
   while (number !== randomNumber) {
     counter++;
     diapazon = number > randomNumber ? `${min}-${number}` : `${number}-${max}`;
-    console.log(number); console.log(randomNumber);
+    // console.log(number); console.log(randomNumber);
     number = +prompt(`Неверное число, попробуйте еще в новом диапазоне ${diapazon}! Попытка № ${counter}`);
   };
 
