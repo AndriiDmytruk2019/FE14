@@ -13,15 +13,17 @@ function guessingGame(num) {
 
   while (number !== randomNumber) {
     counter++;
-    diapazon = number > randomNumber ? `${min}-${number}` : `${number}-${max}`;console.log(diapazon)
+    diapazon = number > randomNumber ? `${min}-${number}` : `${number}-${max}`;
     console.log(number); console.log(randomNumber);
     number = +prompt(`Неверное число, попробуйте еще в новом диапазоне ${diapazon}! Попытка № ${counter}`);
   };
 
   if ( number == randomNumber && counter > 0) {
-    alert(`Вы угадали с ${counter} попитки)`)
+    alert(`Вы угадали с ${counter} попитки)`);
+    guessingGame(prompt('Угадайка еще число от 0 до 100'));
   } else if (number == randomNumber && counter == 0 ) {
-    alert(`Вы сразу угадалы, вы пророк!)`)
+    alert(`Вы сразу угадалы, вы пророк!)`);
+    guessingGame(prompt('Угадай число еще от 0 до 100'));
   };
 };
 
