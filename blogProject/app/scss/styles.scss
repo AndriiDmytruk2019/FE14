@@ -1,8 +1,5 @@
-span {
-	color: red;
-}
-
-span:nth-child(2n)::after {
-	content: '!';
-	color: green;
+body {
+	border: 1px solid black;
+	color: black;
+	background: blue;
 }
