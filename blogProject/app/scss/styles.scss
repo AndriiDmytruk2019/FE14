@@ -1,0 +1,8 @@
+span {
+	color: red;
+}
+
+span:nth-child(2n)::after {
+	content: '!';
+	color: green;
+}
