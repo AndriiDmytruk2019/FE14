@@ -1,4 +1,23 @@
-body {
-  border: 1px solid black;
-  color: black;
-  background: white; }
+@font-face {
+  font-family: 'Montserrat-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Montserrat-bold.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Montserrat-bold.woff2) format("woff2"); }
+
+@media (max-width: 320px) {
+  body .main-diablo p {
+    color: red; } }
+
+@media (min-width: 668px) and (max-width: 768px) {
+  body .main-diablo p {
+    color: red; } }
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body .main-diablo p {
+    color: red; } }
