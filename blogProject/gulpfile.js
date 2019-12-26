@@ -24,11 +24,13 @@ gulp.task('browser-sync', () => // Создаем таск browser-sync
 gulp.task('html', () =>
   gulp.src('app/*.html')
   .pipe(gulp.dest('dist'))
+  .pipe(browserSync.reload({stream: true}))
 );
 
 gulp.task( 'css', () => 
 	gulp.src( 'app/css/**/*.css' )
   .pipe(gulp.dest('dist/css'))
+  .pipe(browserSync.reload({stream: true}))
 );
 
 gulp.task('scss', () => // Создаем таск Scss
@@ -56,6 +58,7 @@ gulp.task('img', () =>
 gulp.task('fonts', () =>
   gulp.src('./app/fonts/**/*.*')
   .pipe(gulp.dest('./dist/fonts'))
+  .pipe(browserSync.reload({stream: true}))
 );
 
 gulp.task( 'clean', () => gulp.src( './dist/*', { read: false } )
@@ -69,5 +72,7 @@ gulp.task( 'watch-fonts', () => gulp.watch('./app/fonts/**/*.*', gulp.series( 'f
 gulp.task( 'watch-html', () => gulp.watch('./app/*.html', gulp.series( 'html' )));
 gulp.task( 'watch-js', () => gulp.watch('./app/js/**/*.js', gulp.series( 'js' )));
 
-gulp.task( 'build', gulp.parallel( 'clean', 'html', 'scss', 'css', 'browser-sync', 'watch-scss', ) );
+gulp.task( 'start', gulp.parallel( 'html', 'scss', 'css', 'js', 'img', 'fonts', 'browser-sync', 'watch-html', 'watch-scss', 'watch-css', 'watch-js' ) );
+
+gulp.task( 'build', gulp.series( 'clean', 'html', 'scss', 'css', 'js', 'img', 'fonts'  ) );
 
