@@ -45,7 +45,7 @@ gulp.task('scss', () => // Создаем таск Scss
 gulp.task('js', () => 
 	gulp.src( './app/js/**/*.js' )
   .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле script.min.js
-  .pipe(uglify()) // Сжимаем JS файл
+  // .pipe(uglify()) // Сжимаем JS файл
   .pipe( gulp.dest('./dist/js') )
   .pipe(browserSync.reload({stream: true}))
 );

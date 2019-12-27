@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>task-7</title>
-	<script src="js/script.min.js"></script>
 	<link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -43,13 +42,36 @@
                         <li class="header-block__nav-menu-480-320__foot-link"><a href="#"><span>DOLOR SIT AMET</span></a></li>
                     </ul>
                 </ul>
+                <div class="header-block__search">
+				  <form>
+					  <input id="search" type="search" placeholder="Искать здесь...">
+					  <button type="submit"></button>
+				  </form>
+				</div>
             </div>
 		</header>
 
-		<main></main>
+		<main>
+			<label for="select">Выбери рубрику:</label>
+            <select name="select">
+                <option value="Choice 1">Спорт</option>
+                <option value="Choice 2">Путешествие</option>
+                <option value="Choice 3">Новости</option>
+                <option value="Choice 3">Кухня</option>
+                <option value="Choice 3">Музыка</option>
+            </select>
+
+            <label for="select-time">Отсортировать статьи:</label>
+            <select name="select-time	">
+                <option value="Choice 1">Самые новые</option>
+                <option value="Choice 2">Популярные</option>
+                <option value="Choice 3">Давно написанные</option>
+            </select>
+		</main>
 
 		<footer></footer>
 
 	</div>
+    <script src="js/script.min.js"></script>
 </body>
 </html>
