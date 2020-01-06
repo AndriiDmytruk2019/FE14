@@ -17,11 +17,11 @@
                 	<li><a href="#"><span>HOME</span></a></li>
                 	<li class="header-block__nav_menu__two-line"><a href="#"><span>ABOUT</span></a>
                     	<ul class="header-block__nav_menu__sub-menu">
-                        	<li><a href="#">About company</a></li>
-                           	<li class="header-block__nav_menu__sub-menu__roll"><a href="#">About price</a>
+                        	<li><a href="#"><span>About company</span></a></li>
+                           	<li class="header-block__nav_menu__sub-menu__roll"><a href="#"><span>About price</span></a>
                                 <ul class="header-block__nav_menu__sub-menu__price">
-                                    <li><a href="#">Price wholesale</a></li>
-                                	<li><a href="#">Price retail</a></li>
+                                    <li><a href="#"><span>Price wholesale</span></a></li>
+                                	<li><a href="#"><span>Price retail</span></a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -53,7 +53,7 @@
 
 		<main>
 			<label for="select">Выбери рубрику:</label>
-            <select name="select">
+            <select id="select_heading" name="select" onchange="getValue()">
                 <option value="Choice 1">Спорт</option>
                 <option value="Choice 2">Путешествие</option>
                 <option value="Choice 3">Новости</option>
@@ -67,6 +67,10 @@
                 <option value="Choice 2">Популярные</option>
                 <option value="Choice 3">Давно написанные</option>
             </select>
+
+            <div id="result">
+                
+            </div>
 		</main>
 
 		<footer></footer>
