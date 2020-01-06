@@ -53,7 +53,8 @@
 
 		<main>
 			<label for="select">Выбери рубрику:</label>
-            <select id="select_heading" name="select" onchange="getValue()">
+            <select id="select_heading" name="select" onchange="getValueHeading()">
+                <option value="Choice 1">Выберите жанр</option>
                 <option value="Choice 1">Спорт</option>
                 <option value="Choice 2">Путешествие</option>
                 <option value="Choice 3">Новости</option>
@@ -62,7 +63,7 @@
             </select>
 
             <label for="select-time">Отсортировать статьи:</label>
-            <select name="select-time	">
+            <select id="select_time" name="select-time" onchange="getValueTime()">
                 <option value="Choice 1">Самые новые</option>
                 <option value="Choice 2">Популярные</option>
                 <option value="Choice 3">Давно написанные</option>
