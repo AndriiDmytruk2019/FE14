@@ -23,7 +23,7 @@ let blogList = [
     {
         topic: 'Путешествие',
         title: 'Лучшее где я был',
-        time: '2018-25-14 01:20:18',
+        time: '2018-10-14 01:20:18',
         like: 0,
         page: 'Places'
     },
@@ -39,10 +39,10 @@ let blogList = [
 
 /*Add new article*/
 function publickArticle() {
-    let btnPush = document.getElementById( 'push_article' ),
+    let newArticle = {},
+        btnPush = document.getElementById( 'push_article' ),
         newTitle= document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value,
-        newArticle = {},
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
     newArticle['topic'] = select.options[indexSelect].text;
@@ -52,6 +52,7 @@ function publickArticle() {
     newArticle['page'] = newPage;
     blogList.unshift(newArticle);
     renderList( blogList,result );
+    liker();
 };
 
 
@@ -71,11 +72,15 @@ let getValueTime = function () {
 };
 
 function filterVal(val,list){
-    let result=[];
-    list.forEach( obj => {
-    if(obj.topic.indexOf(val) != -1)
-        result.push(obj)
-  });
+    let result = blogList.filter(item => {
+    if( item.topic.indexOf(val) != -1 )
+        return item;
+    });
+    // let result=[];
+  //   list.forEach( obj => {
+  //   if(obj.topic.indexOf(val) != -1)
+  //       result.push(obj)
+  // });
     return result;
 };
 
@@ -86,7 +91,8 @@ let sortTime =  function (list, time){
         return list.sort((a,b) => new Date(a.time).getTime() - new Date(b.time).getTime())
     }
 };
-
+/*Render blog*/
+// const result  = document.getElementById( 'result' );
 function renderList(list,el){
     el.innerHTML='';
     list.forEach(obj =>{
@@ -114,10 +120,11 @@ renderList( blogList,result );
 document.getElementById( 'select_heading' ).addEventListener('change',e => {
     e.preventDefault();
     let new_arr_heading = filterVal( getValueHeading(),blogList );
-    renderList( new_arr_heading,result );
+    renderList( new_arr_heading, result );
     if (getValueHeading() == 'Выберите жанр') {
         renderList( blogList,result );
     }
+    liker();
 });
 
 document.getElementById( 'select_time' ).addEventListener('change',e => {
@@ -128,21 +135,23 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     if (getValueHeading() == 'Выберите жанр') {
         sortTime(blogList, getValueTime());
         renderList( blogList,result );
-    }
+    };
+    liker();
 });
 
 /*Likes counter*/
 function liker() {
     let likeBtn =[...document.getElementsByClassName( 'like_count' )];
-    likeBtn.forEach( (el, index) => {
+    likeBtn.forEach( (el, index) => { 
+        console.log(el, index)
         el.addEventListener('click', e => {
+            console.log(e);
             e.preventDefault();
-            console.log(blogList[index].like++);
-            // console.log(el.innerText++);
-            // el.innerText++
+            blogList[index].like++;
+            el.innerText++
         });
-    });
-};liker()
+    });console.log(blogList)
+};liker();
 
 
 /* Search on site*/
