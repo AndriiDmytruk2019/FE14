@@ -134,18 +134,16 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
 /*Likes counter*/
 function liker() {
     let likeBtn =[...document.getElementsByClassName( 'like_count' )];
-
-    likeBtn.forEach( el => {
+    likeBtn.forEach( (el, index) => {
         el.addEventListener('click', e => {
             e.preventDefault();
-            console.log(blogList[0].like++);
+            console.log(blogList[index].like++);
             // console.log(el.innerText++);
             // el.innerText++
         });
     });
 };liker()
 
-console.log(blogList)
 
 /* Search on site*/
 document.querySelector('#search').oninput = function () {
