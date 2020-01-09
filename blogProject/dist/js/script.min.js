@@ -36,6 +36,9 @@ let blogList = [
     }
 ];
 
+sortTime(blogList, getValueTime());
+renderList( blogList,result );
+liker();
 
 /*Add new article*/
 function publickArticle() {
@@ -50,21 +53,28 @@ function publickArticle() {
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
     newArticle['like'] = 0;
     newArticle['page'] = newPage;
-    blogList.unshift(newArticle);
-    renderList( blogList,result );
+    
+    if (newArticle['topic']  == getValueHeading()) {
+        blogList.unshift(newArticle);
+        let addInTopic = filterVal( getValueHeading(),blogList );
+        // sortTime(new_arr_heading, getValueTime());
+        renderList( addInTopic,result );
+    } else {
+        blogList.unshift(newArticle);
+        renderList( blogList,result );
+    }
     liker();
 };
 
-
 /*Filter blog*/
-let getValueHeading = function () {
+function getValueHeading() {
     let indexSelect = document.getElementById( 'select_heading' ).options.selectedIndex;
     let select = document.getElementById( 'select_heading' );
     let value = select.options[indexSelect].text;
     return value;
 };
 
-let getValueTime = function () {
+function getValueTime() {
     let indexSelect = document.getElementById( 'select_time' ).options.selectedIndex;
     let select = document.getElementById( 'select_time' );
     let value = select.options[indexSelect].text;
@@ -84,7 +94,7 @@ function filterVal(val,list){
     return result;
 };
 
-let sortTime =  function (list, time){
+function sortTime (list, time){
     if (time == 'Самые новые') {
         return list.sort((a,b) => new Date(b.time).getTime() - new Date(a.time).getTime());
     } else if (time == 'Давно написанные') {
@@ -100,12 +110,18 @@ function renderList(list,el){
             time = document.createElement( 'span' ),
             title = document.createElement( 'h2' ),
             page = document.createElement( 'p' ),
-            like = document.createElement( 'span' );
+            like = document.createElement( 'span' ),
+            coment = document.createElement( 'div' ),
+            link = document.createElement( 'a' ),
+            forComent = document.createElement( 'textarea' );
         like.className = 'like_count';
         new_block.appendChild( title );
         new_block.appendChild( time );
         new_block.appendChild( page );
         new_block.appendChild( like );
+        new_block.appendChild( coment );
+        coment.appendChild( link );
+        coment.appendChild( forComent );
         time.innerHTML = obj.time;
         title.innerHTML = obj.title;
         page.innerHTML = obj.page;
@@ -113,9 +129,6 @@ function renderList(list,el){
         el.appendChild( new_block );
   })
 };
-
-sortTime(blogList, getValueTime());
-renderList( blogList,result );
 
 document.getElementById( 'select_heading' ).addEventListener('change',e => {
     e.preventDefault();
@@ -139,20 +152,23 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     liker();
 });
 
+/*Add Coments*/
+function comentator() {
+
+}
+
 /*Likes counter*/
 function liker() {
     let likeBtn =[...document.getElementsByClassName( 'like_count' )];
     likeBtn.forEach( (el, index) => { 
         console.log(el, index)
         el.addEventListener('click', e => {
-            console.log(e);
             e.preventDefault();
             blogList[index].like++;
             el.innerText++
         });
     });console.log(blogList)
-};liker();
-
+};
 
 /* Search on site*/
 document.querySelector('#search').oninput = function () {
