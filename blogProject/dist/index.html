@@ -53,7 +53,7 @@
 
 		<main>
             <div class="add-article">
-                <select id="add-article__select_heading">
+                <select id="add-article__select_heading" onchange="btnActive()">
                     <option>Выберите жанр</option>
                     <option>Спорт</option>
                     <option>Путешествие</option>
@@ -64,7 +64,7 @@
 
                 <input id="add-article__title" type="text" name="title">
                 <textarea id="add-article__page" name="page"></textarea>
-                <button id="push_article" onclick="publickArticle()">Опубликовать</button>
+                <button id="push_article" onclick="publickArticle()" disabled>Опубликовать</button>
             </div>
 			<label for="select">Выбери рубрику:</label>
             <select id="select_heading" name="select-heading" onchange="getValueHeading()">

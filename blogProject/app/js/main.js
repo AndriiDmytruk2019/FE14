@@ -57,13 +57,14 @@ function publickArticle() {
     if (newArticle['topic']  == getValueHeading()) {
         blogList.unshift(newArticle);
         let addInTopic = filterVal( getValueHeading(),blogList );
-        // sortTime(new_arr_heading, getValueTime());
         renderList( addInTopic,result );
     } else {
         blogList.unshift(newArticle);
         renderList( blogList,result );
-    }
+    };
     liker();
+    newTitle= document.getElementById( 'add-article__title' ).value = '';
+    newPage = document.getElementById( 'add-article__page' ).value = '';
 };
 
 /*Filter blog*/
@@ -151,6 +152,23 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     };
     liker();
 });
+
+/*Btn Active*/
+function btnActive() {
+    let indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
+        select = document.getElementById( 'add-article__select_heading' ),
+        btnPush = document.getElementById( 'push_article' ),
+        selectText = select.options[indexSelect].text,
+        newTitle = document.getElementById( 'add-article__title' ).value,
+        newPage = document.getElementById( 'add-article__page' ).value;
+    if (selectText !== 'Выберите жанр') {
+        console.log(newTitle, newPage)
+        btnPush.disabled = false;
+    } else {
+        btnPush.disabled = true;
+    }
+};
+
 
 /*Add Coments*/
 function comentator() {
