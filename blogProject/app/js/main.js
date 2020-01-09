@@ -1,12 +1,14 @@
 let blogList = [
     {
+        number: 0,
         topic: 'Спорт',
         title: 'Лучшая украинская теннисистка.',
         time: '2019-02-6 00:20:18',
         like: 0,
         page: 'Лучшая украинская теннисистка Элина Свитолина (№5 WTA) начала новый сезон с поражения на хардовом Премьере в Брисбене.'
     },
-    {
+    {   
+        number: 1,
         topic: 'Спорт',
         title: 'МЧМ по хоккею.',
         time: '2019-12-21 00:20:18',
@@ -14,6 +16,7 @@ let blogList = [
         page: 'В финале Канада в напряженном матче обыграла Россию, хотя североамериканская сборная по ходу встречи проигрывала 0:1 и 1:3, однако сделала камбэк.'
     },
     {
+        number: 2,
         topic: 'Путешествие',
         title: 'Виды на Бали',
         time: '2019-11-28 01:20:18',
@@ -21,6 +24,7 @@ let blogList = [
         page: 'Лучшее место для жини!'
     },
     {
+        number: 3,
         topic: 'Путешествие',
         title: 'Лучшее где я был',
         time: '2018-10-14 01:20:18',
@@ -28,6 +32,7 @@ let blogList = [
         page: 'Places'
     },
     {
+        number: 4,
         topic: 'Музыка',
         title: 'Смоки Мо представит «Стейкхаус»',
         time: '2019-03-31 02:20:18',
@@ -48,12 +53,13 @@ function publickArticle() {
         newPage = document.getElementById( 'add-article__page' ).value,
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
+    newArticle['number'] = blogList.length++;
     newArticle['topic'] = select.options[indexSelect].text;
     newArticle['title'] = newTitle;
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
     newArticle['like'] = 0;
     newArticle['page'] = newPage;
-    
+    console.log(blogList)
     if (newArticle['topic']  == getValueHeading()) {
         blogList.unshift(newArticle);
         let addInTopic = filterVal( getValueHeading(),blogList );
@@ -63,8 +69,8 @@ function publickArticle() {
         renderList( blogList,result );
     };
     liker();
-    newTitle= document.getElementById( 'add-article__title' ).value = '';
-    newPage = document.getElementById( 'add-article__page' ).value = '';
+    document.getElementById( 'add-article__title' ).value = '';
+    document.getElementById( 'add-article__page' ).value = '';
 };
 
 /*Filter blog*/
@@ -115,7 +121,9 @@ function renderList(list,el){
             coment = document.createElement( 'div' ),
             link = document.createElement( 'a' ),
             forComent = document.createElement( 'textarea' );
-        like.className = 'like_count';
+        // new_block.className = obj.number;
+        like.className = obj.number;
+        coment.className = 'coment_block';
         new_block.appendChild( title );
         new_block.appendChild( time );
         new_block.appendChild( page );
@@ -161,7 +169,7 @@ function btnActive() {
         selectText = select.options[indexSelect].text,
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
-    if (selectText !== 'Выберите жанр') {
+    if (selectText !== 'Выберите жанр' ) {
         console.log(newTitle, newPage)
         btnPush.disabled = false;
     } else {
@@ -172,8 +180,15 @@ function btnActive() {
 
 /*Add Coments*/
 function comentator() {
-
-}
+    let comentList = document.getElementById( 'result' );
+    let article = [...comentList.getElementsByTagName( 'textarea' )]; 
+    article.forEach( (el, index) => { 
+        console.log(el, index)
+        el.addEventListener('click', e => {
+            e.preventDefault();console.log(el.value)
+        });
+    });
+}; comentator()
 
 /*Likes counter*/
 function liker() {
@@ -185,7 +200,8 @@ function liker() {
             blogList[index].like++;
             el.innerText++
         });
-    });console.log(blogList)
+    });
+    console.log(blogList)
 };
 
 /* Search on site*/
