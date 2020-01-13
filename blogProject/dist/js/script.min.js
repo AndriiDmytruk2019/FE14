@@ -93,11 +93,6 @@ function filterVal(val,list){
     if( item.topic.indexOf(val) != -1 )
         return item;
     });
-    // let result=[];
-  //   list.forEach( obj => {
-  //   if(obj.topic.indexOf(val) != -1)
-  //       result.push(obj)
-  // });
     return result;
 };
 
@@ -114,7 +109,7 @@ function renderList(list,el){
     el.innerHTML='';
     list.forEach(obj =>{
         let new_block = document.createElement( 'div' ),
-            time = document.createElement( 'span' ),
+            time = document.createElement( 'p' ),
             title = document.createElement( 'h2' ),
             page = document.createElement( 'p' ),
             like = document.createElement( 'span' ),
@@ -145,7 +140,7 @@ document.getElementById( 'select_heading' ).addEventListener('change',e => {
     renderList( new_arr_heading, result );
     if (getValueHeading() == 'Выберите жанр') {
         renderList( blogList,result );
-    }
+    };
     liker();
 });
 
@@ -192,22 +187,27 @@ function comentator() {
 
 /*Likes counter*/
 function liker() {
-    let likeBtn =[...document.getElementsByClassName( 'like_count' )];
-    likeBtn.forEach( (el, index) => { 
-        console.log(el, index)
+    let resultBlock = document.getElementById( 'result' );
+    let countBlock = [...resultBlock.getElementsByTagName( 'span' )];
+    countBlock.forEach( el => { 
         el.addEventListener('click', e => {
             e.preventDefault();
-            blogList[index].like++;
-            el.innerText++
+            for (var i = 0; i < blogList.length; i++) {
+                if (Number(el.className) == blogList[i].number) {
+                    console.log(Number(el.className), blogList[i].number);
+                    blogList[i].like++;
+                    el.innerText++
+                }
+            };
         });
     });
-    console.log(blogList)
 };
 
 /* Search on site*/
 document.querySelector('#search').oninput = function () {
+    console.log(document.innerHTML)
     let val = this.value.trim();
-    let elasticItems = document.querySelectorAll('header span');
+    let elasticItems = document.querySelectorAll('body p');
     console.log(elasticItems);
     if (val != '') {
         elasticItems.forEach(function (elem) {
