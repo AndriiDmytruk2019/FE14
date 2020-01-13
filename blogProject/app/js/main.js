@@ -74,7 +74,8 @@ function publickArticle() {
 };
 
 /*Filter blog*/
-function getValueHeading() {
+function getValueHeading(id) {
+    // console.log(document.getElementById( id ).options[document.getElementById( id ).options.selectedIndex].text);
     let indexSelect = document.getElementById( 'select_heading' ).options.selectedIndex;
     let select = document.getElementById( 'select_heading' );
     let value = select.options[indexSelect].text;
@@ -177,12 +178,18 @@ function btnActive() {
 function comentator() {
     let comentList = document.getElementById( 'result' );
     let article = [...comentList.getElementsByTagName( 'textarea' )]; 
-    article.forEach( (el, index) => { 
-        console.log(el, index)
-        el.addEventListener('click', e => {
-            e.preventDefault();console.log(el.value)
-        });
-    });
+    // article.forEach( el => { 
+    //     el.addEventListener('click', e => {
+    //         e.preventDefault();
+    //         for (var i = 0; i < blogList.length; i++) {
+    //             if (Number(el.className) == blogList[i].number) {
+    //                 console.log(Number(el.className), blogList[i].number);
+    //                 blogList[i].like++;
+    //                 el.innerText++
+    //             }
+    //         };
+    //     });
+    // });
 }; comentator()
 
 /*Likes counter*/
@@ -194,7 +201,7 @@ function liker() {
             e.preventDefault();
             for (var i = 0; i < blogList.length; i++) {
                 if (Number(el.className) == blogList[i].number) {
-                    console.log(Number(el.className), blogList[i].number);
+                    // console.log(Number(el.className), blogList[i].number);
                     blogList[i].like++;
                     el.innerText++
                 }
@@ -207,7 +214,8 @@ function liker() {
 document.querySelector('#search').oninput = function () {
     console.log(document.innerHTML)
     let val = this.value.trim();
-    let elasticItems = document.querySelectorAll('body p');
+    let elasticI = document.body.innerText;console.log(elasticI);
+    let elasticItems = [...document.querySelectorAll('body p')];
     console.log(elasticItems);
     if (val != '') {
         elasticItems.forEach(function (elem) {
