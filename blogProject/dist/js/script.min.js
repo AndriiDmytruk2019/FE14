@@ -53,18 +53,19 @@ function publickArticle() {
         selectValue = document.getElementById( 'select_heading' ),
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
-    newArticle['number'] = blogList.length++;
+    newArticle['number'] = blogList.length+1;
     newArticle['topic'] = select.options[indexSelect].text;
     newArticle['title'] = newTitle.value;
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
     newArticle['like'] = 0;
     newArticle['page'] = newPage.value;
+    blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         blogList.unshift(newArticle);
         let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
         renderList( addInTopic,result );
-    } else {
-        blogList.unshift(newArticle);
+    } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
+        renderList( blogList,result );
     };
     liker();
     newTitle.value = '';
@@ -79,13 +80,6 @@ function getValueSelect(id) {
     let value = select.options[indexSelect].text;
     return value;
 };
-
-// function getValueTime() {
-//     let indexSelect = document.getElementById( 'select_time' ).options.selectedIndex;
-//     let select = document.getElementById( 'select_time' );
-//     let value = select.options[indexSelect].text;
-//     return value;
-// };
 
 function filterVal(val,list){
     let result = blogList.filter(item => {
@@ -114,7 +108,8 @@ function renderList(list,el){
             like = document.createElement( 'span' ),
             coment = document.createElement( 'div' ),
             link = document.createElement( 'a' ),
-            forComent = document.createElement( 'textarea' );
+            forComent = document.createElement( 'textarea' ),
+            btnComent = document.createElement( 'button' );
         like.className = obj.number;
         coment.className = 'coment_block';
         new_block.appendChild( title );
@@ -124,10 +119,12 @@ function renderList(list,el){
         new_block.appendChild( coment );
         coment.appendChild( link );
         coment.appendChild( forComent );
+        coment.appendChild( btnComent );
         time.innerHTML = obj.time;
         title.innerHTML = obj.title;
         page.innerHTML = obj.page;
         like.innerHTML = obj.like;
+        btnComent.innerHTML = 'Прокоментировать'
         el.appendChild( new_block );
   })
 };
@@ -151,7 +148,7 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     if (getValueSelect(indexSelect.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
-    // liker();
+    liker();
 });
 
 /*Btn Active*/
@@ -163,7 +160,6 @@ function btnActive() {
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
     if (selectText !== 'Выберите жанр' ) {
-        console.log(newTitle, newPage)
         btnPush.disabled = false;
     } else {
         btnPush.disabled = true;
@@ -198,7 +194,6 @@ function liker() {
             e.preventDefault();
             for (var i = 0; i < blogList.length; i++) {
                 if (Number(el.className) == blogList[i].number) {
-                    // console.log(Number(el.className), blogList[i].number);
                     blogList[i].like++;
                     el.innerText++
                 }
