@@ -41,7 +41,6 @@ let blogList = [
     }
 ];
 
-sortTime(blogList, getValueTime());
 renderList( blogList,result );
 liker();
 
@@ -49,45 +48,44 @@ liker();
 function publickArticle() {
     let newArticle = {},
         btnPush = document.getElementById( 'push_article' ),
-        newTitle= document.getElementById( 'add-article__title' ).value,
-        newPage = document.getElementById( 'add-article__page' ).value,
+        newTitle= document.getElementById( 'add-article__title' ),
+        newPage = document.getElementById( 'add-article__page' ),
+        selectValue = document.getElementById( 'select_heading' ),
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
     newArticle['number'] = blogList.length++;
     newArticle['topic'] = select.options[indexSelect].text;
-    newArticle['title'] = newTitle;
+    newArticle['title'] = newTitle.value;
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
     newArticle['like'] = 0;
-    newArticle['page'] = newPage;
-    console.log(blogList)
-    if (newArticle['topic']  == getValueHeading()) {
+    newArticle['page'] = newPage.value;
+    if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         blogList.unshift(newArticle);
-        let addInTopic = filterVal( getValueHeading(),blogList );
+        let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
         renderList( addInTopic,result );
     } else {
         blogList.unshift(newArticle);
-        renderList( blogList,result );
     };
     liker();
-    document.getElementById( 'add-article__title' ).value = '';
-    document.getElementById( 'add-article__page' ).value = '';
+    newTitle.value = '';
+    newPage.value = '';
 };
 
 /*Filter blog*/
-function getValueHeading(id) {
-    // console.log(document.getElementById( id ).options[document.getElementById( id ).options.selectedIndex].text);
-    let indexSelect = document.getElementById( 'select_heading' ).options.selectedIndex;
-    let select = document.getElementById( 'select_heading' );
+
+function getValueSelect(id) {
+    let indexSelect = document.getElementById( id ).options.selectedIndex;
+    let select = document.getElementById( id );
     let value = select.options[indexSelect].text;
     return value;
 };
 
-function getValueTime() {
-    let indexSelect = document.getElementById( 'select_time' ).options.selectedIndex;
-    let select = document.getElementById( 'select_time' );
-    let value = select.options[indexSelect].text;
-    return value;
-};
+// function getValueTime() {
+//     let indexSelect = document.getElementById( 'select_time' ).options.selectedIndex;
+//     let select = document.getElementById( 'select_time' );
+//     let value = select.options[indexSelect].text;
+//     return value;
+// };
 
 function filterVal(val,list){
     let result = blogList.filter(item => {
@@ -117,7 +115,6 @@ function renderList(list,el){
             coment = document.createElement( 'div' ),
             link = document.createElement( 'a' ),
             forComent = document.createElement( 'textarea' );
-        // new_block.className = obj.number;
         like.className = obj.number;
         coment.className = 'coment_block';
         new_block.appendChild( title );
@@ -137,9 +134,9 @@ function renderList(list,el){
 
 document.getElementById( 'select_heading' ).addEventListener('change',e => {
     e.preventDefault();
-    let new_arr_heading = filterVal( getValueHeading(),blogList );
+    let new_arr_heading = filterVal( getValueSelect(e.target.id),blogList );
     renderList( new_arr_heading, result );
-    if (getValueHeading() == 'Выберите жанр') {
+    if (getValueSelect(e.target.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
     liker();
@@ -147,14 +144,14 @@ document.getElementById( 'select_heading' ).addEventListener('change',e => {
 
 document.getElementById( 'select_time' ).addEventListener('change',e => {
     e.preventDefault();
-    let new_arr_heading = filterVal( getValueHeading(),blogList );
-    sortTime(new_arr_heading, getValueTime());
-    renderList( new_arr_heading,result );
-    if (getValueHeading() == 'Выберите жанр') {
-        sortTime(blogList, getValueTime());
+    let indexSelect = document.getElementById( 'select_heading' );
+    let new_arr_time = filterVal( getValueSelect(indexSelect.id), blogList );
+    sortTime(new_arr_time, getValueSelect(e.target.id));
+    renderList( new_arr_time, result );
+    if (getValueSelect(indexSelect.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
-    liker();
+    // liker();
 });
 
 /*Btn Active*/
