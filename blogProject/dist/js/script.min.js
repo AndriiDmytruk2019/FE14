@@ -5,6 +5,7 @@ let blogList = [
         title: 'Лучшая украинская теннисистка.',
         time: '2019-02-6 00:20:18',
         like: 0,
+        coments: [],
         page: 'Лучшая украинская теннисистка Элина Свитолина (№5 WTA) начала новый сезон с поражения на хардовом Премьере в Брисбене.'
     },
     {   
@@ -13,6 +14,7 @@ let blogList = [
         title: 'МЧМ по хоккею.',
         time: '2019-12-21 00:20:18',
         like: 0,
+        coments: [],
         page: 'В финале Канада в напряженном матче обыграла Россию, хотя североамериканская сборная по ходу встречи проигрывала 0:1 и 1:3, однако сделала камбэк.'
     },
     {
@@ -21,6 +23,7 @@ let blogList = [
         title: 'Виды на Бали',
         time: '2019-11-28 01:20:18',
         like: 0,
+        coments: [],
         page: 'Лучшее место для жини!'
     },
     {
@@ -29,6 +32,7 @@ let blogList = [
         title: 'Лучшее где я был',
         time: '2018-10-14 01:20:18',
         like: 0,
+        coments: [],
         page: 'Places'
     },
     {
@@ -37,11 +41,13 @@ let blogList = [
         title: 'Смоки Мо представит «Стейкхаус»',
         time: '2019-03-31 02:20:18',
         like: 0,
+        coments: [],
         page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
     }
 ];
 
 renderList( blogList,result );
+comentator();
 liker();
 
 /*Add new article*/
@@ -58,6 +64,7 @@ function publickArticle() {
     newArticle['title'] = newTitle.value;
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
     newArticle['like'] = 0;
+    newArticle['coments'] = [];
     newArticle['page'] = newPage.value;
     blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
@@ -94,6 +101,8 @@ function sortTime (list, time){
         return list.sort((a,b) => new Date(b.time).getTime() - new Date(a.time).getTime());
     } else if (time == 'Давно написанные') {
         return list.sort((a,b) => new Date(a.time).getTime() - new Date(b.time).getTime())
+    } else if (time == 'Популярные') {
+        return list.sort((a,b) => b.like - a.like);
     }
 };
 /*Render blog*/
@@ -111,7 +120,10 @@ function renderList(list,el){
             forComent = document.createElement( 'textarea' ),
             btnComent = document.createElement( 'button' );
         like.className = obj.number;
-        coment.className = 'coment_block';
+        coment.className = 'coment-block';
+        btnComent.className = 'coment-block__btn';
+        btnComent.name = obj.number;
+        forComent.name = obj.number;
         new_block.appendChild( title );
         new_block.appendChild( time );
         new_block.appendChild( page );
@@ -172,20 +184,22 @@ function btnActive() {
 /*Add Coments*/
 function comentator() {
     let comentList = document.getElementById( 'result' );
-    let article = [...comentList.getElementsByTagName( 'textarea' )]; 
-    // article.forEach( el => { 
-    //     el.addEventListener('click', e => {
-    //         e.preventDefault();
-    //         for (var i = 0; i < blogList.length; i++) {
-    //             if (Number(el.className) == blogList[i].number) {
-    //                 console.log(Number(el.className), blogList[i].number);
-    //                 blogList[i].like++;
-    //                 el.innerText++
-    //             }
-    //         };
-    //     });
-    // });
-}; comentator()
+    let article = [...comentList.getElementsByTagName( 'textarea' )];
+    let comentBtn = [...comentList.getElementsByClassName( 'coment-block__btn' )];
+    comentBtn.forEach( el => { 
+        el.addEventListener('click', e => {
+            e.preventDefault();console.log(blogList)
+            let elemDigit = article[el.name].value;
+            
+            for (var i = 0; i < blogList.length; i++) {
+                if (Number(el.name) == blogList[i].number) {
+                    blogList[i]['coments'].push(elemDigit);
+                    console.log(blogList[i]['coments'])
+                }
+            };
+        });
+    });
+};
 
 /*Likes counter*/
 function liker() {
