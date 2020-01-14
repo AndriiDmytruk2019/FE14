@@ -144,8 +144,10 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     let indexSelect = document.getElementById( 'select_heading' );
     let new_arr_time = filterVal( getValueSelect(indexSelect.id), blogList );
     sortTime(new_arr_time, getValueSelect(e.target.id));
-    renderList( new_arr_time, result );
+    renderList( new_arr_time, result ); console.log(getValueSelect(indexSelect.id))
     if (getValueSelect(indexSelect.id) == 'Выберите жанр') {
+        sortTime(blogList, getValueSelect(e.target.id));
+        // console.log(getValueSelect(e.target.id))
         renderList( blogList,result );
     };
     liker();
@@ -201,6 +203,7 @@ function liker() {
         });
     });
 };
+
 
 /* Search on site*/
 document.querySelector('#search').oninput = function () {
