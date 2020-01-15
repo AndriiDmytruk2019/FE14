@@ -74,8 +74,8 @@ function publickArticle() {
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
-    comentator();
-    liker();
+    // comentator();
+    // liker();
     newTitle.value = '';
     newPage.value = '';
 };
@@ -89,6 +89,7 @@ function getValueSelect(id) {
     return value;
 };
 
+/*Change value*/
 function filterVal(val,list){
     let result = blogList.filter(item => {
     if( item.topic.indexOf(val) != -1 )
@@ -97,6 +98,7 @@ function filterVal(val,list){
     return result;
 };
 
+/*Sort time*/
 function sortTime (list, time){
     if (time == 'Самые новые') {
         return list.sort((a,b) => new Date(b.time).getTime() - new Date(a.time).getTime());
@@ -104,8 +106,40 @@ function sortTime (list, time){
         return list.sort((a,b) => new Date(a.time).getTime() - new Date(b.time).getTime())
     } else if (time == 'Популярные') {
         return list.sort((a,b) => b.like - a.like);
+    } else if (time == 'Непопулярные') {
+        return list.sort((a,b) => a.like - b.like);
     }
 };
+
+/* Pagination*/
+function pagination(obj) {
+    let a = 0;
+    let page = Math.ceil(obj.length/2);
+    let result = document.getElementById('result');
+    let pugBlock = document.createElement( 'div' );
+        pugBlock.id = 'pugination-block';
+        result.appendChild( pugBlock );
+    while(a < page) {
+        a++;
+        let pugNum = document.createElement( 'a' );
+        pugNum.innerHTML = a;
+        pugNum.setAttribute('href', '#')
+        pugBlock.appendChild(pugNum);
+    };
+
+    let c = document.getElementById('pugination-block')
+    let v = [...c.querySelectorAll('a')]
+    let start = 0;
+    let end = 2;
+    for (var i = 0; i < v.length; i++) {
+        console.log(v[i].text);
+        console.log(obj.slice(start, end));
+        // renderList(obj.slice(start, end), result)
+        start+=2
+        end+=2
+    }
+};pagination(blogList)
+
 /*Render blog*/
 // const result  = document.getElementById( 'result' );
 function renderList(list,el){
@@ -116,6 +150,8 @@ function renderList(list,el){
             title = document.createElement( 'h2' ),
             page = document.createElement( 'p' ),
             like = document.createElement( 'span' ),
+            sentBlock = document.createElement( 'div' ),
+            sentComent = document.createElement( 'p' ),
             coment = document.createElement( 'div' ),
             link = document.createElement( 'a' ),
             forComent = document.createElement( 'textarea' ),
@@ -129,6 +165,8 @@ function renderList(list,el){
         new_block.appendChild( time );
         new_block.appendChild( page );
         new_block.appendChild( like );
+        new_block.appendChild( sentBlock );
+        sentBlock.appendChild( sentComent );
         new_block.appendChild( coment );
         coment.appendChild( link );
         coment.appendChild( forComent );
@@ -137,9 +175,10 @@ function renderList(list,el){
         title.innerHTML = obj.title;
         page.innerHTML = obj.page;
         like.innerHTML = obj.like;
-        btnComent.innerHTML = 'Прокоментировать'
+        sentComent.innerHTML = obj.coments;
+        btnComent.innerHTML = 'Прокоментировать';
         el.appendChild( new_block );
-  })
+  });
 };
 
 document.getElementById( 'select_heading' ).addEventListener('change',e => {
@@ -158,13 +197,14 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
     let indexSelect = document.getElementById( 'select_heading' );
     let new_arr_time = filterVal( getValueSelect(indexSelect.id), blogList );
     sortTime(new_arr_time, getValueSelect(e.target.id));
-    renderList( new_arr_time, result ); console.log(getValueSelect(indexSelect.id))
+    renderList( new_arr_time, result ); console.log(getValueSelect(indexSelect.id));
     if (getValueSelect(indexSelect.id) == 'Выберите жанр') {
         sortTime(blogList, getValueSelect(e.target.id));
         // console.log(getValueSelect(e.target.id))
         renderList( blogList,result );
     };
     liker();
+    comentator();
 });
 
 /*Btn Active*/
@@ -192,32 +232,37 @@ function comentator() {
     comentBtn.forEach( (el, index) => { 
         el.addEventListener('click', e => {
             e.preventDefault();
-            // let elemDigit = article[index];
-            console.log(article[el.name])
+            let elemDigit = article[index];
+            // console.log(article[el.name])
             for (var i = 0; i < blogList.length; i++) {
                 if (el.name == blogList[i].number) {
                     blogList[i]['coments'].push(elemDigit.value);
-                    console.log(blogList[i]['coments']);
-                    console.log(blogList)
+                    // renderList( blogList,result );
+                    console.log(blogList[i]['coments'], blogList);
                     elemDigit.value = '';
-                }
+                };
             };
         });
     });
 };
-
+document.getElementById('result').onchange = function() {
+    
+}
 /*Likes counter*/
+
 function liker() {
     let resultBlock = document.getElementById( 'result' );
     let countBlock = [...resultBlock.getElementsByTagName( 'span' )];
-    countBlock.forEach( el => { 
+    countBlock.forEach( el => {
         el.addEventListener('click', e => {
             e.preventDefault();
             for (var i = 0; i < blogList.length; i++) {
                 if (Number(el.className) == blogList[i].number) {
                     blogList[i].like++;
-                    el.innerText++
-                }
+                    // el.innerText++;c
+                    renderList( blogList, result);
+                    console.log(blogList, result)
+                };
             };
         });
     });
@@ -226,14 +271,15 @@ function liker() {
 
 /* Search on site*/
 document.querySelector('#search').oninput = function () {
-    console.log(document.innerHTML)
+    // console.log(document.innerHTML)
     let val = this.value.trim();
-    let elasticI = document.body.innerText;console.log(elasticI);
+    let elasticI = document.body.innerText;
+    // console.log(elasticI);
     let elasticItems = [...document.querySelectorAll('body p')];
-    console.log(elasticItems);
+    // console.log(elasticItems);
     if (val != '') {
         elasticItems.forEach(function (elem) {
-            console.log(elem.innerText.toString(), val);
+            // console.log(elem.innerText.toString(), val);
             if (elem.innerText.search(val) == -1) {
                 elem.innerHTML = elem.innerText;
             }
