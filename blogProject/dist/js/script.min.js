@@ -59,7 +59,8 @@ function publickArticle() {
         selectValue = document.getElementById( 'select_heading' ),
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
-    newArticle['number'] = blogList.length+1;
+        // console.log(blogList.length);
+    newArticle['number'] = blogList.length;
     newArticle['topic'] = select.options[indexSelect].text;
     newArticle['title'] = newTitle.value;
     newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
@@ -68,12 +69,12 @@ function publickArticle() {
     newArticle['page'] = newPage.value;
     blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
-        blogList.unshift(newArticle);
         let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
         renderList( addInTopic,result );
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
+    comentator();
     liker();
     newTitle.value = '';
     newPage.value = '';
@@ -122,8 +123,8 @@ function renderList(list,el){
         like.className = obj.number;
         coment.className = 'coment-block';
         btnComent.className = 'coment-block__btn';
-        btnComent.name = obj.number;
         forComent.name = obj.number;
+        btnComent.name = obj.number;
         new_block.appendChild( title );
         new_block.appendChild( time );
         new_block.appendChild( page );
@@ -149,6 +150,7 @@ document.getElementById( 'select_heading' ).addEventListener('change',e => {
         renderList( blogList,result );
     };
     liker();
+    comentator();
 });
 
 document.getElementById( 'select_time' ).addEventListener('change',e => {
@@ -186,15 +188,18 @@ function comentator() {
     let comentList = document.getElementById( 'result' );
     let article = [...comentList.getElementsByTagName( 'textarea' )];
     let comentBtn = [...comentList.getElementsByClassName( 'coment-block__btn' )];
-    comentBtn.forEach( el => { 
+    
+    comentBtn.forEach( (el, index) => { 
         el.addEventListener('click', e => {
-            e.preventDefault();console.log(blogList)
-            let elemDigit = article[el.name].value;
-            
+            e.preventDefault();
+            // let elemDigit = article[index];
+            console.log(article[el.name])
             for (var i = 0; i < blogList.length; i++) {
-                if (Number(el.name) == blogList[i].number) {
-                    blogList[i]['coments'].push(elemDigit);
-                    console.log(blogList[i]['coments'])
+                if (el.name == blogList[i].number) {
+                    blogList[i]['coments'].push(elemDigit.value);
+                    console.log(blogList[i]['coments']);
+                    console.log(blogList)
+                    elemDigit.value = '';
                 }
             };
         });
