@@ -50,6 +50,20 @@ renderList( blogList,result );
 comentator();
 liker();
 
+/*Registration*/
+function registration() {
+    let objUser = {};
+    let regBlock = document.getElementById('header-block__registration');
+    let regBtn = regBlock.querySelector('button');
+    let regInput = [...regBlock.getElementsByTagName('input')];
+    // objUser['login'] = newTitle.value;
+    regBtn.onclick = function () {
+        regInput.forEach(el => objUser[el.className] = el.value);
+        // JSON.stringify(objUser);
+        localStorage.setItem("firstUser", JSON.stringify(objUser));
+    }
+}; registration()
+
 /*Add new article*/
 function publickArticle() {
     let newArticle = {},
@@ -81,7 +95,6 @@ function publickArticle() {
 };
 
 /*Filter blog*/
-
 function getValueSelect(id) {
     let indexSelect = document.getElementById( id ).options.selectedIndex;
     let select = document.getElementById( id );
@@ -246,10 +259,9 @@ function comentator() {
     });
 };
 document.getElementById('result').onchange = function() {
-    
+
 }
 /*Likes counter*/
-
 function liker() {
     let resultBlock = document.getElementById( 'result' );
     let countBlock = [...resultBlock.getElementsByTagName( 'span' )];
@@ -259,8 +271,8 @@ function liker() {
             for (var i = 0; i < blogList.length; i++) {
                 if (Number(el.className) == blogList[i].number) {
                     blogList[i].like++;
-                    // el.innerText++;c
-                    renderList( blogList, result);
+                    el.innerText++;
+                    // renderList( blogList, result);
                     console.log(blogList, result)
                 };
             };
