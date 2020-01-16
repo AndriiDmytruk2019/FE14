@@ -91,7 +91,9 @@
             content: "";
             height: 20px;
             display: block;
-            background-size: 16px; } }
+            background-size: 16px; }
+  main {
+    display: none; } }
 
 @media (min-width: 668px) and (max-width: 768px) {
   body {
@@ -174,7 +176,9 @@
             content: "";
             height: 20px;
             display: block;
-            background-size: 16px; } }
+            background-size: 16px; }
+  main {
+    display: none; } }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   body {
@@ -257,4 +261,6 @@
             content: "";
             height: 20px;
             display: block;
-            background-size: 16px; } }
+            background-size: 16px; }
+  main {
+    display: none; } }
