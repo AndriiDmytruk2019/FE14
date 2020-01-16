@@ -51,18 +51,50 @@ comentator();
 liker();
 
 /*Registration*/
+// localStorage.clear();
 function registration() {
     let objUser = {};
     let regBlock = document.getElementById('header-block__registration');
+    let signBlock = document.getElementById('header-block__sign');
     let regBtn = regBlock.querySelector('button');
+    let signBtn = signBlock.querySelector('button');
     let regInput = [...regBlock.getElementsByTagName('input')];
-    // objUser['login'] = newTitle.value;
+    let signInput = [...signBlock.getElementsByTagName('input')];
     regBtn.onclick = function () {
+        for( let i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i) == regInput[0].value) {
+                alert('Вы уже зарегистрированы')
+            }
+        }   
         regInput.forEach(el => objUser[el.className] = el.value);
-        // JSON.stringify(objUser);
-        localStorage.setItem("firstUser", JSON.stringify(objUser));
+        localStorage.setItem(regInput[0].value, JSON.stringify(objUser));
+
+        if (regInput[0].value !== '' & regInput[1].value !== '' & regInput[2].value !== '') {
+            regInput.forEach(el => el.value = '');
+        } else {
+            regInput.forEach(el => el.value == '' ? el.placeholder = 'Некоректное заполнение' : el.value);
+        }
     }
-}; registration()
+
+    function signIn() {
+        signBtn.onclick = function () {
+        for( let i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i) == signInput[0].value) {
+                alert('Вход разрешен')
+        } else {
+            alert('Нет такого пользователя')
+        };
+
+        if (signInput[0].value !== '' & signInput[1].value !== '') {
+            signInput.forEach(el => el.value = '');
+        } else {
+            signInput.forEach(el => el.value == '' ? el.placeholder = 'Некоректное заполнение' : el.value);
+        }
+            }
+        }
+    };signIn()
+
+}; registration();
 
 /*Add new article*/
 function publickArticle() {
@@ -228,7 +260,7 @@ function btnActive() {
         selectText = select.options[indexSelect].text,
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
-    if (selectText !== 'Выберите жанр' ) {
+    if (selectText !== 'Выберите жанр' & newTitle !== '' & newPage !== '') {
         btnPush.disabled = false;
     } else {
         btnPush.disabled = true;
