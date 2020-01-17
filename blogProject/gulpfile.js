@@ -1,5 +1,6 @@
 const gulp = require( 'gulp' ),
   watchSass = require( 'gulp-watch-sass' ),
+  babel = require('gulp-babel'),
 	sass = require( 'gulp-sass' ),
 	browserSync = require('browser-sync').create(),
 	autoprefixer = require( 'gulp-autoprefixer' ),
@@ -44,6 +45,9 @@ gulp.task('scss', () => // Создаем таск Scss
 
 gulp.task('js', () => 
 	gulp.src( './app/js/**/*.js' )
+  // .pipe(babel({
+  //   presets: ['@babel/preset-env']
+  // }))
   .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле script.min.js
   // .pipe(uglify()) // Сжимаем JS файл
   .pipe( gulp.dest('./dist/js') )

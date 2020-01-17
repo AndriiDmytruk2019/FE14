@@ -46,106 +46,116 @@ let blogList = [
     }
 ];
 
-registration();
-renderList( blogList,result );
-comentator();
-liker();
-
-if (registration() == true) { console.log(registration())
-    document.querySelector('main').style.display = 'block';
-    renderList( blogList,result );
-}
+/*Change status*/
+function stateStatus (state = false) {
+    if (state == true) {
+        document.querySelector('main').style.display = 'block';
+        renderList( blogList,result )
+    }
+};stateStatus(true)
 
 /*Registration*/
 // localStorage.clear();
 function registration() {
-    let objUser = {};
-    let regBlock = document.getElementById('header-block__registration');
-    let signBlock = document.getElementById('header-block__sign');
-    let regBtn = regBlock.querySelector('button');
-    let signBtn = signBlock.querySelector('button');
-    let regInput = [...regBlock.getElementsByTagName('input')];
-    let signInput = [...signBlock.getElementsByTagName('input')];
+    const objUser = {};
+    // let regBlock = document.getElementById('header-block__registration');
+    // let signBlock = document.getElementById('header-block__sign');
+    const regBtn = document.getElementById('header-block__registration')
+                        .querySelector('button');
+    const signBtn = document.getElementById('header-block__sign')
+                        .querySelector('button');
+    const regInput = [...document.getElementById('header-block__registration')
+                        .getElementsByTagName('input')];
+    const signInput = [...document.getElementById('header-block__sign')
+                        .getElementsByTagName('input')];
+    let boolean = false;
 
-    regBtn.onclick = el => {
-        let boolean = false;
-        if (regInput[0].value !== '' & regInput[1].value !== '' & regInput[3].value !== '' & boolean == false) {
-           for( let i = 0; i < localStorage.length; i++) {
-                if (localStorage.key(i) == regInput[0].value) {
-                    boolean = true;
-                    alert('Вы уже зарегистрированы');
+    function regProcess(input) {
+        regBtn.onclick = el => {
+            if (input[0].value !== '' && input[1].value !== '' && input[3].value !== '' && boolean == false) {
+                for( let i = 0; i < localStorage.length; i++) {
+                    if (localStorage.key(i) == input[0].value) {
+                        boolean = true;
+                        alert('Вы уже зарегистрированы');
+                    }
+                    if (localStorage.key(i) == '') {
+                        localStorage.removeItem('');
+                    } 
                 }
-                if (localStorage.key(i) == '') {
-                    localStorage.removeItem('');
-                } 
-            }
-            if (boolean == false & regInput[1].value == regInput[2].value) {
-                    regInput.forEach(el => objUser[el.className] = el.value);
-                    localStorage.setItem(regInput[0].value, JSON.stringify(objUser));
+                if (boolean == false && input[1].value == input[2].value) {
+                        input.forEach(el => objUser[el.className] = el.value);
+                        localStorage.setItem(input[0].value, JSON.stringify(objUser));
+                        alert('Вы успешно зарегистрированы!');
+                } else {
+                    alert('Поля паролей не совпадают');
+                }
+                input.forEach(el => el.value = '');
             } else {
-                alert('Поля паролей не совпадают');
+                input.forEach(el => el.value == '' ? el.placeholder = 'Некоректное заполнение' : el.value);
             }
-            regInput.forEach(el => el.value = '');
-        } else {
-            regInput.forEach(el => el.value == '' ? el.placeholder = 'Некоректное заполнение' : el.value);
         }
-    };
+    };regProcess(regInput);
 
-    function signIn() {
-       return signBtn.onclick = function () {
-            let boolean = false;
-            if (signInput[0].value !== '' & signInput[1].value !== '' & boolean == false) {
+    function signIn(button, input) {
+       button.onclick = () => {
+            if (input[0].value !== '' && input[1].value !== '' && boolean == false) {
                 for( let i = 0; i < localStorage.length; i++) {
                     let objPars = JSON.parse(localStorage[localStorage.key(i)])['pass'];
-                    if (localStorage.key(i) == signInput[0].value & objPars == signInput[1].value) {
+                    if (localStorage.key(i) == input[0].value & objPars == input[1].value) {
                         boolean = true;
                         alert('Вход разрешен');
+                        stateStatus (true)
                     }
                 }
                 if (boolean == false) {
                     alert('Пользователь не зарегистрирован')
                 }
-                signInput.forEach(el => el.value = '');
+                input.forEach(el => el.value = '');
             } else {
-                signInput.forEach(el => el.value == '' ? el.placeholder = 'Заполните поле' : el.value);
+                input.forEach(el => el.value == '' ? el.placeholder = 'Заполните поле' : el.value);
             }
         }
     };
-    signIn();
-    let state = true;return state
-};
+    signIn(signBtn, signInput);
+}; registration();
 
 /*Add new article*/
 function publickArticle() {
-    let newArticle = {},
-        btnPush = document.getElementById( 'push_article' ),
+    const
         newTitle= document.getElementById( 'add-article__title' ),
         newPage = document.getElementById( 'add-article__page' ),
         selectValue = document.getElementById( 'select_heading' ),
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
         select = document.getElementById( 'add-article__select_heading' );
-    newArticle['number'] = blogList.length;
-    newArticle['topic'] = select.options[indexSelect].text;
-    newArticle['title'] = newTitle.value;
-    newArticle['time'] = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
-    newArticle['like'] = 0;
-    newArticle['coments'] = [];
-    newArticle['page'] = newPage.value;
+    const newArticle = {
+        'number': blogList.length,
+        'topic': select.options[indexSelect].text,
+        'title': newTitle.value,
+        'time': new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds(),
+        'like': 0,
+        'coments': [],
+        'page': newPage.value,
+    };
     blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
         renderList( addInTopic,result );
+        iker();
+        comentator();
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
-    // comentator();
-    // liker();
+
     newTitle.value = '';
     newPage.value = '';
+    liker();
+    comentator();
 };
+document.getElementById( 'push_article' ).onclick=()=>publickArticle();
+
 
 /*Filter blog*/
-function getValueSelect(id) {
+function getValueSelect( id ) {
     let indexSelect = document.getElementById( id ).options.selectedIndex;
     let select = document.getElementById( id );
     let value = select.options[indexSelect].text;
@@ -153,63 +163,33 @@ function getValueSelect(id) {
 };
 
 /*Change value*/
-function filterVal(val,list){
-    let result = blogList.filter(item => {
-    if( item.topic.indexOf(val) != -1 )
+function filterVal( val,list ) {
+    return list.filter( item => {
+    if( item.topic.indexOf( val ) != -1 )
         return item;
-    });
-    return result;
+    })
 };
 
 /*Sort time*/
-function sortTime (list, time){
-    if (time == 'Самые новые') {
-        return list.sort((a,b) => new Date(b.time).getTime() - new Date(a.time).getTime());
-    } else if (time == 'Давно написанные') {
-        return list.sort((a,b) => new Date(a.time).getTime() - new Date(b.time).getTime())
-    } else if (time == 'Популярные') {
-        return list.sort((a,b) => b.like - a.like);
-    } else if (time == 'Непопулярные') {
-        return list.sort((a,b) => a.like - b.like);
+function sortTime( list, time ) {
+    if ( time == 'Самые новые' ) {
+        return list.sort( ( a,b ) => new Date( b.time ).getTime() - new Date( a.time ).getTime() );
+    } else if ( time == 'Давно написанные' ) {
+        return list.sort( ( a,b ) => new Date( a.time ).getTime() - new Date( b.time ).getTime())
+    } else if ( time == 'Популярные') {
+        return list.sort( ( a,b ) => b.like - a.like );
+    } else if ( time == 'Непопулярные' ) {
+        return list.sort( (a,b) => a.like - b.like );
     }
 };
 
-/* Pagination*/
-function pagination(obj) {
-    let a = 0;
-    let page = Math.ceil(obj.length/2);
-    let result = document.getElementById('result');
-    let pugBlock = document.createElement( 'div' );
-        pugBlock.id = 'pugination-block';
-        result.appendChild( pugBlock );
-    while(a < page) {
-        a++;
-        let pugNum = document.createElement( 'a' );
-        pugNum.innerHTML = a;
-        pugNum.setAttribute('href', '#')
-        pugBlock.appendChild(pugNum);
-    };
-
-    let c = document.getElementById('pugination-block')
-    let v = [...c.querySelectorAll('a')]
-    let start = 0;
-    let end = 2;
-    for (var i = 0; i < v.length; i++) {
-        console.log(v[i].text);
-        console.log(obj.slice(start, end));
-        // renderList(obj.slice(start, end), result)
-        start+=2
-        end+=2
-    }
-};pagination(blogList)
-
 /*Render blog*/
 // const result  = document.getElementById( 'result' );
-function renderList(list,el){
+function renderList( list,el ){
     el.innerHTML='';
     list.forEach(obj =>{
         let new_block = document.createElement( 'div' ),
-            time = document.createElement( 'p' ),
+            time = document.createElement( 'p' )
             title = document.createElement( 'h2' ),
             page = document.createElement( 'p' ),
             like = document.createElement( 'span' ),
@@ -236,22 +216,22 @@ function renderList(list,el){
         coment.appendChild( btnComent );
         time.innerHTML = obj.time;
         title.innerHTML = obj.title;
-        page.innerHTML = obj.page;
-        like.innerHTML = obj.like;
+        page.innerText = obj.page;
+        like.innerText = obj.like;
         sentComent.innerHTML = obj.coments;
         btnComent.innerHTML = 'Прокоментировать';
         el.appendChild( new_block );
   });
-};
+};renderList( blogList,result );
 
 document.getElementById( 'select_heading' ).addEventListener('change',e => {
-    e.preventDefault();
+    e.preventDefault();console.log(e.target.id)
     let new_arr_heading = filterVal( getValueSelect(e.target.id),blogList );
     renderList( new_arr_heading, result );
     if (getValueSelect(e.target.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
-    liker();
+    liker(new_arr_heading, result);
     comentator();
 });
 
@@ -273,62 +253,73 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
 /*Btn Active*/
 function btnActive() {
     let indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
-        select = document.getElementById( 'add-article__select_heading' ),
+        select = document.getElementById( 'add-article__select_heading' )
+                    .options[indexSelect].text,
         btnPush = document.getElementById( 'push_article' ),
-        selectText = select.options[indexSelect].text,
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
-    if (selectText !== 'Выберите жанр' & newTitle !== '' & newPage !== '') {
-        btnPush.disabled = false;
-    } else {
-        btnPush.disabled = true;
-    }
+    return newTitle !== '' & newPage !== '' ? btnPush.disabled = false : btnPush.disabled = true;
 };
+document.getElementById( 'add-article__select_heading' ).onchange=()=>btnActive();
 
 
 /*Add Coments*/
 function comentator() {
-    let comentList = document.getElementById( 'result' );
-    let article = [...comentList.getElementsByTagName( 'textarea' )];
-    let comentBtn = [...comentList.getElementsByClassName( 'coment-block__btn' )];
+    let article = [...document.getElementById( 'result' ).getElementsByTagName( 'textarea' )];
+    let comentBtn = [...document.getElementById( 'result' ).getElementsByClassName( 'coment-block__btn' )];
     
     comentBtn.forEach( (el, index) => { 
         el.addEventListener('click', e => {
             e.preventDefault();
             let elemDigit = article[index];
-            // console.log(article[el.name])
             for (var i = 0; i < blogList.length; i++) {
                 if (el.name == blogList[i].number) {
                     blogList[i]['coments'].push(elemDigit.value);
-                    // renderList( blogList,result );
+                    renderList( blogList,result );
+                    comentator();
+                    liker();
                     console.log(blogList[i]['coments'], blogList);
-                    elemDigit.value = '';
                 };
             };
         });
     });
-};
-document.getElementById('result').onchange = function() {
+};comentator();
 
-}
 /*Likes counter*/
-function liker() {
-    let resultBlock = document.getElementById( 'result' );
-    let countBlock = [...resultBlock.getElementsByTagName( 'span' )];
-    countBlock.forEach( el => {
-        el.addEventListener('click', e => {
+// function liker() {
+//     let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
+//         .forEach( el => {
+//             el.addEventListener('click', e => {
+//             e.preventDefault();
+//             console.log(blogList);
+//             for (var i = 0; i < blogList.length; i++) {
+//                 if (Number(el.className) == blogList[i].number) {
+//                     blogList[i].like++;
+//                     renderList( blogList, result);
+//                     liker();
+//                     comentator();
+//                 };
+//             };
+//         });
+//     });
+
+function liker(list, val) {
+    let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
+        .forEach( el => {
+            el.addEventListener('click', e => {
             e.preventDefault();
-            for (var i = 0; i < blogList.length; i++) {
-                if (Number(el.className) == blogList[i].number) {
-                    blogList[i].like++;
-                    el.innerText++;
-                    // renderList( blogList, result);
-                    console.log(blogList, result)
+            console.log(list);
+            for (var i = 0; i < list.length; i++) {
+                if (Number(el.className) == list[i].number) {
+                    list[i].like++;
+                    renderList( list, val);
+                    liker();
+                    comentator();
                 };
             };
         });
     });
-};
+};liker();
 
 
 /* Search on site*/
@@ -365,3 +356,33 @@ function liker() {
 //     // hello+<mark>+wo+</mark>+rld
 //     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 // }
+
+
+// /* Pagination*/
+// function pagination(obj) {
+//     let a = 0;
+//     let page = Math.ceil(obj.length/2);
+//     let result = document.getElementById('result');
+//     let pugBlock = document.createElement( 'div' );
+//         pugBlock.id = 'pugination-block';
+//         result.appendChild( pugBlock );
+//     while(a < page) {
+//         a++;
+//         let pugNum = document.createElement( 'a' );
+//         pugNum.innerHTML = a;
+//         pugNum.setAttribute('href', '#')
+//         pugBlock.appendChild(pugNum);
+//     };
+
+//     let c = document.getElementById('pugination-block')
+//     let v = [...c.querySelectorAll('a')]
+//     let start = 0;
+//     let end = 2;
+//     for (var i = 0; i < v.length; i++) {
+//         console.log(v[i].text);
+//         console.log(obj.slice(start, end));
+//         // renderList(obj.slice(start, end), result)
+//         start+=2
+//         end+=2
+//     }
+// };pagination(blogList)
