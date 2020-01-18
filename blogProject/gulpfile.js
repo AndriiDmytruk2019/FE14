@@ -1,6 +1,7 @@
 const gulp = require( 'gulp' ),
   watchSass = require( 'gulp-watch-sass' ),
   babel = require('gulp-babel'),
+  include = require('gulp-include'),
 	sass = require( 'gulp-sass' ),
 	browserSync = require('browser-sync').create(),
 	autoprefixer = require( 'gulp-autoprefixer' ),

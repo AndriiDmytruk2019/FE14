@@ -139,17 +139,17 @@ function publickArticle() {
     blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
+        liker(addInTopic);
+        comentator(addInTopic);
         renderList( addInTopic,result );
-        iker();
-        comentator();
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result );
     };
 
     newTitle.value = '';
     newPage.value = '';
-    liker();
-    comentator();
+    liker(blogList);
+    comentator(blogList);
 };
 document.getElementById( 'push_article' ).onclick=()=>publickArticle();
 
@@ -229,10 +229,12 @@ document.getElementById( 'select_heading' ).addEventListener('change',e => {
     let new_arr_heading = filterVal( getValueSelect(e.target.id),blogList );
     renderList( new_arr_heading, result );
     if (getValueSelect(e.target.id) == 'Выберите жанр') {
-        renderList( blogList,result );
+        renderList( blogList,result );  
+        liker(blogList);
+        comentator(blogList);
     };
-    liker(new_arr_heading, result);
-    comentator();
+    liker(new_arr_heading);
+    comentator(new_arr_heading);
 });
 
 document.getElementById( 'select_time' ).addEventListener('change',e => {
@@ -246,8 +248,8 @@ document.getElementById( 'select_time' ).addEventListener('change',e => {
         // console.log(getValueSelect(e.target.id))
         renderList( blogList,result );
     };
-    liker();
-    comentator();
+    liker(new_arr_time);
+    comentator(new_arr_time);
 });
 
 /*Btn Active*/
@@ -264,7 +266,7 @@ document.getElementById( 'add-article__select_heading' ).onchange=()=>btnActive(
 
 
 /*Add Coments*/
-function comentator() {
+function comentator(list) {
     let article = [...document.getElementById( 'result' ).getElementsByTagName( 'textarea' )];
     let comentBtn = [...document.getElementById( 'result' ).getElementsByClassName( 'coment-block__btn' )];
     
@@ -272,38 +274,21 @@ function comentator() {
         el.addEventListener('click', e => {
             e.preventDefault();
             let elemDigit = article[index];
-            for (var i = 0; i < blogList.length; i++) {
-                if (el.name == blogList[i].number) {
+            for (var i = 0; i < list.length; i++) {
+                if (el.name == list[i].number) {
                     blogList[i]['coments'].push(elemDigit.value);
-                    renderList( blogList,result );
-                    comentator();
-                    liker();
-                    console.log(blogList[i]['coments'], blogList);
+                    renderList( list,result );
+                    liker(list);
+                    comentator(list);
+                    console.log(blogList[i]['coments'], list);
                 };
             };
         });
     });
-};comentator();
+};comentator(blogList);
 
 /*Likes counter*/
-// function liker() {
-//     let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
-//         .forEach( el => {
-//             el.addEventListener('click', e => {
-//             e.preventDefault();
-//             console.log(blogList);
-//             for (var i = 0; i < blogList.length; i++) {
-//                 if (Number(el.className) == blogList[i].number) {
-//                     blogList[i].like++;
-//                     renderList( blogList, result);
-//                     liker();
-//                     comentator();
-//                 };
-//             };
-//         });
-//     });
-
-function liker(list, val) {
+function liker(list) {
     let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
         .forEach( el => {
             el.addEventListener('click', e => {
@@ -312,14 +297,14 @@ function liker(list, val) {
             for (var i = 0; i < list.length; i++) {
                 if (Number(el.className) == list[i].number) {
                     list[i].like++;
-                    renderList( list, val);
-                    liker();
-                    comentator();
+                    renderList( list, result);
+                    liker(list);
+                    comentator(list);
                 };
             };
         });
     });
-};liker();
+}; liker(blogList);
 
 
 /* Search on site*/

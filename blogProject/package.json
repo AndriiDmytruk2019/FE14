@@ -7,6 +7,7 @@
     "express": "^4.17.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean": "^0.4.0",
+    "gulp-include": "^2.4.1",
     "gulp-pngquant": "^1.0.12",
     "gulp-sass": "^4.0.2",
     "lite-server": "^2.5.4",
@@ -14,7 +15,9 @@
     "nodemon": "^1.19.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
