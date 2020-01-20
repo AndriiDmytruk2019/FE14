@@ -43,6 +43,24 @@ let blogList = [
         like: 0,
         coments: ['okm', '[;l[p]]'],
         page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
+    },
+    {
+        number: 5,
+        topic: 'Спорт',
+        title: 'МЧМ по хоккею.',
+        time: '2019-12-21 00:20:18',
+        like: 0,
+        coments: [],
+        page: 'В финале Канада в напряженном матче обыграла Россию, хотя североамериканская сборная по ходу встречи проигрывала 0:1 и 1:3, однако сделала камбэк.'
+    },
+    {
+        number: 6,
+        topic: 'Музыка',
+        title: 'Смоки Мо представит «Стейкхаус»',
+        time: '2019-03-31 02:20:18',
+        like: 0,
+        coments: ['okm'],
+        page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
     }
 ];
 
@@ -139,13 +157,13 @@ function publickArticle() {
     blogList.unshift(newArticle);
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
-        pagination(addInTopic);
+        pagination(addInTopic, 0);
         renderList( addInTopic,result );
         liker(addInTopic);
         comentator(addInTopic);
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
-        pagination(blogList);
         renderList( blogList,result );
+        pagination(blogList, 0);
         liker(blogList);
         comentator(blogList);
     };
@@ -319,7 +337,7 @@ function liker(list,) {
 
 
 /* Pagination*/
-function pagination(obj) {
+function pagination(obj, target = 0) {
     let k = 1;
     let pageSize = Math.ceil(obj.length/2+1);
     let mainBlock = document.querySelector('main');
@@ -334,18 +352,32 @@ function pagination(obj) {
     };
 
     let arrLink = [...pugBlock.querySelectorAll('a')];console.log(arrLink)
-    // renderList(obj.slice(0, 2) ,result);
-        arrLink.forEach( el => {console.log(arrLink.length)
+        arrLink.forEach( el => {
+            if (target == 0) {
+                renderList( obj.slice( 0, 2 ) ,result);
+                liker(obj.slice( 0, 2 ));
+                comentator(obj.slice( 0, 2 ));
+            };
             el.addEventListener('click', e => {
             e.preventDefault();
             for (let i = 0; i < arrLink.length; i++) {
-                console.log(Number(e.target.text))
-                if ( Number(e.target.text) == 1) {console.log(e.target.text)
+                console.log(Number(e.target.text)); 
+                if ( Number(e.target.text) !== 1 && Number(e.target.text)%2 == 0) {
+                    pagination(obj, target = 1);
+                    renderList(obj.slice(Number(e.target.text)+1, Number(e.target.text)+2) ,result)
+                    liker(obj.slice(Number(e.target.text)+1, Number(e.target.text)+2));
+                    comentator(obj.slice(Number(e.target.text)+1, Number(e.target.text)+2));
+                } else if ( Number(e.target.text) == 1 ) {console.log(blogList, '2')
+                    pagination(obj, target = 1);
                     renderList(obj.slice(Number(e.target.text)-1, Number(e.target.text)+1) ,result)
-                    pagination(obj);
-                } else {
+                    liker(obj.slice(Number(e.target.text)-1, Number(e.target.text)+1));
+                    comentator(obj.slice(Number(e.target.text)-1, Number(e.target.text)+1));
+                }
+                if ( Number(e.target.text) !== 1 && Number(e.target.text)%2 == 1 ) {console.log(blogList, '3')
+                    pagination(obj, target = 1);
                     renderList(obj.slice(Number(e.target.text), Number(e.target.text)+2) ,result)
-                    pagination(obj);
+                    liker(obj.slice(Number(e.target.text), Number(e.target.text)+2));
+                    comentator(obj.slice(Number(e.target.text), Number(e.target.text)+2));
                 }
             }
         });
