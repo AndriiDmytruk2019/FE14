@@ -1,0 +1,78 @@
+.slide_box {
+  height: 250px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  & > input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    display: inline-block;
+    height: 6px;
+    margin: 10px;
+    position: relative;
+    width: 6px;
+    border-radius: 20%;
+    &::after {
+      border: 2px solid #3b3b3ba8;
+      content: " ";
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 20%;
+    }
+  }
+  .slider {
+    background-image: url('../img/green_mount.jpg');
+    box-shadow: 0 -10px 105px -30px #d2c4c4;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    width: inherit;
+  }
+  .slides {
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    width: inherit;
+    background-size: cover;
+    z-index: 0;
+    transform: rotate(55deg);
+    -webkit-filter: hue-rotate(90deg);
+    transition: 1s;
+  }
+  .img1 { background-image: url('../img/green_mount.jpg'); }
+  .img2 { background-image: url('../img/learn-instrument.jpg'); }
+  .img3 { background-image: url('../img/travelling.jpg'); }
+  .img4 { background-image: url('../img/green_mount.jpg'); }
+  .img5 { background-image: url('../img/learn-instrument.jpg'); }
+  .img6 { background-image: url('../img/travelling.jpg'); }
+
+  #point1:checked ~ .control label:nth-of-type(1),
+  #point2:checked ~ .control label:nth-of-type(2),
+  #point3:checked ~ .control label:nth-of-type(3),
+  #point4:checked ~ .control label:nth-of-type(4),
+  #point5:checked ~ .control label:nth-of-type(5),
+  #point6:checked ~ .control label:nth-of-type(6) {
+    background: $button-color;
+  }
+  #point1:checked ~ .slider > .img1,
+  #point2:checked ~ .slider > .img2,
+  #point3:checked ~ .slider > .img3,
+  #point4:checked ~ .slider > .img4,
+  #point5:checked ~ .slider > .img5,
+  #point6:checked ~ .slider > .img6 {
+    opacity: 1;
+    z-index: 1;
+    transform: none;
+    -webkit-filter: none;
+  }
+  .control {
+    padding: 5px 0 5px 70px;
+    background: #000;
+  }
+}

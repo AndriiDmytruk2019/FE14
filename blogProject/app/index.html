@@ -10,8 +10,32 @@
 	<div class="main-block">
 		<header>
             <div class="header-block">
-                <div class="header-block__logo">
-                	<a href="#"><img src=""></a>
+                <div id="header-block__logo">
+                	<a href="#">
+                        <img src="./img/b.png">
+                    </a>
+                    <div>
+                        <button>Вход</button>
+                        <button>Регистрация</button>
+                    </div>
+                </div>
+                <div id="header-block__sign">
+                    <input class="login" type="text" name="login" placeholder="Логин для входа">
+                    <input class="pass" type="password" name="pass" placeholder="Пароль">
+                    <button>Войти</button>
+                </div>
+                <div id="header-block__registration">
+                    <input class="login" type="text" name="login" placeholder="Придумайте логин">
+                    <input class="pass" type="text" name="pass" placeholder="Пароль">
+                    <input class="pass" type="password" name="pass" placeholder="Повторите пароль">
+                    <input class="email" type="email" name="email" placeholder="mail">
+                    <button>Зарегистрировать</button>
+                </div>
+                <div class="header-block__menue-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                	<ul class="header-block__nav_menu">
                 	<li><a href="#"><span>HOME</span></a></li>
@@ -26,20 +50,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#"><span>BLOG</span></a></li>
-                    <li><a href="#"><span>PRODUCTS</span></a></li>
-                    <li><a href="#"><span>LOREM IPSUM</span></a></li>
-                    <li><a href="#"><span>DOLOR SIT AMET</span></a></li>
+                    <li><a href="#"><span>Header</span></a></li>
+                    <li><a href="#"><span>Main</span></a></li>
+                    <li><a href="#"><span>Section</span></a></li>
+                    <li><a href="#"><span>Footer</span></a></li>
                 </ul>
 
                 <ul class="header-block__nav-menu-480-320">
                     <li><a class="header-block__nav-menu-480-320__head-link" href="#"><span class="head-span">HOME</span></a></li>
                     <ul class="header-block__nav-menu-480-320__inner">
-                    	<li><a href="#"><span>ABOUT</span></a></li>
-                        <li><a href="#"><span>BLOG</span></a></li>
-                        <li><a href="#"><span>PRODUCTS</span></a></li>
-                        <li><a href="#"><span>LOREM IPSUM</span></a></li>
-                        <li class="header-block__nav-menu-480-320__foot-link"><a href="#"><span>DOLOR SIT AMET</span></a></li>
+                    	<li><a href="#"><span>Header</span></a></li>
+                        <li><a href="#"><span>Main</span></a></li>
+                        <li><a href="#"><span>Section</span></a></li>
+                        <li><a href="#"><span>Footer</span></a></li>
                     </ul>
                 </ul>
                 <div class="header-block__search">
@@ -48,20 +71,37 @@
 					  <button type="submit"></button>
 				  </form>
 				</div>
-                <div id="header-block__sign">
-                    <input class="login" type="text" name="login" placeholder="Логин для входа">
-                    <input class="pass" type="password" name="pass" placeholder="Пароль">
-                    <button>Войти</button>
-                </div>
-                <div id="header-block__registration">
-                    <input class="login" type="text" name="login" placeholder="Придумайте логин">
-                    <input class="pass" type="text" name="pass" placeholder="Пароль">
-                    <input class="pass" type="password" name="pass" placeholder="Повторите пароль">
-                    <input class="email" name="email" placeholder="mail">
-                    <button>Зарегистрировать</button>
+                <div class="header-block__under-logo">
+                    <img src="./img/under_header.png">
                 </div>
             </div>
 		</header>
+
+        <div class="slide_box">
+            <input type="radio" name="slides" id="point1" checked>
+            <input type="radio" name="slides" id="point2">
+            <input type="radio" name="slides" id="point3">
+            <input type="radio" name="slides" id="point4">
+            <input type="radio" name="slides" id="point5">
+            <input type="radio" name="slides" id="point6">
+    
+            <div class="slider">
+                <div class="slides img1"></div>
+                <div class="slides img2"></div>
+                <div class="slides img3"></div>
+                <div class="slides img4"></div>
+                <div class="slides img5"></div>
+                <div class="slides img6"></div>
+            </div>  
+            <div class="control">
+                <label for="point1"></label>
+                <label for="point2"></label>
+                <label for="point3"></label>
+                <label for="point4"></label>
+                <label for="point5"></label>
+                <label for="point6"></label>
+            </div>
+        </div>
 
 		<main>
             <div class="add-article">
@@ -101,7 +141,9 @@
             <div id="pagination-block"></div>
 		</main>
 
-		<footer></footer>
+		<footer>
+            
+        </footer>
 
 	</div>
     <script src="js/script.min.js"></script>
