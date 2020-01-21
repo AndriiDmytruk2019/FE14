@@ -5,7 +5,18 @@ let blogList = [
         title: 'Лучшая украинская теннисистка.',
         time: '2019-02-6 00:20:18',
         like: 0,
-        coments: [],
+        coments: [
+        {
+            id: 1,
+            user: 'Andrii',
+            page: 'Плохая статья!'
+        },
+        {
+            id: 2,
+            user: 'Serhii',
+            page: 'Все понравилось!'
+        }
+        ],
         page: 'Лучшая украинская теннисистка Элина Свитолина (№5 WTA) начала новый сезон с поражения на хардовом Премьере в Брисбене.'
     },
     {   
@@ -41,7 +52,7 @@ let blogList = [
         title: 'Смоки Мо представит «Стейкхаус»',
         time: '2019-03-31 02:20:18',
         like: 0,
-        coments: ['okm', '[;l[p]]'],
+        coments: [],
         page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
     },
     {
@@ -59,7 +70,7 @@ let blogList = [
         title: ' «Стейкхаус»',
         time: '2019-03-31 02:20:18',
         like: 0,
-        coments: ['okm'],
+        coments: [],
         page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
     }
 ];
@@ -187,6 +198,11 @@ function publickArticle() {
 };
 document.getElementById( 'push_article' ).onclick=()=>publickArticle();
 
+/*Delete coments*/
+function deleteComent(arr, num) {
+    arr.filter( el => el.number );
+}
+
 /*Filter blog*/
 function getValueSelect( id ) {
     let indexSelect = document.getElementById( id ).options.selectedIndex;
@@ -249,10 +265,19 @@ function renderList( list,el ){
         title.innerHTML = obj.title;
         page.innerText = obj.page;
         like.innerText = obj.like;
-        obj.coments.forEach(el => {
+        obj.coments.forEach( (el,i) => {
+            listComent = document.createElement( 'div' );
+            linkUser = document.createElement( 'a' );
             sentComent = document.createElement( 'p' );
-            coment.appendChild(sentComent);
-            sentComent.innerHTML = el;
+            delComent = document.createElement( 'span' );
+            delComent.className = 'coment-block__delet';
+            listComent.appendChild(linkUser);
+            listComent.appendChild(sentComent);
+            listComent.appendChild( delComent );
+            coment.appendChild( listComent );
+            linkUser.innerHTML = el.user;
+            sentComent.innerHTML = el.page;
+            delComent.innerHTML = '--';
         });
         btnComent.innerHTML = 'Прокоментировать';
         el.appendChild( new_block );
@@ -321,7 +346,12 @@ function comentator(list) {
             e.preventDefault();
             for (var i = 0; i < list.length; i++) {
                 if (Number(e.target.name) == list[i].number) {
-                    list[i]['coments'].push(article[i].value);
+                    let obj = {
+                        'id': list[i]['coments'].length,
+                        'user': 'link',
+                        'page': article[i].value
+                    }
+                    list[i]['coments'].push(obj);
                     renderList( list,result );
                     liker(list);
                     comentator(list);
@@ -349,14 +379,13 @@ function liker(list,) {
     });
 }; liker(blogList);
 
-
 /* Pagination*/
 function pagination(obj, target = 0) {
     let k = 1;
-    let pageSize = Math.ceil(obj.length/2+1);
-    let mainBlock = document.querySelector('main');
-    let pugBlock = document.getElementById( 'pagination-block' );
-    pugBlock.innerHTML = '';
+    let pageSize = Math.ceil(obj.length/2+1),
+        mainBlock = document.querySelector('main'),
+        pugBlock = document.getElementById( 'pagination-block' );
+        pugBlock.innerHTML = '';
     while(k < pageSize) {
         let pugNum = document.createElement( 'a' );
             pugNum.innerHTML = k;
@@ -365,7 +394,7 @@ function pagination(obj, target = 0) {
             k++;
     };
 
-    let arrLink = [...pugBlock.querySelectorAll('a')];console.log(arrLink)
+    let arrLink = [...pugBlock.querySelectorAll('a')];console.log(arrLink);
         arrLink.forEach( el => {
             if (target == 0) {
                 renderList( obj.slice( 0, 2 ) ,result);
@@ -374,24 +403,26 @@ function pagination(obj, target = 0) {
             };
             el.addEventListener('click', e => {
             e.preventDefault();
+            let numTrget = Number(e.target.text);
+            let a = 0;
+            let b = 0;
             for (let i = 0; i < arrLink.length; i++) {
-                console.log(Number(e.target.text)); 
-                if ( Number(e.target.text) !== 1 && Number(e.target.text)%2 == 0) {
+                if ( numTrget!== 1 && numTrget%2 == 0) {
                     pagination(obj, target = 1);
-                    renderList(obj.slice(Number(e.target.text)+1, Number(e.target.text)+3) ,result)
-                    liker(obj.slice(Number(e.target.text), Number(e.target.text)+2));
-                    comentator(obj.slice(Number(e.target.text), Number(e.target.text)+2));
-                } else if ( Number(e.target.text) == 1 ) {console.log(blogList, '2')
+                    renderList(obj.slice(numTrget+1, numTrget+3) ,result)
+                    liker(obj.slice(numTrget, numTrget+2));
+                    comentator(obj.slice(numTrget, numTrget+2));
+                } else if ( numTrget == 1 ) {console.log(blogList, '2')
                     pagination(obj, target = 1);
-                    renderList(obj.slice(Number(e.target.text)-1, Number(e.target.text)+1) ,result)
-                    liker(obj.slice(Number(e.target.text)-1, Number(e.target.text)+2));
-                    comentator(obj.slice(Number(e.target.text)-1, Number(e.target.text)+2));
+                    renderList(obj.slice(numTrget-1, numTrget+1) ,result)
+                    liker(obj.slice(numTrget-1, numTrget+2));
+                    comentator(obj.slice(numTrget-1, numTrget+2));
                 }
-                if ( Number(e.target.text) !== 1 && Number(e.target.text)%2 == 1 ) {console.log(blogList, '3')
+                if ( numTrget !== 1 && numTrget%2 == 1 ) {console.log(blogList, '3')
                     pagination(obj, target = 1);
-                    renderList(obj.slice(Number(e.target.text)+1, Number(e.target.text)+3) ,result)
-                    liker(obj.slice(Number(e.target.text), Number(e.target.text)+2));
-                    comentator(obj.slice(Number(e.target.text), Number(e.target.text)+2));
+                    renderList(obj.slice(numTrget+1, numTrget+3) ,result)
+                    liker(obj.slice(numTrget, numTrget+2));
+                    comentator(obj.slice(numTrget, numTrget+2));
                 }
             }
         });

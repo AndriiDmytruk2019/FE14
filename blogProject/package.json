@@ -31,10 +31,10 @@
     "gulp-spritesmith": "0.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-watch-sass": "^1.4.1"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   }
-},
-"babel": {
-  "presets": [
-    "latest"
-  ]
-},
+}
