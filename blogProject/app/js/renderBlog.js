@@ -1,10 +1,11 @@
 /*Render blog*/
 // const result  = document.getElementById( 'result' );
-function renderList( list,el ){
+function renderList( list, el, user ){
     el.innerHTML='';
     list.forEach(obj =>{
         let new_block = document.createElement( 'div' ),
-            time = document.createElement( 'p' )
+            time = document.createElement( 'p' ),
+            linkWriter = document.createElement( 'a' ),
             title = document.createElement( 'h2' ),
             page = document.createElement( 'p' ),
             like = document.createElement( 'span' ),
@@ -18,6 +19,7 @@ function renderList( list,el ){
         btnComent.className = 'coment-block__btn';
         forComent.name = obj.number;
         btnComent.name = obj.number;
+        new_block.appendChild(linkWriter);
         new_block.appendChild( title );
         new_block.appendChild( time );
         new_block.appendChild( page );
@@ -27,9 +29,11 @@ function renderList( list,el ){
         coment.appendChild( link );
         coment.appendChild( forComent );
         coment.appendChild( btnComent );
+        linkWriter.innerHTML = obj.userPublicated;
         time.innerHTML = obj.time;
         title.innerHTML = obj.title;
         page.innerText = obj.page;
+        link.innerHTML = user;
         like.innerText = obj.like;
         obj.coments.forEach( (el,i) => {
             listComent = document.createElement( 'div' );
@@ -44,6 +48,7 @@ function renderList( list,el ){
             linkUser.innerHTML = el.user;
             sentComent.innerHTML = el.page;
             delComent.innerHTML = 'Del';
+
         });
         btnComent.innerHTML = 'Прокоментировать';
         el.appendChild( new_block );

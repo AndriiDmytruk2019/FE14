@@ -1,5 +1,5 @@
 /*Add Coments*/
-function comentator(list) {
+function comentator( list, user) {
     let article = [...document.getElementById( 'result' )
         .getElementsByTagName( 'textarea' )];
     let comentBtn = [...document.getElementById( 'result' )
@@ -8,17 +8,21 @@ function comentator(list) {
     comentBtn.forEach( (el, index) => {
         el.addEventListener('click', e => {
             e.preventDefault();
-            for (var i = 0; i < list.length; i++) {
-                if (Number(e.target.name) == list[i].number) {
-                    let obj = {
-                        'id': list[i]['coments'].length,
-                        'user': 'link',
-                        'page': article[i].value
-                    }
-                    list[i]['coments'].push(obj);
-                    renderList( list,result );
-                    liker(list);
-                    comentator(list);
+            if (article[index].value == '') {
+                alert('Перед отправкой заполните поле коментария!')
+            } else {console.log(blogList)
+                for (var i = 0; i < list.length; i++) {
+                    if (Number(e.target.name) == list[i].number) {
+                        let obj = {
+                            'id': list[i]['coments'].length,
+                            'user': user,
+                            'page': article[i].value
+                        }
+                        list[i]['coments'].push(obj);
+                        renderList( list,result );
+                        liker(list);
+                        comentator(list, user);
+                    };
                 };
             };
         });

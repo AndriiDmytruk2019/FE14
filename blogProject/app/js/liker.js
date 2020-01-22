@@ -1,5 +1,5 @@
 /*Likes counter*/
-function liker(list,) {
+function liker(list) {
     let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
         .forEach( el => {
             el.addEventListener('click', e => {

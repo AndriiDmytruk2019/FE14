@@ -1,7 +1,7 @@
 /*Add new article*/
 function publickArticle() {
-    const
-        newTitle= document.getElementById( 'add-article__title' ),
+    const pushBtn = document.getElementById( 'push_article' ),
+        newTitle = document.getElementById( 'add-article__title' ),
         newPage = document.getElementById( 'add-article__page' ),
         selectValue = document.getElementById( 'select_heading' ),
         indexSelect = document.getElementById( 'add-article__select_heading' ).options.selectedIndex,
@@ -31,5 +31,6 @@ function publickArticle() {
 
     newTitle.value = '';
     newPage.value = '';
+    pushBtn.setAttribute('disabled', 'disabled')
 };
-document.getElementById( 'push_article' ).onclick=()=>publickArticle();
+document.getElementById( 'push_article' ).onclick = () => publickArticle();

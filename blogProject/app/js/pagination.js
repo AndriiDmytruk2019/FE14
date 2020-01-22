@@ -1,5 +1,5 @@
 /* Pagination*/
-function pagination(obj, target = 0) {
+function pagination(obj, target = 0, user) {
     let k = 1;
     let pageSize = Math.ceil(obj.length/2+1),
         mainBlock = document.querySelector('main'),
@@ -13,12 +13,12 @@ function pagination(obj, target = 0) {
             k++;
     };
 
-    let arrLink = [...pugBlock.querySelectorAll('a')];console.log(arrLink);
+    let arrLink = [...pugBlock.querySelectorAll('a')];
         arrLink.forEach( el => {
             if (target == 0) {
                 renderList( obj.slice( 0, 2 ) ,result);
                 liker(obj.slice( 0, 2 ));
-                comentator(obj.slice( 0, 2 ));
+                comentator(obj.slice( 0, 2 ), user);
             };
             el.addEventListener('click', e => {
             e.preventDefault();
@@ -30,18 +30,18 @@ function pagination(obj, target = 0) {
                     pagination(obj, target = 1);
                     renderList(obj.slice(numTrget+1, numTrget+3) ,result)
                     liker(obj.slice(numTrget, numTrget+2));
-                    comentator(obj.slice(numTrget, numTrget+2));
-                } else if ( numTrget == 1 ) {console.log(blogList, '2')
+                    comentator(obj.slice(numTrget, numTrget+2), user);
+                } else if ( numTrget == 1 ) {
                     pagination(obj, target = 1);
                     renderList(obj.slice(numTrget-1, numTrget+1) ,result)
                     liker(obj.slice(numTrget-1, numTrget+2));
-                    comentator(obj.slice(numTrget-1, numTrget+2));
+                    comentator(obj.slice(numTrget-1, numTrget+2), user);
                 }
-                if ( numTrget !== 1 && numTrget%2 == 1 ) {console.log(blogList, '3')
+                if ( numTrget !== 1 && numTrget%2 == 1 ) {
                     pagination(obj, target = 1);
                     renderList(obj.slice(numTrget+1, numTrget+3) ,result)
                     liker(obj.slice(numTrget, numTrget+2));
-                    comentator(obj.slice(numTrget, numTrget+2));
+                    comentator(obj.slice(numTrget, numTrget+2), user);
                 }
             }
         });

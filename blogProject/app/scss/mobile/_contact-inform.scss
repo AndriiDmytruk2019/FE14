@@ -6,6 +6,11 @@
     text-align: center;
   }
 
+  .contact_inform__map-responsive {
+    iframe {
+      width: 99%
+    }
+  }
   .contact_inform__tel {
     display: flex;
     justify-content: space-around;

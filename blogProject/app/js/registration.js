@@ -34,7 +34,6 @@ function registration() {
                     if (localStorage.key(i) == '') {
                         localStorage.removeItem('');
                     } 
-
                 }
                 if (boolean == false && input[1].value == input[2].value) {
                         input.forEach(el => objUser[el.className] = el.value);
@@ -52,6 +51,11 @@ function registration() {
     };regProcess(regInput);
 
     function signIn(button, input) {
+        if(localStorage.key('LogOn') !== null) {
+            let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));
+            // stateStatus(true, userFromLocal.replace(/\"/g, ""));
+            stateStatus(true, userFromLocal);
+        }
        button.onclick = () => {
             if (input[0].value !== '' && input[1].value !== '' && boolean == false) {
                 for( let i = 0; i < localStorage.length; i++) {
@@ -59,8 +63,10 @@ function registration() {
                     if (localStorage.key(i) == input[0].value & objPars == input[1].value) {
                         boolean = true;
                         alert('Вход разрешен');
+                        userLogged = localStorage.key(i);
                         signBlock.style.display = 'none';
-                        stateStatus (true)
+                        localStorage.setItem('LogOn', JSON.stringify(userLogged));
+                        stateStatus (true, userLogged);
                     }
                 }
                 if (boolean == false) {
@@ -73,6 +79,7 @@ function registration() {
                 input.forEach(el => el.value == '' ? el.placeholder = 'Заполните поле' : el.value);
             }
         }
+
     };
     signIn(signBtn, signInput);
 }; registration();

@@ -15,8 +15,10 @@
                         <img src="./img/b.png">
                     </a>
                     <div>
+                        <span class="header-block__user-name"></span>
                         <button>Вход</button>
                         <button>Регистрация</button>
+                        <button>Выйти</button>
                     </div>
                 </div>
                 <div id="header-block__sign">
@@ -57,12 +59,12 @@
                 </ul>
 
                 <ul class="header-block__nav-menu-480-320">
-                    <li><a class="header-block__nav-menu-480-320__head-link" href="#"><span class="head-span">HOME</span></a></li>
+                    <li><a class="header-block__nav-menu-480-320__head-link"><span class="head-span">HOME</span></a></li>
                     <ul class="header-block__nav-menu-480-320__inner">
                     	<li><a href="#"><span>Header</span></a></li>
                         <li><a href="#"><span>Main</span></a></li>
                         <li><a href="#"><span>Section</span></a></li>
-                        <li><a href="#"><span>Footer</span></a></li>
+                        <li><a href="#footer"><span>Footer</span></a></li>
                     </ul>
                 </ul>
                 <div class="header-block__search">
@@ -105,6 +107,8 @@
 
 		<main>
             <div class="add-article">
+                <input id="add-article__title" type="text" name="title" placeholder="Имя публикации">
+                <textarea id="add-article__page" name="page"></textarea>
                 <select id="add-article__select_heading">
                     <option>Выберите жанр</option>
                     <option>Спорт</option>
@@ -113,28 +117,26 @@
                     <option>Кухня</option>
                     <option>Музыка</option>
                 </select>
-
-                <input id="add-article__title" type="text" name="title" placeholder="Имя публикации">
-                <textarea id="add-article__page" name="page"></textarea>
                 <button id="push_article"  disabled>Опубликовать</button>
             </div>
-			<label for="select">Выбери рубрику:</label>
-            <select id="select_heading" name="select-heading" >
-                <option value="Choice 0">Выберите жанр</option>
-                <option value="Choice 1">Спорт</option>
-                <option value="Choice 2">Путешествие</option>
-                <option value="Choice 3">Новости</option>
-                <option value="Choice 4">Кухня</option>
-                <option value="Choice 5">Музыка</option>
-            </select>
+            <div class="filter-article">
+    			<label for="select">Sort by:</label>
+                <select id="select_heading" name="select-heading" >
+                    <option value="Choice 0">Выберите жанр</option>
+                    <option value="Choice 1">Спорт</option>
+                    <option value="Choice 2">Путешествие</option>
+                    <option value="Choice 3">Новости</option>
+                    <option value="Choice 4">Кухня</option>
+                    <option value="Choice 5">Музыка</option>
+                </select>
 
-            <label for="select-time">Отсортировать статьи:</label>
-            <select id="select_time" name="select-time">
-                <option value="Choice 1">Самые новые</option>
-                <option value="Choice 3">Давно написанные</option>
-                <option value="Choice 2">Популярные</option>
-                <option value="Choice 2">Непопулярные</option>
-            </select>
+                <select id="select_time" name="select-time">
+                    <option value="Choice 1">Самые новые</option>
+                    <option value="Choice 3">Давно написанные</option>
+                    <option value="Choice 2">Популярные</option>
+                    <option value="Choice 2">Непопулярные</option>
+                </select>
+            </div>
 
             <div id="result">
             </div>
