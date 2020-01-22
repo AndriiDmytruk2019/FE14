@@ -1,0 +1,25 @@
+footer {
+  background-image: url(../img/flor.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .footer__links {
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 25px 0;
+      li {
+        list-style-type: none;
+        a {
+          color: #ffffff7a;
+          &:hover {
+            text-decoration: none;
+            color: #ffffffc4;
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,105 @@
 main {
 	display: none;
+	background: #000;
+	color: $main-color;
+	button {
+	    width: 135px;
+	    height: 30px;
+	    margin-bottom: 10px;
+	    border: 0;
+	    border-radius: 4px;
+	    background-color: #282727;
+	    color: #797878;
+	    &:hover {
+	      background-color: #ffffff3b;
+	      color: #fffffff0;
+	      transition: 1s;
+	    }
+	    &:focus {
+	      border: none;
+	      outline: none;
+	 	}
+	}
+	.add-article {
+		text-align: center;
+		input[type=text]:focus,
+		textarea:focus,
+		select:focus {
+			border-bottom: .5px solid $main-color;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			outline: none;
+			background: #282727;
+			box-shadow: 0 0 10px 2px $main-color;
+		}
+		input[type="text"],
+		textarea {
+			width: 256px;
+			margin: 8px;
+			padding: 10px;
+			transition: .30s ease-in-out;
+			border: none;
+			border-bottom: .5px solid $main-color;
+			background: #000;
+			color: #fff;
+		}
+		select {
+			width: 180px;
+			padding: 10px;
+			transition: .30s ease-in-out;
+			border: none;
+			border-bottom: .5px solid $main-color;
+			background: #000;
+			color: #fff;
+		}
+	}
+	#result {
+		div {
+		   	.coment-block {
+				input[type=text]:focus,
+				textarea:focus,
+				select:focus {
+			        border-bottom: .5px solid $main-color;
+			        border-left: none;
+			        border-right: none;
+			        border-top: none;
+			        outline: none;
+			        background: #282727;
+			        box-shadow: 0 0 10px 2px $main-color;
+			    }
+			    input[type="text"],
+			    textarea {
+			        width: 256px;
+			        margin: 8px;
+			        padding: 10px;
+			        transition: .30s ease-in-out;
+			        border: none;
+			        border-bottom: .5px solid $main-color;
+			        background: #000;
+			        color: #fff;
+			    }
+			}
+		}
+	}
+	#pagination-block {
+		text-align: center;
+		padding-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		a {
+		    display: block;
+		   	border-top: 1px solid #5c00ff00;
+	    	border-bottom: 1px solid #5c00ff00;
+
+		    color: #5c00ffba;
+		    text-decoration: none;
+		    margin-left: 5px;
+		    padding: 3px;
+		    &:hover {
+			    border-top: 1px solid #5c00ffba;
+	    		border-bottom: 1px solid #5c00ffba;
+		    }
+		}
+	}
 }

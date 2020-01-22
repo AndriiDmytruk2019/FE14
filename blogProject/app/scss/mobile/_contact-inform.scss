@@ -1,0 +1,22 @@
+.contact_inform {
+  margin: 0;
+  background: #070707;
+  color: $main-color;
+  .contact_inform__inform-about-us{
+    text-align: center;
+  }
+
+  .contact_inform__tel {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    a {
+      color: #c40d0d75;
+      &:hover {
+        text-decoration: none;
+        color: #d20000;
+        transition: 1s;
+      }
+    }
+  }
+}
