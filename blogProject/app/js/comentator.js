@@ -19,8 +19,8 @@ function comentator( list, user) {
                             'page': article[i].value
                         }
                         list[i]['coments'].push(obj);
-                        renderList( list,result );
-                        liker(list);
+                        renderList( list,result, user );
+                        liker(list, user);
                         comentator(list, user);
                     };
                 };

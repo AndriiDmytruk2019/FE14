@@ -35,7 +35,7 @@ function renderList( list, el, user ){
         page.innerText = obj.page;
         link.innerHTML = user;
         like.innerText = obj.like;
-        obj.coments.forEach( (el,i) => {
+        obj.coments.forEach( (el,i) => {console.log(el)
             listComent = document.createElement( 'div' );
             linkUser = document.createElement( 'a' );
             sentComent = document.createElement( 'p' );

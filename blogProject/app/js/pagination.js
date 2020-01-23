@@ -1,6 +1,8 @@
 /* Pagination*/
-function pagination(obj, target = 0, user) {
+function pagination(obj, user) {
     let k = 1;
+    let startPag = 0;
+    let nextPag = 0;
     let pageSize = Math.ceil(obj.length/2+1),
         mainBlock = document.querySelector('main'),
         pugBlock = document.getElementById( 'pagination-block' );
@@ -8,41 +10,34 @@ function pagination(obj, target = 0, user) {
     while(k < pageSize) {
         let pugNum = document.createElement( 'a' );
             pugNum.innerHTML = k;
-            pugNum.setAttribute('href', '#')
             pugBlock.appendChild(pugNum);
             k++;
     };
+    if (startPag == 0) {
+            renderList(obj.slice(nextPag, nextPag+2) ,result, user);
+            // liker(obj.slice(nextPag, nextPag+2));
+            // comentator(obj.slice(nextPag, nextPag+2), user);
+            startPag = 1;
+            nextPag = 2;
+        }
 
     let arrLink = [...pugBlock.querySelectorAll('a')];
-        arrLink.forEach( el => {
-            if (target == 0) {
-                renderList( obj.slice( 0, 2 ) ,result);
-                liker(obj.slice( 0, 2 ));
-                comentator(obj.slice( 0, 2 ), user);
-            };
-            el.addEventListener('click', e => {
+    arrLink.forEach( el => {
+        el.addEventListener('click', e => {
+            let target = Number(e.target.text);
             e.preventDefault();
-            let numTrget = Number(e.target.text);
-            let a = 0;
-            let b = 0;
-            for (let i = 0; i < arrLink.length; i++) {
-                if ( numTrget!== 1 && numTrget%2 == 0) {
-                    pagination(obj, target = 1);
-                    renderList(obj.slice(numTrget+1, numTrget+3) ,result)
-                    liker(obj.slice(numTrget, numTrget+2));
-                    comentator(obj.slice(numTrget, numTrget+2), user);
-                } else if ( numTrget == 1 ) {
-                    pagination(obj, target = 1);
-                    renderList(obj.slice(numTrget-1, numTrget+1) ,result)
-                    liker(obj.slice(numTrget-1, numTrget+2));
-                    comentator(obj.slice(numTrget-1, numTrget+2), user);
-                }
-                if ( numTrget !== 1 && numTrget%2 == 1 ) {
-                    pagination(obj, target = 1);
-                    renderList(obj.slice(numTrget+1, numTrget+3) ,result)
-                    liker(obj.slice(numTrget, numTrget+2));
-                    comentator(obj.slice(numTrget, numTrget+2), user);
-                }
+            if (startPag < Number(e.target.text)) {
+                renderList(obj.slice(nextPag, nextPag+2), result, user);
+                liker(obj.slice(nextPag, nextPag+2), user);
+                comentator(obj.slice(nextPag, nextPag+2), user);
+                nextPag += 2;
+                startPag = Number(e.target.text);
+            } else if (startPag > Number(e.target.text)) {
+                renderList(obj.slice(nextPag-4, nextPag-2) ,result, user);
+                liker(obj.slice(nextPag-4, nextPag-2), user);
+                comentator(obj.slice(nextPag-4, nextPag-2), user);
+                nextPag -= 2;
+                startPag = Number(e.target.text);
             }
         });
     });

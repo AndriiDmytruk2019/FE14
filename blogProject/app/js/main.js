@@ -1,13 +1,12 @@
-let userLogged = 'Anonim';
 
-stateStatus();
-deleteComent();
-renderList( blogList,result, userLogged );
-comentator(blogList, userLogged);
-liker(blogList);
-pagination(blogList, userLogged);
+let userLogged = localStorage.key('LogOn') !== null ? localStorage.getItem('LogOn').replace(/\"/g, "") :'Anonim';
 
-
+// stateStatus();
+// deleteComent();
+// pagination(blogList, userLogged);
+// renderList(blogList.slice(0, 2), result, userLogged );
+// comentator(blogList, userLogged);
+// liker(blogList, userLogged);
 
 setTimeout(() => {
     const logo = document.getElementById('header-block__logo')

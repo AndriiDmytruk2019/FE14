@@ -13,7 +13,10 @@ function stateStatus (state = false, user = 'Anonim') {
     	userName.style.top = '5px';
     	userName.style.transition = '1.2s'
         main.style.display = 'block';
-        renderList( blogList, result, user );
-        comentator(blogList, user);
+        deleteComent();
+        pagination(blogList, user);
+        renderList( blogList.slice(0, 2), result, user );
+        comentator(blogList.slice(0, 2), user);
+        liker(blogList.slice(0, 2), user);
     }
 };

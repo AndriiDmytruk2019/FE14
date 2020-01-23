@@ -53,8 +53,8 @@ function registration() {
     function signIn(button, input) {
         if(localStorage.key('LogOn') !== null) {
             let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));
-            // stateStatus(true, userFromLocal.replace(/\"/g, ""));
-            stateStatus(true, userFromLocal);
+            stateStatus(true, userFromLocal.replace(/\"/g, ""));
+            // stateStatus(true, userFromLocal);
         }
        button.onclick = () => {
             if (input[0].value !== '' && input[1].value !== '' && boolean == false) {
