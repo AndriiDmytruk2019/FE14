@@ -1,5 +1,5 @@
 /*Add new article*/
-function publickArticle() {
+function publickArticle(user) {
     const pushBtn = document.getElementById( 'push_article' ),
         newTitle = document.getElementById( 'add-article__title' ),
         newPage = document.getElementById( 'add-article__page' ),
@@ -16,21 +16,21 @@ function publickArticle() {
         'page': newPage.value,
     };
     blogList.unshift(newArticle);
+    let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
-        let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
-        pagination(addInTopic, 0);
-        renderList( addInTopic,result );
-        liker(addInTopic);
-        comentator(addInTopic);
+        pagination(addInTopic, user);
+        renderList( addInTopic, result, user );
+        liker(addInTopic, user);
+        comentator(addInTopic, user);
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
-        renderList( blogList,result );
-        pagination(blogList, 0);
-        liker(blogList);
-        comentator(blogList);
+        renderList( blogList,result, user );
+        pagination(blogList, user);
+        liker(blogList.slice(0, 2), user);
+        comentator(blogList.slice(0, 2), user);
     };
 
     newTitle.value = '';
     newPage.value = '';
     pushBtn.setAttribute('disabled', 'disabled')
 };
-document.getElementById( 'push_article' ).onclick = () => publickArticle();
+document.getElementById( 'push_article' ).onclick = () => publickArticle(userLogged);

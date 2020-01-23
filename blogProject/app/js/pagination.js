@@ -15,8 +15,6 @@ function pagination(obj, user) {
     };
     if (startPag == 0) {
             renderList(obj.slice(nextPag, nextPag+2) ,result, user);
-            // liker(obj.slice(nextPag, nextPag+2));
-            // comentator(obj.slice(nextPag, nextPag+2), user);
             startPag = 1;
             nextPag = 2;
         }
