@@ -1,39 +1,32 @@
 /* Pagination*/
 function pagination(obj, user) {
-    let k = 1;
+    let i = 1;
     let startPage = 0;
-    let target;
-    let pageSize = Math.ceil(obj.length/2+1),
-        mainBlock = document.querySelector('main'),
-        pugBlock = document.getElementById( 'pagination-block' );
-        pugBlock.innerHTML = '';
-    while(k < pageSize) {
-        let pugNum = document.createElement( 'a' );
-            pugNum.innerHTML = k;
-            pugBlock.appendChild(pugNum);
-            k++;
+    let pugNum;
+    let arrLink;
+    const pageSize = Math.ceil(obj.length/2+1);
+    const mainBlock = document.querySelector('main');
+    const pugBlock = document.getElementById( 'pagination-block' );
+          pugBlock.innerHTML = '';
+
+    while( i < pageSize ) {
+        pugNum = document.createElement( 'a' );
+        pugNum.innerHTML = i;
+        pugBlock.appendChild( pugNum );
+        i++;
     };
     if (startPage == 0) {
-            renderList(obj.slice(startPage, startPage+2) ,result, user);
-            startPag = 1;
-        }
+        renderList(obj.slice(startPage, startPage+2) ,result, user);
+    }
+    arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
 
-    let arrLink = [...pugBlock.querySelectorAll('a')];
-    arrLink.forEach( el => {
-        el.addEventListener('click', e => {console.log(blogList)
-            target = Number(e.target.text);
-            startPage = Number(e.target.text);
+    arrLink.forEach( link => {
+        link.addEventListener( 'click', e => {
             e.preventDefault();
-            let reduce = startPage*2;console.log(reduce)
-            if (startPage == Number(e.target.text)) {
-                renderList(obj.slice(reduce-2, reduce), result, user);
-                liker(obj.slice(reduce-2, reduce), user);
-                comentator(obj.slice(reduce-2, reduce), user);
-            } else {
-                renderList(obj.slice(reduce+2, reduce), result, user);
-                liker(obj.slice(reduce+2, reduce), user);
-                comentator(obj.slice(reduce+2, reduce), user);
-            }
+            startPage = Number( e.target.text );
+            renderList( obj.slice( startPage*2-2, startPage*2 ), result, user );
+            liker( obj.slice( startPage*2-2, startPage*2 ), user );
+            comentator( obj.slice( startPage*2-2, startPage*2 ), user );
         });
     });
 };

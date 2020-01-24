@@ -23,6 +23,12 @@ function registration() {
         regBlock.style.display = 'none';
     }
 
+    //     if(localStorage.key('LogOn') !== null) {
+    //     let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));
+    //     // stateStatus(true, userFromLocal.replace(/\"/g, ""));
+    //     stateStatus(true, userFromLocal);
+    // } else {stateStatus(true, userLogged)}
+
     function regProcess(input) {
         regBtn.onclick = el => {
             if (input[0].value !== '' && input[1].value !== '' && input[3].value !== '' && boolean == false) {
@@ -51,11 +57,6 @@ function registration() {
     };regProcess(regInput);
 
     function signIn(button, input) {
-        if(localStorage.key('LogOn') !== null) {
-            let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));
-            stateStatus(true, userFromLocal.replace(/\"/g, ""));
-            // stateStatus(true, userFromLocal);
-        }
        button.onclick = () => {
             if (input[0].value !== '' && input[1].value !== '' && boolean == false) {
                 for( let i = 0; i < localStorage.length; i++) {

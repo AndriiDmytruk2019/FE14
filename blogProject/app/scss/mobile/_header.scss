@@ -47,8 +47,11 @@ header {
 			        outline: none;
 		        }
 		    }
-			}
+		    button:last-child {
+		        display: none;
+		    }
 		}
+	}
 		#header-block__sign {
 			display:none;
 			@include registrations-batton-header;

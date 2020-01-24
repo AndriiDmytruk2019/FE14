@@ -1,12 +1,10 @@
 
-let userLogged = localStorage.key('LogOn') !== null ? localStorage.getItem('LogOn').replace(/\"/g, "") :'Anonim';
+let userLogged = localStorage.key('LogOn') == null ? localStorage.getItem('LogOn').replace(/\"/g, "") : 'Anonim';
 
-// stateStatus();
-// deleteComent();
-// pagination(blogList, userLogged);
-// renderList(blogList.slice(0, 2), result, userLogged );
-// comentator(blogList, userLogged);
-// liker(blogList, userLogged);
+if(localStorage.getItem('LogOn') !== null) {
+    let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));
+    stateStatus(true, userFromLocal.replace(/\"/g, ""));
+};
 
 setTimeout(() => {
     const logo = document.getElementById('header-block__logo')

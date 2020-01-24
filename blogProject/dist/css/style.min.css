@@ -119,6 +119,8 @@
           header .header-block #header-block__logo div button:focus {
             border: none;
             outline: none; }
+        header .header-block #header-block__logo div button:last-child {
+          display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
@@ -643,6 +645,8 @@
           header .header-block #header-block__logo div button:focus {
             border: none;
             outline: none; }
+        header .header-block #header-block__logo div button:last-child {
+          display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
@@ -1167,6 +1171,8 @@
           header .header-block #header-block__logo div button:focus {
             border: none;
             outline: none; }
+        header .header-block #header-block__logo div button:last-child {
+          display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
