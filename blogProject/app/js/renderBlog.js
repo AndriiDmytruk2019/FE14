@@ -35,12 +35,14 @@ function renderList( list, el, user ){
         page.innerText = obj.page;
         link.innerHTML = user;
         like.innerText = obj.like;
-        obj.coments.forEach( (el,i) => {
+        obj.coments.forEach( ( el,i ) => {
             listComent = document.createElement( 'div' );
             linkUser = document.createElement( 'a' );
             sentComent = document.createElement( 'p' );
-            delComent = document.createElement( 'span' );
-            delComent.className = 'coment-block__delet';
+            delComent = document.createElement( 'p' );
+            listComent.className = 'coment-block__coment-user';
+            delComent.className = obj.number;
+            delComent.id = obj.coments[i].id;
             listComent.appendChild(linkUser);
             listComent.appendChild(sentComent);
             listComent.appendChild( delComent );

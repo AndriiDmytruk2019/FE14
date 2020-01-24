@@ -18,8 +18,8 @@ function publickArticle(user) {
     blogList.unshift(newArticle);
     let addInTopic = filterVal( getValueSelect(selectValue.id),blogList );
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
-        pagination(addInTopic, user);
         renderList( addInTopic, result, user );
+        pagination(addInTopic, user);
         liker(addInTopic, user);
         comentator(addInTopic, user);
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {

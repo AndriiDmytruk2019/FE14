@@ -15,9 +15,9 @@ header {
 				top: 10px;
 				display: block;
 				transform: rotate(-65deg);
-			 img {
-			 		height: 80px;
-			 	}
+				img {
+				 	height: 80px;
+				}
 			}
 			div {
 				margin-left: 60%;
@@ -28,30 +28,30 @@ header {
 				    font-size: 20px;
 					color: #797878;
 				}
-			button {
-		        width: 95%;
-		        height: 35px;
-		        margin-top: 18px;
-		        border: 0;
-		        border-radius: 4px;
-		        background-color: #282727;
-		        color: #797878;
-		        cursor: pointer;
-		        &:hover {
-		            background-color: #ffffff3b;
-		            color: #fffffff0;
-		            transition: 1s;
-		        }
-		        &:focus {
-			        border: none;
-			        outline: none;
-		        }
-		    }
-		    button:last-child {
-		        display: none;
-		    }
+				button {
+			        width: 95%;
+			        height: 35px;
+			        margin-top: 18px;
+			        border: 0;
+			        border-radius: 4px;
+			        background-color: #282727;
+			        color: #797878;
+			        cursor: pointer;
+			        &:hover {
+			            background-color: #ffffff3b;
+			            color: #fffffff0;
+			            transition: 1s;
+			        }
+			        &:focus {
+				        border: none;
+				        outline: none;
+			        }
+			    }
+			    button:last-child {
+			        display: none;
+			    }
+			}
 		}
-	}
 		#header-block__sign {
 			display:none;
 			@include registrations-batton-header;

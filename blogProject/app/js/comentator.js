@@ -22,6 +22,7 @@ function comentator( list, user) {
                         renderList( list,result, user );
                         liker(list, user);
                         comentator(list, user);
+                        deleteComent(list, user);
                     };
                 };
             };

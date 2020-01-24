@@ -34,7 +34,12 @@ let blogList = [
         title: 'Виды на Бали',
         time: '2019-11-28 01:20:18',
         like: 0,
-        coments: [],
+        coments: [
+        {
+            id: 0,
+            user: 'Andrii',
+            page: 'Хорошая статья'
+        }],
         page: 'Лучшее место для жини!'
     },
     {
@@ -44,7 +49,12 @@ let blogList = [
         title: 'Лучшее где я был',
         time: '2018-10-14 01:20:18',
         like: 0,
-        coments: [],
+        coments: [
+        {
+            id: 0,
+            user: 'Andrii',
+            page: 'Хорошая статья'
+        }],
         page: 'Places'
     },
     {
