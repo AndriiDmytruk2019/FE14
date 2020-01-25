@@ -78,49 +78,45 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a {
+      position: absolute;
+      left: -30%;
+      top: 10px;
+      display: block;
+      -webkit-transform: rotate(-65deg);
+          -ms-transform: rotate(-65deg);
+              transform: rotate(-65deg); }
+      header .header-block #header-block__logo a img {
+        height: 80px; }
+    header .header-block #header-block__logo div {
+      margin-left: 60%;
+      padding-top: 20px; }
+      header .header-block #header-block__logo div span {
         position: absolute;
-        left: -30%;
-        top: 10px;
-        display: block;
-        -webkit-transform: rotate(-65deg);
-            -ms-transform: rotate(-65deg);
-                transform: rotate(-65deg); }
-        header .header-block #header-block__logo a img {
-          height: 80px; }
-      header .header-block #header-block__logo div {
-        margin-left: 60%; }
-        header .header-block #header-block__logo div span {
-          position: absolute;
-          left: 40%;
-          top: 50%;
-          font-size: 20px;
-          color: #797878; }
-        header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 35px;
-          margin-top: 18px;
-          border: 0;
-          border-radius: 4px;
-          background-color: #282727;
-          color: #797878;
-          cursor: pointer; }
-          header .header-block #header-block__logo div button:hover {
-            background-color: #ffffff3b;
-            color: #fffffff0;
-            -webkit-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          header .header-block #header-block__logo div button:focus {
-            border: none;
-            outline: none; }
-        header .header-block #header-block__logo div button:last-child {
-          display: none; }
+        left: 40%;
+        top: 50%;
+        font-size: 16px;
+        color: #797878; }
+      header .header-block #header-block__logo div button {
+        width: 95%;
+        height: 35px;
+        margin-bottom: 18px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
+        header .header-block #header-block__logo div button:hover {
+          background-color: #ffffff3b;
+          color: #fffffff0;
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
+        header .header-block #header-block__logo div button:focus {
+          border: none;
+          outline: none; }
+      header .header-block #header-block__logo div button:last-child {
+        display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
@@ -496,6 +492,7 @@
         color: #fff; }
     main #result {
       width: 90%;
+      /*height: 800px;*/
       margin: 0 auto; }
       main #result div .coment-block input[type=text]:focus,
       main #result div .coment-block textarea:focus,
@@ -604,49 +601,45 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a {
+      position: absolute;
+      left: -30%;
+      top: 10px;
+      display: block;
+      -webkit-transform: rotate(-65deg);
+          -ms-transform: rotate(-65deg);
+              transform: rotate(-65deg); }
+      header .header-block #header-block__logo a img {
+        height: 80px; }
+    header .header-block #header-block__logo div {
+      margin-left: 60%;
+      padding-top: 20px; }
+      header .header-block #header-block__logo div span {
         position: absolute;
-        left: -30%;
-        top: 10px;
-        display: block;
-        -webkit-transform: rotate(-65deg);
-            -ms-transform: rotate(-65deg);
-                transform: rotate(-65deg); }
-        header .header-block #header-block__logo a img {
-          height: 80px; }
-      header .header-block #header-block__logo div {
-        margin-left: 60%; }
-        header .header-block #header-block__logo div span {
-          position: absolute;
-          left: 40%;
-          top: 50%;
-          font-size: 20px;
-          color: #797878; }
-        header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 35px;
-          margin-top: 18px;
-          border: 0;
-          border-radius: 4px;
-          background-color: #282727;
-          color: #797878;
-          cursor: pointer; }
-          header .header-block #header-block__logo div button:hover {
-            background-color: #ffffff3b;
-            color: #fffffff0;
-            -webkit-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          header .header-block #header-block__logo div button:focus {
-            border: none;
-            outline: none; }
-        header .header-block #header-block__logo div button:last-child {
-          display: none; }
+        left: 40%;
+        top: 50%;
+        font-size: 16px;
+        color: #797878; }
+      header .header-block #header-block__logo div button {
+        width: 95%;
+        height: 35px;
+        margin-bottom: 18px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
+        header .header-block #header-block__logo div button:hover {
+          background-color: #ffffff3b;
+          color: #fffffff0;
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
+        header .header-block #header-block__logo div button:focus {
+          border: none;
+          outline: none; }
+      header .header-block #header-block__logo div button:last-child {
+        display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
@@ -1022,6 +1015,7 @@
         color: #fff; }
     main #result {
       width: 90%;
+      /*height: 800px;*/
       margin: 0 auto; }
       main #result div .coment-block input[type=text]:focus,
       main #result div .coment-block textarea:focus,
@@ -1130,49 +1124,45 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a {
+      position: absolute;
+      left: -30%;
+      top: 10px;
+      display: block;
+      -webkit-transform: rotate(-65deg);
+          -ms-transform: rotate(-65deg);
+              transform: rotate(-65deg); }
+      header .header-block #header-block__logo a img {
+        height: 80px; }
+    header .header-block #header-block__logo div {
+      margin-left: 60%;
+      padding-top: 20px; }
+      header .header-block #header-block__logo div span {
         position: absolute;
-        left: -30%;
-        top: 10px;
-        display: block;
-        -webkit-transform: rotate(-65deg);
-            -ms-transform: rotate(-65deg);
-                transform: rotate(-65deg); }
-        header .header-block #header-block__logo a img {
-          height: 80px; }
-      header .header-block #header-block__logo div {
-        margin-left: 60%; }
-        header .header-block #header-block__logo div span {
-          position: absolute;
-          left: 40%;
-          top: 50%;
-          font-size: 20px;
-          color: #797878; }
-        header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 35px;
-          margin-top: 18px;
-          border: 0;
-          border-radius: 4px;
-          background-color: #282727;
-          color: #797878;
-          cursor: pointer; }
-          header .header-block #header-block__logo div button:hover {
-            background-color: #ffffff3b;
-            color: #fffffff0;
-            -webkit-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          header .header-block #header-block__logo div button:focus {
-            border: none;
-            outline: none; }
-        header .header-block #header-block__logo div button:last-child {
-          display: none; }
+        left: 40%;
+        top: 50%;
+        font-size: 16px;
+        color: #797878; }
+      header .header-block #header-block__logo div button {
+        width: 95%;
+        height: 35px;
+        margin-bottom: 18px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
+        header .header-block #header-block__logo div button:hover {
+          background-color: #ffffff3b;
+          color: #fffffff0;
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
+        header .header-block #header-block__logo div button:focus {
+          border: none;
+          outline: none; }
+      header .header-block #header-block__logo div button:last-child {
+        display: none; }
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
@@ -1548,6 +1538,7 @@
         color: #fff; }
     main #result {
       width: 90%;
+      /*height: 800px;*/
       margin: 0 auto; }
       main #result div .coment-block input[type=text]:focus,
       main #result div .coment-block textarea:focus,

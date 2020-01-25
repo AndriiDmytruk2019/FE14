@@ -1,5 +1,5 @@
 
-let userLogged = localStorage.key('LogOn') == null ? localStorage.getItem('LogOn').replace(/\"/g, "") : 'Anonim';
+let userLogged = localStorage.key('LogOn') !== null ? localStorage.getItem('LogOn').replace(/\"/g, "") : 'Anonim';
 
 if(localStorage.getItem('LogOn') !== null) {
     let userFromLocal = localStorage.getItem('LogOn', JSON.stringify(userLogged));

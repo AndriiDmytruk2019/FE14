@@ -24,10 +24,10 @@ function pagination(obj, user) {
         link.addEventListener( 'click', e => {
             e.preventDefault();
             startPage = Number( e.target.text );
-            pagination( obj.slice( startPage*2-2, startPage*2 ), user );
             renderList( obj.slice( startPage*2-2, startPage*2 ), result, user );
             liker( obj.slice( startPage*2-2, startPage*2 ), user );
             comentator( obj.slice( startPage*2-2, startPage*2 ), user );
+            deleteComent( obj.slice( startPage*2-2, startPage*2 ), user );
         });
     });
 };

@@ -8,7 +8,6 @@ header {
 		background-size: cover;
 		height: 530px;
 		#header-block__logo {
-			display: flex;
 			a {
 				position: absolute;
 				left: -30%;
@@ -21,17 +20,18 @@ header {
 			}
 			div {
 				margin-left: 60%;
+				padding-top: 20px;
 				span {
 					position: absolute;
 				    left: 40%;
 				    top: 50%;
-				    font-size: 20px;
+				    font-size: 16px;
 					color: #797878;
 				}
 				button {
 			        width: 95%;
 			        height: 35px;
-			        margin-top: 18px;
+			        margin-bottom: 18px;
 			        border: 0;
 			        border-radius: 4px;
 			        background-color: #282727;

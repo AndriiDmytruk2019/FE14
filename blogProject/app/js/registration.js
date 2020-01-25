@@ -56,6 +56,7 @@ function registration() {
                 for( let i = 0; i < localStorage.length; i++) {
                     let objPars = JSON.parse(localStorage[localStorage.key(i)])['pass'];
                     if (localStorage.key(i) == input[0].value && objPars == input[1].value) {
+                        console.log('5')
                         boolean = true;
                         alert('Вход разрешен');
                         userLogged = localStorage.key(i);

@@ -1,5 +1,5 @@
 /*Add new article*/
-function publickArticle(user) {
+function publickArticle(user) {console.log(user)
     const pushBtn = document.getElementById( 'push_article' ),
         newTitle = document.getElementById( 'add-article__title' ),
         newPage = document.getElementById( 'add-article__page' ),
@@ -8,6 +8,7 @@ function publickArticle(user) {
         select = document.getElementById( 'add-article__select_heading' );
     const newArticle = {
         'number': blogList.length,
+        'userPublicated': user,
         'topic': select.options[indexSelect].text,
         'title': newTitle.value,
         'time': new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds(),
@@ -22,11 +23,13 @@ function publickArticle(user) {
         pagination(addInTopic, user);
         liker(addInTopic, user);
         comentator(addInTopic, user);
+        deleteComent( addInTopic, user )
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result, user );
         pagination(blogList, user);
         liker(blogList.slice(0, 2), user);
         comentator(blogList.slice(0, 2), user);
+        deleteComent( blogList.slice(0, 2), user )
     };
 
     newTitle.value = '';
