@@ -20,9 +20,9 @@ function comentator( list, user) {
                         }
                         list[i]['coments'].push(obj);
                         renderList( list,result, user );
-                        liker(list, user);
-                        comentator(list, user);
-                        deleteComent(list, user);
+                        // liker(list, user);
+                        // comentator(list, user);
+                        // deleteComent(list, user);
                     };
                 };
             };

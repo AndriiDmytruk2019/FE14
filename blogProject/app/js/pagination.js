@@ -25,9 +25,9 @@ function pagination(obj, user) {
             e.preventDefault();
             startPage = Number( e.target.text );
             renderList( obj.slice( startPage*2-2, startPage*2 ), result, user );
-            liker( obj.slice( startPage*2-2, startPage*2 ), user );
-            comentator( obj.slice( startPage*2-2, startPage*2 ), user );
-            deleteComent( obj.slice( startPage*2-2, startPage*2 ), user );
+            // liker( obj.slice( startPage*2-2, startPage*2 ), user );
+            // comentator( obj.slice( startPage*2-2, startPage*2 ), user );
+            // deleteComent( obj.slice( startPage*2-2, startPage*2 ), user );
         });
     });
 };

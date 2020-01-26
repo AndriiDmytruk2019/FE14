@@ -8,8 +8,8 @@ function liker( list, user ) {
                 if (Number(el.className) == list[i].number) {
                     list[i].like++;
                     renderList( list, result, user);
-                    liker(list, user);
-                    comentator(list, user);
+                    // liker(list, user);
+                    // comentator(list, user);
                 };
             };
         });

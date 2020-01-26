@@ -21,15 +21,15 @@ function publickArticle(user) {console.log(user)
     if (newArticle['topic'] == getValueSelect(selectValue.id)) {
         renderList( addInTopic, result, user );
         pagination(addInTopic, user);
-        liker(addInTopic, user);
-        comentator(addInTopic, user);
-        deleteComent( addInTopic, user )
+        // liker(addInTopic, user);
+        // comentator(addInTopic, user);
+        // deleteComent( addInTopic, user )
     } else if (getValueSelect(selectValue.id) == 'Выберите жанр') {
         renderList( blogList,result, user );
         pagination(blogList, user);
-        liker(blogList.slice(0, 2), user);
-        comentator(blogList.slice(0, 2), user);
-        deleteComent( blogList.slice(0, 2), user )
+        // liker(blogList.slice(0, 2), user);
+        // comentator(blogList.slice(0, 2), user);
+        // deleteComent( blogList.slice(0, 2), user )
     };
 
     newTitle.value = '';

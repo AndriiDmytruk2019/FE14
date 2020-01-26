@@ -13,9 +13,9 @@ function deleteComent( arr, user ) {
             blogList[ blogIndex ].coments.splice( targetId, 1 );
             renderList( arr, result, user);
             // pagination( arr, userLogged );
-            comentator( arr, user );
-            liker( arr, user );
-            deleteComent( arr, user );
+            // comentator( arr, user );
+            // liker( arr, user );
+            // deleteComent( arr, user );
         };
     })
 }

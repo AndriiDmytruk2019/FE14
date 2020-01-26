@@ -16,9 +16,9 @@ function stateStatus (state = false, user = 'Anonim') {
         registration();
         pagination(blogList, user);
         renderList( blogList.slice(0, 2), result, user );
-        comentator(blogList.slice(0, 2), user);
-        liker(blogList.slice(0, 2), user);
-        deleteComent(blogList.slice(0, 2), user );
+        // comentator(blogList.slice(0, 2), user);
+        // liker(blogList.slice(0, 2), user);
+        // deleteComent(blogList.slice(0, 2), user );
     } else {
         userName.innerHTML = '';
         // userName.style.display = 'none';
