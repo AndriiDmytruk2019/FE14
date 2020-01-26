@@ -9,13 +9,13 @@ header {
 		height: 530px;
 		#header-block__logo {
 			a {
-				position: absolute;
-				left: -30%;
-				top: 10px;
-				display: block;
-				transform: rotate(-65deg);
 				img {
-				 	height: 80px;
+					height: 50px;
+					position: absolute;
+					left: -30%;
+					top: 230px;
+					display: block;
+					transform: rotate(-65deg);
 				}
 			}
 			div {

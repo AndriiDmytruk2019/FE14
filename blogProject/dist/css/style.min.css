@@ -78,16 +78,15 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a img {
+      height: 50px;
       position: absolute;
       left: -30%;
-      top: 10px;
+      top: 230px;
       display: block;
       -webkit-transform: rotate(-65deg);
           -ms-transform: rotate(-65deg);
               transform: rotate(-65deg); }
-      header .header-block #header-block__logo a img {
-        height: 80px; }
     header .header-block #header-block__logo div {
       margin-left: 60%;
       padding-top: 20px; }
@@ -646,16 +645,15 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a img {
+      height: 50px;
       position: absolute;
       left: -30%;
-      top: 10px;
+      top: 230px;
       display: block;
       -webkit-transform: rotate(-65deg);
           -ms-transform: rotate(-65deg);
               transform: rotate(-65deg); }
-      header .header-block #header-block__logo a img {
-        height: 80px; }
     header .header-block #header-block__logo div {
       margin-left: 60%;
       padding-top: 20px; }
@@ -1214,16 +1212,15 @@
     background-color: #000;
     background-size: cover;
     height: 530px; }
-    header .header-block #header-block__logo a {
+    header .header-block #header-block__logo a img {
+      height: 50px;
       position: absolute;
       left: -30%;
-      top: 10px;
+      top: 230px;
       display: block;
       -webkit-transform: rotate(-65deg);
           -ms-transform: rotate(-65deg);
               transform: rotate(-65deg); }
-      header .header-block #header-block__logo a img {
-        height: 80px; }
     header .header-block #header-block__logo div {
       margin-left: 60%;
       padding-top: 20px; }

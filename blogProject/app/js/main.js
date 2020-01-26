@@ -1,4 +1,3 @@
-
 let userLogged = localStorage.getItem( 'LogOn' ) !== 'null' ? localStorage.getItem( 'LogOn' ).replace( /\"/g, "" ) : 'Anonim';
 
 
@@ -9,12 +8,21 @@ if( localStorage.getItem( 'LogOn') !== 'null' ) {
     localStorage.setItem( 'LogOn', JSON.stringify( null ) );
 };
 
-setTimeout( () => {
-    const logo = [ ...document.querySelectorAll( 'div#header-block__logo > a' ) ];
-    logo[ 0 ].style.left = '5%';
-    logo[ 0 ].style.transition = '1.2s';
-    logo[ 0 ].style.transform = 'rotate( 0deg )';
-}, 1000 );
+function stateStatus ( state = false, user = 'Anonim' ) {
+    const userName = document.getElementsByClassName( 'header-block__user-name' )[ 0 ];
+    const main = document.querySelector( 'main' );
+    registeredUser( user );
+    if ( state == true ) {
+        btnHide();
+        pagination( blogList, user );
+        renderList( blogList.slice( 0, 2 ), result, user );
+    } else {
+        userName.innerHTML = '';
+        // userName.style.display = 'none';
+        main.style.display = 'none';
+    };
+};
+
 
 ( () => {
     let bol = true;
@@ -29,4 +37,4 @@ setTimeout( () => {
             bol = true;
         }
     }
-} )();
+})();
