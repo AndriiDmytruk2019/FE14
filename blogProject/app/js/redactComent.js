@@ -26,13 +26,8 @@ function editComent( obj, user ) {
 	                inputRefresh.style.display = 'none';
       				inpuCreate.style.display = 'none';
 	                renderList( obj, result, user);
-	                // comentator(arr, user);
-	                // liker(arr, user);
-	                editComent(blogList.slice(0,2), user);
             	}
             }
         };
     })
-}
-
-editComent(blogList.slice(0,2), userLogged);
+};

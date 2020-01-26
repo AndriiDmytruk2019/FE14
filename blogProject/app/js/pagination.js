@@ -1,11 +1,11 @@
 /* Pagination*/
-function pagination(obj, user) {
+function pagination( obj, user ) {
     let i = 1;
     let startPage = 0;
     let pugNum;
     let arrLink;
-    const pageSize = Math.ceil(obj.length/2+1);
-    const mainBlock = document.querySelector('main');
+    const pageSize = Math.ceil( obj.length/2+1 );
+    const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';
 
@@ -15,9 +15,9 @@ function pagination(obj, user) {
         pugBlock.appendChild( pugNum );
         i++;
     };
-    if (startPage == 0) {
-        renderList(obj.slice(startPage, startPage+2) ,result, user);
-    }
+    // if (startPage == 0) {
+    //     renderList(obj.slice(startPage, startPage+2) ,result, user);
+    // }
     arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
 
     arrLink.forEach( link => {
@@ -25,9 +25,6 @@ function pagination(obj, user) {
             e.preventDefault();
             startPage = Number( e.target.text );
             renderList( obj.slice( startPage*2-2, startPage*2 ), result, user );
-            // liker( obj.slice( startPage*2-2, startPage*2 ), user );
-            // comentator( obj.slice( startPage*2-2, startPage*2 ), user );
-            // deleteComent( obj.slice( startPage*2-2, startPage*2 ), user );
         });
     });
 };

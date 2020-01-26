@@ -1,16 +1,12 @@
 /*Likes counter*/
 function liker( list, user ) {
-    let resultBlock = [...document.getElementById( 'result' ).getElementsByTagName( 'span' )]
-        .forEach( el => {
-            el.addEventListener('click', e => {
+    let resultBlock = [ ...document.querySelectorAll( 'div#result > div.result__render-article > span' ) ]
+        .forEach( ( el, i ) => {
+            el.addEventListener( 'click', e => {
             e.preventDefault();
-            for (var i = 0; i < list.length; i++) {
-                if (Number(el.className) == list[i].number) {
-                    list[i].like++;
-                    renderList( list, result, user);
-                    // liker(list, user);
-                    // comentator(list, user);
-                };
+            if ( Number( el.className ) == list[ i ].number ) {
+                list[ i ].like++;
+                renderList( list, result, user);
             };
         });
     });

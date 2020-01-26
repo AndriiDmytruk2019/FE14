@@ -13,7 +13,6 @@ function stateStatus (state = false, user = 'Anonim') {
     	userName.style.top = '5px';
     	userName.style.transition = '1.2s'
         main.style.display = 'block';
-        registration();
         pagination(blogList, user);
         renderList( blogList.slice(0, 2), result, user );
         // comentator(blogList.slice(0, 2), user);
