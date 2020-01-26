@@ -75,11 +75,55 @@ main {
 		}
 	}
 	#result {
+		/*position: relative;
 	    width: 90%;
-	    /*height: 800px;*/
+	    height: 500px;*/
    		margin: 0 auto;
-		div {
+		.result__render-article {
+			/*height: 245px;
+			&:hover {
+				position: absolute;
+				top: 0;
+				margin: 0;
+				height: 505px;
+				border: 1px solid $main-color;
+				border-radius: 6px;
+		    	background: black;
+		    	box-shadow: 0 0 95px -10px #d2c4c4;
+		    	transition: 1s;
+		    	z-index: 3;
+	    	}
+
+    		&:hover .article {
+        		display: block;
+    		}
+    		&:hover .coment-block {
+        		display: block;
+    		}
+    		h2 {
+    			text-align: center;
+    			text-decoration: underline;
+    		}
+    		a {
+    			display: block;
+    		}
+    		.article {
+    			display: none;
+    		}
+    		span {
+    		    display: block;
+				text-align: right;
+				&:after {
+					content: '\2764';
+					dispaly: block;
+					height: 30px;
+				}
+    		}*/
+    		.time {
+    			font-size: 11px;
+    		}
 		   	.coment-block {
+		   		/*display: none;*/
 				input[type=text]:focus,
 				textarea:focus,
 				select:focus {

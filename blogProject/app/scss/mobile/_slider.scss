@@ -46,11 +46,11 @@
     transition: 1s;
   }
   .img1 { background-image: url('../img/green_mount.jpg'); }
-  .img2 { background-image: url('../img/learn-instrument.jpg'); }
+  .img2 { background-image: url('../img/city.jpg'); }
   .img3 { background-image: url('../img/travelling.jpg'); }
   .img4 { background-image: url('../img/green_mount.jpg'); }
-  .img5 { background-image: url('../img/learn-instrument.jpg'); }
-  .img6 { background-image: url('../img/travelling.jpg'); }
+  .img5 { background-image: url('../img/green.jpg'); }
+  .img6 { background-image: url('../img/mount.jpg'); }
 
   #point1:checked ~ .control label:nth-of-type(1),
   #point2:checked ~ .control label:nth-of-type(2),

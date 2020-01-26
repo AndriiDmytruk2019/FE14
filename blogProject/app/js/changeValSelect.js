@@ -2,7 +2,7 @@
 function getValueSelect( id ) {
     const indexSelect = document.getElementById( id ).options.selectedIndex;
     const select = document.getElementById( id );
-    const value = select.options[indexSelect].text;
+    const value = select.options[ indexSelect ].text;
     return value;
 };
 

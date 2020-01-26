@@ -89,5 +89,5 @@ let blogList = [
     }
 ];
 // localStorage.clear();LogOn
-localStorage.setItem('LogOn', JSON.stringify(null));
 localStorage.setItem('blogList', JSON.stringify(blogList));
+let a = JSON.parse(localStorage.getItem('blogList'));

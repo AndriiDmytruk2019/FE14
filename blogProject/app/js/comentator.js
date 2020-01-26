@@ -16,7 +16,7 @@ function comentator( list, user) {
                         let obj = {
                             'id': list[i]['coments'].length,
                             'user': user,
-                            'page': article[i].value
+                            'page': article[i].value,
                         }
                         list[i]['coments'].push(obj);
                         renderList( list,result, user );

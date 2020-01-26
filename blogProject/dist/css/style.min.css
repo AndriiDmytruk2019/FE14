@@ -381,15 +381,15 @@
     .slide_box .img1 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img2 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/city.jpg"); }
     .slide_box .img3 {
       background-image: url("../img/travelling.jpg"); }
     .slide_box .img4 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img5 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/green.jpg"); }
     .slide_box .img6 {
-      background-image: url("../img/travelling.jpg"); }
+      background-image: url("../img/mount.jpg"); }
     .slide_box #point1:checked ~ .control label:nth-of-type(1),
     .slide_box #point2:checked ~ .control label:nth-of-type(2),
     .slide_box #point3:checked ~ .control label:nth-of-type(3),
@@ -491,32 +491,77 @@
         background: #000;
         color: #fff; }
     main #result {
-      width: 90%;
-      /*height: 800px;*/
+      /*position: relative;
+	    width: 90%;
+	    height: 500px;*/
       margin: 0 auto; }
-      main #result div .coment-block input[type=text]:focus,
-      main #result div .coment-block textarea:focus,
-      main #result div .coment-block select:focus {
-        border-bottom: 0.5px solid #727272;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        outline: none;
-        background: #282727;
-        -webkit-box-shadow: 0 0 10px 2px #727272;
-                box-shadow: 0 0 10px 2px #727272; }
-      main #result div .coment-block input[type="text"],
-      main #result div .coment-block textarea {
-        width: 256px;
-        margin: 8px;
-        padding: 10px;
-        -webkit-transition: .30s ease-in-out;
-        -o-transition: .30s ease-in-out;
-        transition: .30s ease-in-out;
-        border: none;
-        border-bottom: 0.5px solid #727272;
-        background: #000;
-        color: #fff; }
+      main #result .result__render-article {
+        /*height: 245px;
+			&:hover {
+				position: absolute;
+				top: 0;
+				margin: 0;
+				height: 505px;
+				border: 1px solid $main-color;
+				border-radius: 6px;
+		    	background: black;
+		    	box-shadow: 0 0 95px -10px #d2c4c4;
+		    	transition: 1s;
+		    	z-index: 3;
+	    	}
+
+    		&:hover .article {
+        		display: block;
+    		}
+    		&:hover .coment-block {
+        		display: block;
+    		}
+    		h2 {
+    			text-align: center;
+    			text-decoration: underline;
+    		}
+    		a {
+    			display: block;
+    		}
+    		.article {
+    			display: none;
+    		}
+    		span {
+    		    display: block;
+				text-align: right;
+				&:after {
+					content: '\2764';
+					dispaly: block;
+					height: 30px;
+				}
+    		}*/ }
+        main #result .result__render-article .time {
+          font-size: 11px; }
+        main #result .result__render-article .coment-block {
+          /*display: none;*/ }
+          main #result .result__render-article .coment-block input[type=text]:focus,
+          main #result .result__render-article .coment-block textarea:focus,
+          main #result .result__render-article .coment-block select:focus {
+            border-bottom: 0.5px solid #727272;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            background: #282727;
+            -webkit-box-shadow: 0 0 10px 2px #727272;
+                    box-shadow: 0 0 10px 2px #727272; }
+          main #result .result__render-article .coment-block input[type="text"],
+          main #result .result__render-article .coment-block textarea {
+            width: 256px;
+            margin: 8px;
+            padding: 10px;
+            -webkit-transition: .30s ease-in-out;
+            -o-transition: .30s ease-in-out;
+            transition: .30s ease-in-out;
+            border: none;
+            border-bottom: 0.5px solid #727272;
+            background: #000;
+            color: #fff; }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;
@@ -904,15 +949,15 @@
     .slide_box .img1 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img2 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/city.jpg"); }
     .slide_box .img3 {
       background-image: url("../img/travelling.jpg"); }
     .slide_box .img4 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img5 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/green.jpg"); }
     .slide_box .img6 {
-      background-image: url("../img/travelling.jpg"); }
+      background-image: url("../img/mount.jpg"); }
     .slide_box #point1:checked ~ .control label:nth-of-type(1),
     .slide_box #point2:checked ~ .control label:nth-of-type(2),
     .slide_box #point3:checked ~ .control label:nth-of-type(3),
@@ -1014,32 +1059,77 @@
         background: #000;
         color: #fff; }
     main #result {
-      width: 90%;
-      /*height: 800px;*/
+      /*position: relative;
+	    width: 90%;
+	    height: 500px;*/
       margin: 0 auto; }
-      main #result div .coment-block input[type=text]:focus,
-      main #result div .coment-block textarea:focus,
-      main #result div .coment-block select:focus {
-        border-bottom: 0.5px solid #727272;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        outline: none;
-        background: #282727;
-        -webkit-box-shadow: 0 0 10px 2px #727272;
-                box-shadow: 0 0 10px 2px #727272; }
-      main #result div .coment-block input[type="text"],
-      main #result div .coment-block textarea {
-        width: 256px;
-        margin: 8px;
-        padding: 10px;
-        -webkit-transition: .30s ease-in-out;
-        -o-transition: .30s ease-in-out;
-        transition: .30s ease-in-out;
-        border: none;
-        border-bottom: 0.5px solid #727272;
-        background: #000;
-        color: #fff; }
+      main #result .result__render-article {
+        /*height: 245px;
+			&:hover {
+				position: absolute;
+				top: 0;
+				margin: 0;
+				height: 505px;
+				border: 1px solid $main-color;
+				border-radius: 6px;
+		    	background: black;
+		    	box-shadow: 0 0 95px -10px #d2c4c4;
+		    	transition: 1s;
+		    	z-index: 3;
+	    	}
+
+    		&:hover .article {
+        		display: block;
+    		}
+    		&:hover .coment-block {
+        		display: block;
+    		}
+    		h2 {
+    			text-align: center;
+    			text-decoration: underline;
+    		}
+    		a {
+    			display: block;
+    		}
+    		.article {
+    			display: none;
+    		}
+    		span {
+    		    display: block;
+				text-align: right;
+				&:after {
+					content: '\2764';
+					dispaly: block;
+					height: 30px;
+				}
+    		}*/ }
+        main #result .result__render-article .time {
+          font-size: 11px; }
+        main #result .result__render-article .coment-block {
+          /*display: none;*/ }
+          main #result .result__render-article .coment-block input[type=text]:focus,
+          main #result .result__render-article .coment-block textarea:focus,
+          main #result .result__render-article .coment-block select:focus {
+            border-bottom: 0.5px solid #727272;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            background: #282727;
+            -webkit-box-shadow: 0 0 10px 2px #727272;
+                    box-shadow: 0 0 10px 2px #727272; }
+          main #result .result__render-article .coment-block input[type="text"],
+          main #result .result__render-article .coment-block textarea {
+            width: 256px;
+            margin: 8px;
+            padding: 10px;
+            -webkit-transition: .30s ease-in-out;
+            -o-transition: .30s ease-in-out;
+            transition: .30s ease-in-out;
+            border: none;
+            border-bottom: 0.5px solid #727272;
+            background: #000;
+            color: #fff; }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1427,15 +1517,15 @@
     .slide_box .img1 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img2 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/city.jpg"); }
     .slide_box .img3 {
       background-image: url("../img/travelling.jpg"); }
     .slide_box .img4 {
       background-image: url("../img/green_mount.jpg"); }
     .slide_box .img5 {
-      background-image: url("../img/learn-instrument.jpg"); }
+      background-image: url("../img/green.jpg"); }
     .slide_box .img6 {
-      background-image: url("../img/travelling.jpg"); }
+      background-image: url("../img/mount.jpg"); }
     .slide_box #point1:checked ~ .control label:nth-of-type(1),
     .slide_box #point2:checked ~ .control label:nth-of-type(2),
     .slide_box #point3:checked ~ .control label:nth-of-type(3),
@@ -1537,32 +1627,77 @@
         background: #000;
         color: #fff; }
     main #result {
-      width: 90%;
-      /*height: 800px;*/
+      /*position: relative;
+	    width: 90%;
+	    height: 500px;*/
       margin: 0 auto; }
-      main #result div .coment-block input[type=text]:focus,
-      main #result div .coment-block textarea:focus,
-      main #result div .coment-block select:focus {
-        border-bottom: 0.5px solid #727272;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        outline: none;
-        background: #282727;
-        -webkit-box-shadow: 0 0 10px 2px #727272;
-                box-shadow: 0 0 10px 2px #727272; }
-      main #result div .coment-block input[type="text"],
-      main #result div .coment-block textarea {
-        width: 256px;
-        margin: 8px;
-        padding: 10px;
-        -webkit-transition: .30s ease-in-out;
-        -o-transition: .30s ease-in-out;
-        transition: .30s ease-in-out;
-        border: none;
-        border-bottom: 0.5px solid #727272;
-        background: #000;
-        color: #fff; }
+      main #result .result__render-article {
+        /*height: 245px;
+			&:hover {
+				position: absolute;
+				top: 0;
+				margin: 0;
+				height: 505px;
+				border: 1px solid $main-color;
+				border-radius: 6px;
+		    	background: black;
+		    	box-shadow: 0 0 95px -10px #d2c4c4;
+		    	transition: 1s;
+		    	z-index: 3;
+	    	}
+
+    		&:hover .article {
+        		display: block;
+    		}
+    		&:hover .coment-block {
+        		display: block;
+    		}
+    		h2 {
+    			text-align: center;
+    			text-decoration: underline;
+    		}
+    		a {
+    			display: block;
+    		}
+    		.article {
+    			display: none;
+    		}
+    		span {
+    		    display: block;
+				text-align: right;
+				&:after {
+					content: '\2764';
+					dispaly: block;
+					height: 30px;
+				}
+    		}*/ }
+        main #result .result__render-article .time {
+          font-size: 11px; }
+        main #result .result__render-article .coment-block {
+          /*display: none;*/ }
+          main #result .result__render-article .coment-block input[type=text]:focus,
+          main #result .result__render-article .coment-block textarea:focus,
+          main #result .result__render-article .coment-block select:focus {
+            border-bottom: 0.5px solid #727272;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            background: #282727;
+            -webkit-box-shadow: 0 0 10px 2px #727272;
+                    box-shadow: 0 0 10px 2px #727272; }
+          main #result .result__render-article .coment-block input[type="text"],
+          main #result .result__render-article .coment-block textarea {
+            width: 256px;
+            margin: 8px;
+            padding: 10px;
+            -webkit-transition: .30s ease-in-out;
+            -o-transition: .30s ease-in-out;
+            transition: .30s ease-in-out;
+            border: none;
+            border-bottom: 0.5px solid #727272;
+            background: #000;
+            color: #fff; }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;
