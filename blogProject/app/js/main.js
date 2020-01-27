@@ -31,6 +31,7 @@ function stateStatus ( state = false, user = 'Anonim' ) {
     menueBtn.onclick = function () {
         if ( bol == true ) {
             menue[ 0 ].style.display = 'block';
+            menueBtn.style.zIndex = '5';
             bol = false;
         } else {
             menue[ 0 ].style.display = 'none';

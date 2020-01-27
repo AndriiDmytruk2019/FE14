@@ -12,7 +12,6 @@ function deleteComent( arr, user ) {
             targetId = blogList[ target ].coments.findIndex( el => el.id == Number( e.target.id ) );
             blogList[ blogIndex ].coments.splice( targetId, 1 );
             renderList( arr, result, user );
-            // pagination( arr, userLogged );
         };
     });
 };
