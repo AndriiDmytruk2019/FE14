@@ -15,9 +15,9 @@ function pagination( obj, user ) {
         pugBlock.appendChild( pugNum );
         i++;
     };
-    // if (startPage == 0) {
-    //     renderList(obj.slice(startPage, startPage+2) ,result, user);
-    // }
+    if (startPage == 0) {
+        renderList(obj.slice(startPage, startPage+2) ,result, user);
+    }
     arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
 
     arrLink.forEach( link => {

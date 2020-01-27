@@ -49,6 +49,8 @@ function createComentBlock( obj, user, block ) {
             sentComent = document.createElement( 'p' );
             delComent = document.createElement( 'p' );
             listComent.className = 'coment-block__coment-user';
+            sentComent.className = obj.number;
+            sentComent.id = obj.coments[i].id;
             delComent.className = obj.number;
             delComent.id = obj.coments[i].id;
             listComent.appendChild(linkUser);
