@@ -1,32 +1,41 @@
 main {
 	background: #000;
 	color: $main-color;
-	button {
-	    width: 135px;
-	    height: 30px;
-	    margin: 10px 0;
-	    border: 0;
-	    border-radius: 4px;
-	    background-color: #282727;
-	    color: #797878;
-	    cursor: pointer;
-	    &:hover {
-	      background-color: #ffffff3b;
-	      color: #fffffff0;
-	      transition: 1s;
-	    }
-	    &:focus {
-	      border: none;
-	      outline: none;
-	 	}
-	}
+      button {
+        width: 140px;
+        margin-top: 8px;
+        height: 10px;
+        font-size: 0;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer;
+        &:hover {
+          width: 160px;
+          height: 35px;
+          font-size: 11px;
+          border-radius: 10px;
+          background-color: #ffffff3b;
+          color: #fffffff0;
+          transition: 1s;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+        }
+    }
 	.add-article {
 		text-align: center;
 		width: 90%;
+		height: 200px;
     	margin: 0 auto;
+    	padding-top: 25px;
+    	box-shadow: 0 33px 14px -14px #d2c4c4;
 		input[type=text]:focus,
 		textarea:focus,
 		select:focus {
+		    font-size: 11px;
 			border-bottom: .5px solid $main-color;
 			border-left: none;
 			border-right: none;
@@ -37,6 +46,7 @@ main {
 		}
 		input[type="text"],
 		textarea {
+		    font-size: 11px;
 			width: 90%;
 			margin: 8px;
 			padding: 10px;
@@ -47,6 +57,7 @@ main {
 			color: #fff;
 		}
 		select {
+			font-size: 11px;
 			width: 65%;
 			padding: 10px;
 			transition: .30s ease-in-out;
@@ -55,15 +66,29 @@ main {
 			background: #000;
 			color: #fff;
 		}
+	      button {
+	        width: 140px;
+	        margin-top: 8px;
+	        height: 10px;
+	        font-size: 0;
+	        border: 0;
+	        border-radius: 4px;
+	        background-color: #282727;
+	        color: #797878;
+	        cursor: pointer;
+	    }
 	}
 	.filter-article {
 		text-align: center;
-		margin: 50px 0;
+		margin: 75px 0;
 		label {
+			font-size: 16px;
 			display: block;
     		text-align: center;
 		}
 		select {
+			font-size: 11px;
+			letter-spacing: 3px;
 			width: 45%;
 			padding: 10px;
 			transition: .30s ease-in-out;
@@ -71,6 +96,9 @@ main {
 			border-bottom: .5px solid $main-color;
 			background: #000;
 			color: #fff;
+			option {
+				letter-spacing: 3px;
+			}
 		}
 	}
 	#result {

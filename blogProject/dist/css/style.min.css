@@ -429,15 +429,20 @@
     background: #000;
     color: #727272; }
     main button {
-      width: 135px;
-      height: 30px;
-      margin: 10px 0;
+      width: 140px;
+      margin-top: 8px;
+      height: 10px;
+      font-size: 0;
       border: 0;
       border-radius: 4px;
       background-color: #282727;
       color: #797878;
       cursor: pointer; }
       main button:hover {
+        width: 160px;
+        height: 35px;
+        font-size: 11px;
+        border-radius: 10px;
         background-color: #ffffff3b;
         color: #fffffff0;
         -webkit-transition: 1s;
@@ -449,10 +454,15 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      margin: 0 auto; }
+      height: 200px;
+      margin: 0 auto;
+      padding-top: 25px;
+      -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
+              box-shadow: 0 33px 14px -14px #d2c4c4; }
       main .add-article input[type=text]:focus,
       main .add-article textarea:focus,
       main .add-article select:focus {
+        font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
         border-right: none;
@@ -463,6 +473,7 @@
                 box-shadow: 0 0 10px 2px #727272; }
       main .add-article input[type="text"],
       main .add-article textarea {
+        font-size: 11px;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -474,6 +485,7 @@
         background: #000;
         color: #fff; }
       main .add-article select {
+        font-size: 11px;
         width: 65%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -483,13 +495,26 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article button {
+        width: 140px;
+        margin-top: 8px;
+        height: 10px;
+        font-size: 0;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
     main .filter-article {
       text-align: center;
-      margin: 50px 0; }
+      margin: 75px 0; }
       main .filter-article label {
+        font-size: 16px;
         display: block;
         text-align: center; }
       main .filter-article select {
+        font-size: 11px;
+        letter-spacing: 3px;
         width: 45%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -499,6 +524,8 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .filter-article select option {
+          letter-spacing: 3px; }
     main #result {
       /*position: relative;
 	    width: 90%;
@@ -1020,15 +1047,20 @@
     background: #000;
     color: #727272; }
     main button {
-      width: 135px;
-      height: 30px;
-      margin: 10px 0;
+      width: 140px;
+      margin-top: 8px;
+      height: 10px;
+      font-size: 0;
       border: 0;
       border-radius: 4px;
       background-color: #282727;
       color: #797878;
       cursor: pointer; }
       main button:hover {
+        width: 160px;
+        height: 35px;
+        font-size: 11px;
+        border-radius: 10px;
         background-color: #ffffff3b;
         color: #fffffff0;
         -webkit-transition: 1s;
@@ -1040,10 +1072,15 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      margin: 0 auto; }
+      height: 200px;
+      margin: 0 auto;
+      padding-top: 25px;
+      -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
+              box-shadow: 0 33px 14px -14px #d2c4c4; }
       main .add-article input[type=text]:focus,
       main .add-article textarea:focus,
       main .add-article select:focus {
+        font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
         border-right: none;
@@ -1054,6 +1091,7 @@
                 box-shadow: 0 0 10px 2px #727272; }
       main .add-article input[type="text"],
       main .add-article textarea {
+        font-size: 11px;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -1065,6 +1103,7 @@
         background: #000;
         color: #fff; }
       main .add-article select {
+        font-size: 11px;
         width: 65%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -1074,13 +1113,26 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article button {
+        width: 140px;
+        margin-top: 8px;
+        height: 10px;
+        font-size: 0;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
     main .filter-article {
       text-align: center;
-      margin: 50px 0; }
+      margin: 75px 0; }
       main .filter-article label {
+        font-size: 16px;
         display: block;
         text-align: center; }
       main .filter-article select {
+        font-size: 11px;
+        letter-spacing: 3px;
         width: 45%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -1090,6 +1142,8 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .filter-article select option {
+          letter-spacing: 3px; }
     main #result {
       /*position: relative;
 	    width: 90%;
@@ -1611,15 +1665,20 @@
     background: #000;
     color: #727272; }
     main button {
-      width: 135px;
-      height: 30px;
-      margin: 10px 0;
+      width: 140px;
+      margin-top: 8px;
+      height: 10px;
+      font-size: 0;
       border: 0;
       border-radius: 4px;
       background-color: #282727;
       color: #797878;
       cursor: pointer; }
       main button:hover {
+        width: 160px;
+        height: 35px;
+        font-size: 11px;
+        border-radius: 10px;
         background-color: #ffffff3b;
         color: #fffffff0;
         -webkit-transition: 1s;
@@ -1631,10 +1690,15 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      margin: 0 auto; }
+      height: 200px;
+      margin: 0 auto;
+      padding-top: 25px;
+      -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
+              box-shadow: 0 33px 14px -14px #d2c4c4; }
       main .add-article input[type=text]:focus,
       main .add-article textarea:focus,
       main .add-article select:focus {
+        font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
         border-right: none;
@@ -1645,6 +1709,7 @@
                 box-shadow: 0 0 10px 2px #727272; }
       main .add-article input[type="text"],
       main .add-article textarea {
+        font-size: 11px;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -1656,6 +1721,7 @@
         background: #000;
         color: #fff; }
       main .add-article select {
+        font-size: 11px;
         width: 65%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -1665,13 +1731,26 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article button {
+        width: 140px;
+        margin-top: 8px;
+        height: 10px;
+        font-size: 0;
+        border: 0;
+        border-radius: 4px;
+        background-color: #282727;
+        color: #797878;
+        cursor: pointer; }
     main .filter-article {
       text-align: center;
-      margin: 50px 0; }
+      margin: 75px 0; }
       main .filter-article label {
+        font-size: 16px;
         display: block;
         text-align: center; }
       main .filter-article select {
+        font-size: 11px;
+        letter-spacing: 3px;
         width: 45%;
         padding: 10px;
         -webkit-transition: .30s ease-in-out;
@@ -1681,6 +1760,8 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .filter-article select option {
+          letter-spacing: 3px; }
     main #result {
       /*position: relative;
 	    width: 90%;

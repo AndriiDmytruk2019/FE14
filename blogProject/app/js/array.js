@@ -1,3 +1,4 @@
+/*Для хардкода масива*/
 // let blogList = [
 //     {
 //         number: 0,
@@ -88,7 +89,8 @@
 //         page: 'Концерт Смоки Мо состоится 4 апреля 2020 года в «Известия Hall». Рэпер представит композиции со своего недавнего альбома «Стейкхаус», а также лучшие песни с предыдущих восьми пластинок.'
 //     }
 // ];
-// localStorage.clear();LogOn
+// localStorage.clear();
 // localStorage.setItem('LogOn', JSON.stringify('Admin'));
 // localStorage.setItem('blogList', JSON.stringify(blogList));
+
 let blogList = JSON.parse(localStorage.getItem('blogList'));

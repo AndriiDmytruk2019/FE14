@@ -20,12 +20,15 @@ function editComent( obj, user ) {
                 inputRefresh.onclick = ( e ) => {
                     target = e.target;
                     blogList.forEach( ( el, i ) => {
-                    if ( blogList[ i ].number == target.className ) {
+                    if ( blogList[ i ].number == target.className && blogList[ i ].coments[ target.id ].user == user ) {
                         blogList[ i ].coments[ target.id ].page = textCreate.value;
                         inputRefresh.style.display = 'none';
                         textCreate.style.display = 'none';
                         localStorage.setItem('blogList', JSON.stringify(blogList));
                         renderList( obj, result, user );
+                    } else {
+                        inputRefresh.style.display = 'none';
+                        textCreate.style.display = 'none';
                     };
                 });
             };

@@ -5,7 +5,10 @@ function btnActive() {
         btnPush = document.getElementById( 'push_article' ),
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
-        newTitle.onchange = (e) => console.log(e.target.value) ;
-    return newTitle !== '' && newPage !== '' ? btnPush.disabled = false : btnPush.disabled = true;
+    if (newTitle !== '' && newPage !== '') {
+        btnPush.style.height = '35px'
+        btnPush.style.fontSize = '11px'
+        btnPush.style.transition = '1s'
+    }
 };
 document.getElementById( 'add-article__select_heading' ).onchange= () => btnActive();
