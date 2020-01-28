@@ -6,6 +6,7 @@ function liker( list, user ) {
             e.preventDefault();
             if ( Number( el.className ) == list[ i ].number ) {
                 list[ i ].like++;
+                localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( list, result, user);
             };
         });

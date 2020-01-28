@@ -8,19 +8,37 @@ if( localStorage.getItem( 'LogOn') !== 'null' ) {
     localStorage.setItem( 'LogOn', JSON.stringify( null ) );
 };
 
-function stateStatus ( state = false, user = 'Anonim' ) {
+function stateStatus( state = false, user = 'Anonim' ) {
     const userName = document.getElementsByClassName( 'header-block__user-name' )[ 0 ];
     const main = document.querySelector( 'main' );
+
     registeredUser( user );
     if ( state == true ) {
         btnHide();
         pagination( blogList, user );
         renderList( blogList.slice( 0, 2 ), result, user );
     } else {
-        userName.innerHTML = '';
         main.style.display = 'none';
+        userName.innerHTML = '';
     };
 };
+
+
+// async function stateStatus( state = false, user = 'Anonim' ) {
+//     let newArr = JSON.parse(localStorage.getItem('blogList'));
+//     const userName = document.getElementsByClassName( 'header-block__user-name' )[ 0 ];
+//     const main = document.querySelector( 'main' );
+//     registeredUser( user );
+
+//     if ( state == true ) {
+//         btnHide();
+//         pagination( blogList, user );
+//         renderList( blogList.slice( 0, 2 ), result, user );
+//     } else {
+//         main.style.display = 'none';
+//         userName.innerHTML = '';
+//     } await newArr ;
+// };
 
 
 ( () => {

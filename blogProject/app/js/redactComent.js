@@ -24,6 +24,7 @@ function editComent( obj, user ) {
                         blogList[ i ].coments[ target.id ].page = textCreate.value;
                         inputRefresh.style.display = 'none';
                         textCreate.style.display = 'none';
+                        localStorage.setItem('blogList', JSON.stringify(blogList));
                         renderList( obj, result, user );
                     };
                 });

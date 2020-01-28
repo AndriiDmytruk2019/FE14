@@ -18,6 +18,7 @@ function publickArticle( user ) {
         'page': newPage.value,
     };
     blogList.unshift( newArticle );
+    localStorage.setItem('blogList', JSON.stringify(blogList));
     if ( newArticle[ 'topic' ] == getValueSelect( selectValue.id ) ) {
         renderList( addInTopic, result, user );
         pagination( addInTopic, user );

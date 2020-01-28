@@ -17,6 +17,7 @@ function comentator( list, user) {
                     'page': article[ i ].value,
                 }
                 list[ i ][ 'coments' ].push( obj );
+                localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( list, result, user );
             };
         });

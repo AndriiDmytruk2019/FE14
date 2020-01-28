@@ -1,6 +1,7 @@
 function regProcess( input, btn ) {
     const objUser = {};
     let boolean = false;
+    let newUser;
     const regBlock = document.getElementById( 'header-block__registration' );
     btn.onclick = el => {
         if ( input[ 0 ].value !== '' && input[ 1 ].value !== '' && input[ 3 ].value !== '' && boolean == false ) {
@@ -13,10 +14,13 @@ function regProcess( input, btn ) {
                 } 
             };
             if ( boolean == false && input[ 1 ].value == input[ 2 ].value ) {
+                newUser = input[ 0 ].value;
                 input.forEach( el => objUser[ el.className ] = el.value );
-                localStorage.setItem( input[ 0 ].value, JSON.stringify( objUser ) );
+                localStorage.setItem( newUser, JSON.stringify( objUser ) );
                 alert( 'You have successfully registered!' );
                 regBlock.style.display = 'none';
+                localStorage.setItem( 'LogOn', JSON.stringify( newUser ) );
+                stateStatus( true, newUser );
             } else if ( input[ 1 ].value !== input[ 2 ].value ){
                 alert( 'Password fields do not match' );
             }
