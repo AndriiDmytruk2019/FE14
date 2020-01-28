@@ -2,8 +2,8 @@ let blogList = [
     {
         number: 0,
         userPublicated: 'Andrii Dmytruk',
-        topic: 'Спорт',
-        title: 'Лучшая украинская теннисистка.',
+        topic: 'Sport',
+        title: 'America mourns Kobe Bryant after death in helicopter crash.',
         time: '2019-02-6 00:20:18',
         like: 0,
         coments: [{
@@ -16,7 +16,7 @@ let blogList = [
     {   
         number: 1,
         userPublicated: 'Oleg Dmytruk',
-        topic: 'Спорт',
+        topic: 'Sport',
         title: 'МЧМ по хоккею.',
         time: '2019-12-21 00:20:18',
         like: 0,
@@ -30,7 +30,7 @@ let blogList = [
     {
         number: 2,
         userPublicated: 'Anonim',
-        topic: 'Путешествие',
+        topic: 'Travelling',
         title: 'Виды на Бали',
         time: '2019-11-28 01:20:18',
         like: 0,
@@ -45,7 +45,7 @@ let blogList = [
     {
         number: 3,
         userPublicated: 'Leonid',
-        topic: 'Путешествие',
+        topic: 'Travelling',
         title: 'Лучшее где я был',
         time: '2018-10-14 01:20:18',
         like: 0,
@@ -60,7 +60,7 @@ let blogList = [
     {
         number: 4,
         userPublicated: 'Albert Petrov',
-        topic: 'Музыка',
+        topic: 'Music',
         title: 'Смоки Мо представит «Стейкхаус»',
         time: '2019-03-31 02:20:18',
         like: 0,
@@ -70,7 +70,7 @@ let blogList = [
         {
         number: 5,
         userPublicated: 'Leonid',
-        topic: 'Путешествие',
+        topic: 'Travelling',
         title: 'Л',
         time: '2018-10-14 01:20:18',
         like: 0,
@@ -80,7 +80,7 @@ let blogList = [
     {
         number: 6,
         userPublicated: 'Albert Petrov',
-        topic: 'Музыка',
+        topic: 'Music',
         title: 'С»',
         time: '2019-03-31 02:20:18',
         like: 0,

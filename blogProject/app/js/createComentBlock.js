@@ -36,7 +36,7 @@ function createBlogBlock( list, el, user ) {
         page.innerText = obj.page;
         link.innerHTML = user;
         like.innerText = obj.like;
-        btnComent.innerHTML = 'Прокоментировать';
+        btnComent.innerHTML = 'To comment';
         el.appendChild( new_block );
         createComentBlock( obj, user, coment )
     });

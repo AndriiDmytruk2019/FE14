@@ -21,7 +21,7 @@ function publickArticle( user ) {
     if ( newArticle[ 'topic' ] == getValueSelect( selectValue.id ) ) {
         renderList( addInTopic, result, user );
         pagination( addInTopic, user );
-    } else if ( getValueSelect( selectValue.id ) == 'Выберите жанр' ) {
+    } else if ( getValueSelect( selectValue.id ) == 'Select topic' ) {
         renderList( blogList,result, user );
         pagination( blogList, user );
     };

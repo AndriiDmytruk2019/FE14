@@ -18,7 +18,6 @@ function stateStatus ( state = false, user = 'Anonim' ) {
         renderList( blogList.slice( 0, 2 ), result, user );
     } else {
         userName.innerHTML = '';
-        // userName.style.display = 'none';
         main.style.display = 'none';
     };
 };

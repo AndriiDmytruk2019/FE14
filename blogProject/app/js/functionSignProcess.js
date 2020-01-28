@@ -14,13 +14,13 @@ function signIn( button, input, signBlock, regBlock ) {
                 }
             }
             if ( boolean == false ) {
-                alert('Пользователь не зарегистрирован')
+                alert('User not registered(')
                 regBlock.style.display = 'block';
                 signBlock.style.display = 'none';
             }
             input.forEach( el => el.value = '' );
         } else {
-            input.forEach( el => el.value == '' ? el.placeholder = 'Заполните поле' : el.value );
+            input.forEach( el => el.value == '' ? el.placeholder = 'Fill field' : el.value );
         }
     }
 };

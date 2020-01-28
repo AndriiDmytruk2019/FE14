@@ -123,7 +123,8 @@
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
-      header .header-block #header-block__sign input[type=text]:focus {
+      header .header-block #header-block__sign input[type=text]:focus,
+      header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -182,7 +183,8 @@
     header .header-block #header-block__registration {
       display: none;
       text-align: center; }
-      header .header-block #header-block__registration input[type=text]:focus {
+      header .header-block #header-block__registration input[type=text]:focus,
+      header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -279,7 +281,7 @@
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131d9; }
+      background: #523131ed; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -570,6 +572,19 @@
             border-bottom: 0.5px solid #727272;
             background: #000;
             color: #fff; }
+          main #result .result__render-article .coment-block .coment-block__coment-user {
+            /*textarea {
+			    		position: absolute;
+					    top: 27px;
+					    left: 0;
+					    margin: 0;
+					    padding: 1px 0 0;
+			    	}
+			    	button {
+			    		position: absolute;
+					    left: 0;
+					    top: 58px;
+			    	}*/ }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;
@@ -700,7 +715,8 @@
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
-      header .header-block #header-block__sign input[type=text]:focus {
+      header .header-block #header-block__sign input[type=text]:focus,
+      header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -759,7 +775,8 @@
     header .header-block #header-block__registration {
       display: none;
       text-align: center; }
-      header .header-block #header-block__registration input[type=text]:focus {
+      header .header-block #header-block__registration input[type=text]:focus,
+      header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -856,7 +873,7 @@
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131d9; }
+      background: #523131ed; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -1147,6 +1164,19 @@
             border-bottom: 0.5px solid #727272;
             background: #000;
             color: #fff; }
+          main #result .result__render-article .coment-block .coment-block__coment-user {
+            /*textarea {
+			    		position: absolute;
+					    top: 27px;
+					    left: 0;
+					    margin: 0;
+					    padding: 1px 0 0;
+			    	}
+			    	button {
+			    		position: absolute;
+					    left: 0;
+					    top: 58px;
+			    	}*/ }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1277,7 +1307,8 @@
     header .header-block #header-block__sign {
       display: none;
       text-align: center; }
-      header .header-block #header-block__sign input[type=text]:focus {
+      header .header-block #header-block__sign input[type=text]:focus,
+      header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -1336,7 +1367,8 @@
     header .header-block #header-block__registration {
       display: none;
       text-align: center; }
-      header .header-block #header-block__registration input[type=text]:focus {
+      header .header-block #header-block__registration input[type=text]:focus,
+      header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
         border-bottom: 0.5px solid #727272;
         border-left: none;
@@ -1433,7 +1465,7 @@
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131d9; }
+      background: #523131ed; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -1724,6 +1756,19 @@
             border-bottom: 0.5px solid #727272;
             background: #000;
             color: #fff; }
+          main #result .result__render-article .coment-block .coment-block__coment-user {
+            /*textarea {
+			    		position: absolute;
+					    top: 27px;
+					    left: 0;
+					    margin: 0;
+					    padding: 1px 0 0;
+			    	}
+			    	button {
+			    		position: absolute;
+					    left: 0;
+					    top: 58px;
+			    	}*/ }
     main #pagination-block {
       display: -webkit-box;
       display: -webkit-flex;

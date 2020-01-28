@@ -7,7 +7,7 @@ function regProcess( input, btn ) {
             for( let i = 0; i < localStorage.length; i++ ) {
                 if ( localStorage.key( i ) == input[ 0 ].value ) {
                     boolean = true;
-                    alert( 'Вы уже зарегистрированы' );
+                    alert( 'You are already registered!' );
                 } else if ( localStorage.key( i ) == '' ) {
                     localStorage.removeItem( '' );
                 } 
@@ -15,14 +15,14 @@ function regProcess( input, btn ) {
             if ( boolean == false && input[ 1 ].value == input[ 2 ].value ) {
                 input.forEach( el => objUser[ el.className ] = el.value );
                 localStorage.setItem( input[ 0 ].value, JSON.stringify( objUser ) );
-                alert( 'Вы успешно зарегистрированы!' );
+                alert( 'You have successfully registered!' );
                 regBlock.style.display = 'none';
             } else if ( input[ 1 ].value !== input[ 2 ].value ){
-                alert( 'Поля паролей не совпадают' );
+                alert( 'Password fields do not match' );
             }
             input.forEach( el => el.value = '' );
         } else {
-            input.forEach( el => el.value == '' ? el.placeholder = 'Некоректное заполнение' : el.value );
+            input.forEach( el => el.value == '' ? el.placeholder = 'Incorrect filling' : el.value );
         };
     };
 };

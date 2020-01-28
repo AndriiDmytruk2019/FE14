@@ -9,7 +9,7 @@ function comentator( list, user) {
             e.preventDefault();
             let target = Number(e.target.name);
             if ( article[ i ].value == '' ) {
-                alert( 'Перед отправкой заполните поле коментария!' )
+                alert( 'Before sending, fill in the comment field!' )
             } else if (  target  == list[ i ].number ) {
                 obj = {
                     'id': list[ i ][ 'coments' ].length,
