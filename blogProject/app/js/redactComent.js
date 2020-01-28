@@ -2,7 +2,7 @@
 function editComent( obj, user ) {
     const createElements = [ ...document.querySelectorAll( 'div.coment-block__coment-user' ) ];
     const innerElements = [ ...document.querySelectorAll( '.coment-block__coment-user > p:nth-child(2)' ) ];
-    const pageClass = [ ...document.querySelectorAll( '.coment-block__coment-user > p:last-child' ) ];
+    const pageClass = [ ...document.querySelectorAll( '.coment-block__coment-user > span:last-child' ) ];
     let inputRefresh;
     let textCreate;
     let target;

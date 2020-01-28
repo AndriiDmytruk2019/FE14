@@ -1,6 +1,6 @@
 /*Likes counter*/
 function liker( list, user ) {
-    let resultBlock = [ ...document.querySelectorAll( 'div#result > div.result__render-article > span' ) ]
+    let resultBlock = [ ...document.querySelectorAll( 'div#result > div.result__render-article > .article-block > span' ) ]
         .forEach( ( el, i ) => {
             el.addEventListener( 'click', e => {
             e.preventDefault();

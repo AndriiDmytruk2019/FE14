@@ -9,6 +9,7 @@ function logOff() {
         btnLogoBlock[ 1 ].style.display = 'block';
         localStorage.setItem( 'LogOn', JSON.stringify( null ) );
         stateStatus( false );
+        registration();
     }
 };
 logOff();

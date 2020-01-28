@@ -12,24 +12,26 @@ function createBlogBlock( list, el, user ) {
         link = document.createElement( 'a' ),
         forComent = document.createElement( 'textarea' ),
         btnComent = document.createElement( 'button' );
-        new_block.className = 'result__render-article'
+        new_block.className = 'result__render-article';
         time.className = 'time'
         like.className = obj.number;
         page.className = 'article'
         coment.className = 'coment-block';
         btnComent.className = 'coment-block__btn';
+        sentBlock.className = 'article-block'
         forComent.name = obj.number;
         btnComent.name = obj.number;
-        new_block.appendChild( title );
-        new_block.appendChild(linkWriter);
-        new_block.appendChild( time );
-        new_block.appendChild( page );
-        new_block.appendChild( like );
+        sentBlock.appendChild( title );
+        sentBlock.appendChild(linkWriter);
+        sentBlock.appendChild( time );
+        sentBlock.appendChild( page );
+        sentBlock.appendChild( like );
         new_block.appendChild( sentBlock );
         new_block.appendChild( coment );
         coment.appendChild( link );
         coment.appendChild( forComent );
         coment.appendChild( btnComent );
+        forComent.placeholder = 'Coment please ...'
         linkWriter.innerHTML = obj.userPublicated;
         time.innerHTML = obj.time;
         title.innerHTML = obj.title;
@@ -46,20 +48,23 @@ function createComentBlock( obj, user, block ) {
     obj.coments.forEach( ( el,i ) => {
             listComent = document.createElement( 'div' );
             linkUser = document.createElement( 'a' );
+            timeComent = document.createElement( 'span' );
             sentComent = document.createElement( 'p' );
-            delComent = document.createElement( 'p' );
+            delComent = document.createElement( 'span' );
             listComent.className = 'coment-block__coment-user';
             sentComent.className = obj.number;
             sentComent.id = obj.coments[i].id;
             delComent.className = obj.number;
             delComent.id = obj.coments[i].id;
             listComent.appendChild(linkUser);
+            listComent.appendChild(timeComent);
             listComent.appendChild(sentComent);
             listComent.appendChild( delComent );
             block.appendChild( listComent );
+            timeComent.innerText = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
             linkUser.innerHTML = el.user;
             sentComent.innerHTML = el.page;
-            delComent.innerHTML = 'Del';
+            delComent.innerHTML = 'Delete';
 
     });
 };
