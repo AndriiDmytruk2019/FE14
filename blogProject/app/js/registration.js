@@ -1,5 +1,4 @@
 /*Registration*/
-// localStorage.clear();
 function registration() {
     const logoBtn = [ ...document.querySelectorAll( 'div#header-block__logo > div > button' ) ];
     const regBlock = document.getElementById( 'header-block__registration' );
