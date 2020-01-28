@@ -88,9 +88,9 @@ main {
 		}
 		select {
 			font-size: 11px;
-			letter-spacing: 3px;
-			width: 45%;
-			padding: 10px;
+			letter-spacing: 5px;
+			width: 40%;
+			padding: 8px;
 			transition: .30s ease-in-out;
 			border: none;
 			border-bottom: .5px solid $main-color;
@@ -103,8 +103,9 @@ main {
 	}
 	#result {
 	    width: 90%;
-	    height: 800px;
+	    height: 1200px;
    		margin: 0 auto;
+   		box-shadow: 0 -33px 14px -14px #d2c4c4;
 		.result__render-article {
 			h2 {
 				color: #3bb6ee59;
@@ -129,6 +130,7 @@ main {
     			}*/
     		}
 		   	.coment-block {
+		   		margin-top: 45px;
 				input[type=text]:focus,
 				textarea:focus,
 				select:focus {
@@ -142,8 +144,8 @@ main {
 			    }
 			    input[type="text"],
 			    textarea {
-			        width: 256px;
-			        margin: 8px;
+			        width: 200px;
+			        margin: 10px 0 0 15px;
 			        padding: 10px;
 			        transition: .30s ease-in-out;
 			        border: none;
@@ -152,18 +154,12 @@ main {
 			        color: #fff;
 			    }
 			    .coment-block__coment-user {
-			    	/*textarea {
-			    		position: absolute;
-					    top: 27px;
-					    left: 0;
-					    margin: 0;
-					    padding: 1px 0 0;
-			    	}
-			    	button {
-			    		position: absolute;
-					    left: 0;
-					    top: 58px;
-			    	}*/
+			    	height: 200px;
+    				overflow: hidden;
+    				span {
+    					text-align: right;
+    					display: block;
+    				}
 			    }
 			}
 		}
