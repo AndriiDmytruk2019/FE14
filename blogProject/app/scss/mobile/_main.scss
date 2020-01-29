@@ -120,6 +120,8 @@ main {
 	    			font-size: 11px;
 	    		}
 	    		.article {
+	    			padding-top: 10px;
+   			    	border-top: 1px solid $main-color;
 	    			height: 100px;
 	    			margin-bottom: 0;
 	    			overflow: hidden;
@@ -127,9 +129,9 @@ main {
 	    		span {
 	    			display: block;
 	    			text-align: right;
-				    margin-bottom: 10px;
+				    margin: 10px 0 20px;
 	    			&:after {
-	    				content: '\2764';	
+	    				content: '\2764';
 	    				margin-left: 3px;
 	    			}
 	    		}
@@ -176,10 +178,11 @@ main {
 					    border-bottom: 1px solid;
     				}
     				span {
+    					display: block;
     					margin-right: 10px;
     					font-size: 10px;
     					text-align: right;
-    					display: block;
+    					cursor: pointer;
     				}
     				textarea {
 						position: absolute;
@@ -209,8 +212,7 @@ main {
 		    display: block;
 		   	border-top: 1px solid #5c00ff00;
 	    	border-bottom: 1px solid #5c00ff00;
-
-		    color: #5c00ffba;
+		    color: #2196f366;
 		    text-decoration: none;
 		    margin-left: 5px;
 		    padding: 3px;

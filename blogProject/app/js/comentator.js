@@ -21,6 +21,7 @@ function comentator( list, user) {
                 localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( list, result, user );
                 document.querySelector( '.coment-block' ).style.display = 'block';
+                document.querySelector( 'p.article' ).style.height = '100%';
             };
         });
     });

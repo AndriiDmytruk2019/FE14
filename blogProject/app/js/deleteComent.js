@@ -15,6 +15,7 @@ function deleteComent( arr, user ) {
                 localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( arr, result, user );
                 document.querySelector( '.coment-block' ).style.display = 'block';
+                document.querySelector( 'p.article' ).style.height = '100%';
             } else {
                 alert('You cannot delete someone else’s comment!')
             };

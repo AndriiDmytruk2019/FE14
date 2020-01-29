@@ -4,7 +4,7 @@ function pagination( obj, user ) {
     let startPage = 0;
     let pugNum;
     let arrLink;
-    const pageSize = Math.ceil( obj.length/5+1 );console.log(pageSize)
+    const pageSize = Math.ceil( obj.length/5+1 );
     const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';

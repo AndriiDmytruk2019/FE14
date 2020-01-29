@@ -9,6 +9,7 @@ function openArticle( list, elements, user ) {
             pagination( selectArticle, user );
             renderList( selectArticle, result, user);
             document.querySelector( '.coment-block' ).style.display = 'block';
+            document.querySelector( 'p.article' ).style.height = '100%';
         };
     })
 };
