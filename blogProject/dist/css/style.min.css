@@ -528,7 +528,7 @@
           letter-spacing: 3px; }
     main #result {
       width: 90%;
-      height: 1200px;
+      height: 100%;
       margin: 0 auto;
       -webkit-box-shadow: 0 -20px 14px -17px #d2c4c4;
               box-shadow: 0 -20px 14px -17px #d2c4c4; }
@@ -561,8 +561,7 @@
             content: '\2764';
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
-          height: 295px;
-          overflow: hidden; }
+          display: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -609,15 +608,15 @@
               display: block; }
             main #result .result__render-article .coment-block .coment-block__coment-user textarea {
               position: absolute;
-              top: 12px;
+              top: 23px;
               left: 0;
               margin-left: 0;
               padding-top: 0;
               border: 0; }
             main #result .result__render-article .coment-block .coment-block__coment-user button {
               position: absolute;
-              top: 55px;
-              right: 0;
+              top: 62px;
+              right: 35px;
               margin-left: 0; }
     main #pagination-block {
       display: -webkit-box;
@@ -1156,7 +1155,7 @@
           letter-spacing: 3px; }
     main #result {
       width: 90%;
-      height: 1200px;
+      height: 100%;
       margin: 0 auto;
       -webkit-box-shadow: 0 -20px 14px -17px #d2c4c4;
               box-shadow: 0 -20px 14px -17px #d2c4c4; }
@@ -1189,8 +1188,7 @@
             content: '\2764';
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
-          height: 295px;
-          overflow: hidden; }
+          display: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -1237,15 +1235,15 @@
               display: block; }
             main #result .result__render-article .coment-block .coment-block__coment-user textarea {
               position: absolute;
-              top: 12px;
+              top: 23px;
               left: 0;
               margin-left: 0;
               padding-top: 0;
               border: 0; }
             main #result .result__render-article .coment-block .coment-block__coment-user button {
               position: absolute;
-              top: 55px;
-              right: 0;
+              top: 62px;
+              right: 35px;
               margin-left: 0; }
     main #pagination-block {
       display: -webkit-box;
@@ -1784,7 +1782,7 @@
           letter-spacing: 3px; }
     main #result {
       width: 90%;
-      height: 1200px;
+      height: 100%;
       margin: 0 auto;
       -webkit-box-shadow: 0 -20px 14px -17px #d2c4c4;
               box-shadow: 0 -20px 14px -17px #d2c4c4; }
@@ -1817,8 +1815,7 @@
             content: '\2764';
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
-          height: 295px;
-          overflow: hidden; }
+          display: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -1865,15 +1862,15 @@
               display: block; }
             main #result .result__render-article .coment-block .coment-block__coment-user textarea {
               position: absolute;
-              top: 12px;
+              top: 23px;
               left: 0;
               margin-left: 0;
               padding-top: 0;
               border: 0; }
             main #result .result__render-article .coment-block .coment-block__coment-user button {
               position: absolute;
-              top: 55px;
-              right: 0;
+              top: 62px;
+              right: 35px;
               margin-left: 0; }
     main #pagination-block {
       display: -webkit-box;

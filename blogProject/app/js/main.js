@@ -10,13 +10,14 @@ if( localStorage.getItem( 'LogOn') !== 'null' ) {
 
 function stateStatus( state = false, user = 'Anonim' ) {
     const userName = document.getElementsByClassName( 'header-block__user-name' )[ 0 ];
+    const articleArr = [ ...document.querySelectorAll( 'div' ) ];
     const main = document.querySelector( 'main' );
 
     registeredUser( user );
     if ( state == true ) {
         btnHide();
         pagination( blogList, user );
-        renderList( blogList.slice( 0, 2 ), result, user );
+        renderList( blogList.slice( 0, 5 ), result, user );
     } else {
         main.style.display = 'none';
         userName.innerHTML = '';

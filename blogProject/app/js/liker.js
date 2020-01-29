@@ -8,6 +8,7 @@ function liker( list, user ) {
                 list[ i ].like++;
                 localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( list, result, user);
+                document.querySelector( '.coment-block' ).style.display = 'block';
             };
         });
     });

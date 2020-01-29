@@ -103,7 +103,7 @@ main {
 	}
 	#result {
 	    width: 90%;
-	    height: 1200px;
+	    height: 100%;
    		margin: 0 auto;
    		box-shadow: 0 -20px 14px -17px #d2c4c4;
 		.result__render-article {
@@ -142,8 +142,7 @@ main {
 	    		}
     		}
 		   	.coment-block {
-				height: 295px;
-				overflow: hidden;
+		   		display: none;
 				input[type=text]:focus,
 				textarea:focus,
 				select:focus {
@@ -191,7 +190,7 @@ main {
     				}
     				textarea {
 						position: absolute;
-					    top: 12px;
+					    top: 23px;
 					    left: 0;
 					    margin-left: 0;
 					    padding-top: 0;
@@ -199,8 +198,8 @@ main {
     				}
     				button {
 						position: absolute;
-					    top: 55px;
-					    right: 0;
+					    top: 62px;
+					    right: 35px;
 					    margin-left: 0;
     				}
 			    }

@@ -3,6 +3,7 @@ function deleteComent( arr, user ) {
     const delElements = [ ...document.querySelectorAll( 'div.coment-block__coment-user > span:last-child' ) ];
     let target,
         blogIndex,
+        comentBlock,
         targetId;
 
     delElements.forEach( (el, i) => {
@@ -13,6 +14,7 @@ function deleteComent( arr, user ) {
             blogList[ blogIndex ].coments.splice( targetId, 1 );
             localStorage.setItem('blogList', JSON.stringify(blogList));
             renderList( arr, result, user );
+            comentBlock = document.querySelector( '.coment-block' ).style.display = 'block';
         };
     });
 };

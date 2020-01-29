@@ -13,6 +13,7 @@ function createBlogBlock( list, el, user ) {
         forComent = document.createElement( 'textarea' ),
         btnComent = document.createElement( 'button' );
         new_block.className = 'result__render-article';
+        title.className = obj.number;
         time.className = 'time'
         like.className = obj.number;
         page.className = 'article'

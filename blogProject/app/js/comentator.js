@@ -19,6 +19,7 @@ function comentator( list, user) {
                 list[ i ][ 'coments' ].push( obj );
                 localStorage.setItem('blogList', JSON.stringify(blogList));
                 renderList( list, result, user );
+                document.querySelector( '.coment-block' ).style.display = 'block';
             };
         });
     });

@@ -4,7 +4,7 @@ function pagination( obj, user ) {
     let startPage = 0;
     let pugNum;
     let arrLink;
-    const pageSize = Math.ceil( obj.length/2+1 );
+    const pageSize = Math.ceil( obj.length/5+1 );
     const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';
@@ -24,7 +24,7 @@ function pagination( obj, user ) {
         link.addEventListener( 'click', e => {
             e.preventDefault();
             startPage = Number( e.target.text );
-            renderList( obj.slice( startPage*2-2, startPage*2 ), result, user );
+            renderList( obj.slice( startPage*5-5, startPage*5 ), result, user );
         });
     });
 };
