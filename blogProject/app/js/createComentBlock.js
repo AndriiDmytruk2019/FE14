@@ -62,7 +62,7 @@ function createComentBlock( obj, user, block ) {
             listComent.appendChild(sentComent);
             listComent.appendChild( delComent );
             block.appendChild( listComent );
-            timeComent.innerText = new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds();
+            timeComent.innerHTML = obj.coments[i].timePublic;
             linkUser.innerHTML = el.user;
             sentComent.innerHTML = el.page;
             delComent.innerHTML = 'Delete';

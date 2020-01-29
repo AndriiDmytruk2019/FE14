@@ -47,6 +47,7 @@ main {
 		input[type="text"],
 		textarea {
 		    font-size: 11px;
+		    letter-spacing: 10px;
 			width: 90%;
 			margin: 8px;
 			padding: 10px;
@@ -58,6 +59,7 @@ main {
 		}
 		select {
 			font-size: 11px;
+			letter-spacing: 10px;
 			width: 65%;
 			padding: 10px;
 			transition: .30s ease-in-out;
@@ -108,9 +110,11 @@ main {
    		box-shadow: 0 -20px 14px -17px #d2c4c4;
 		.result__render-article {
 			padding-top: 10px;
+			box-shadow: 0 -20px 14px -17px #d2c4c4;
 			.article-block {
 				h2 {
 					color: #3bb6ee59;
+					cursor: pointer;
 				}
 			    .time {
 	    			font-size: 11px;
@@ -119,22 +123,11 @@ main {
 	    			height: 100px;
 	    			margin-bottom: 0;
 	    			overflow: hidden;
-	    			/*&:hover {
-						position: absolute;
-						top: 0;
-						margin: 0;
-						height: 100%;
-						border: 1px solid $main-color;
-						border-radius: 6px;
-					   	background: black;
-					   	box-shadow: 0 0 95px -10px #d2c4c4;
-					   	transition: 1s;
-					   	z-index: 3;
-	    			}*/
 	    		}
 	    		span {
+	    			display: block;
 	    			text-align: right;
-				    display: block;
+				    margin-bottom: 10px;
 	    			&:after {
 	    				content: '\2764';	
 	    				margin-left: 3px;
@@ -170,8 +163,7 @@ main {
 			    	position: relative;
 				    box-shadow: 0 -16px 23px -18px #d2c4c4;
 				    margin-top: 30px;
-				    width: 95%;
-    				overflow: hidden;
+    				height: 125px;
     				a {
     					display: block;
 					    margin-top: 6px;
@@ -184,13 +176,15 @@ main {
 					    border-bottom: 1px solid;
     				}
     				span {
+    					margin-right: 10px;
     					font-size: 10px;
     					text-align: right;
     					display: block;
     				}
     				textarea {
 						position: absolute;
-					    top: 23px;
+						width: 94%;
+					    top: 17px;
 					    left: 0;
 					    margin-left: 0;
 					    padding-top: 0;
@@ -199,7 +193,7 @@ main {
     				button {
 						position: absolute;
 					    top: 62px;
-					    right: 35px;
+					    right: 50px;
 					    margin-left: 0;
     				}
 			    }

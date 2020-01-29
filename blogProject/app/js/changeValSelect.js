@@ -11,7 +11,7 @@ function selectHeading() {
         e.preventDefault();
         new_arr_heading = filterVal( getValueSelect( e.target.id ), blogList );
         if ( getValueSelect( e.target.id ) == 'Select topic') {
-            renderList( blogList.slice( 0, 2 ), result, userLogged );
+            renderList( blogList.slice( 0, 5 ), result, userLogged );
             pagination( blogList, userLogged );
         } else {
             renderList( new_arr_heading, result, userLogged );

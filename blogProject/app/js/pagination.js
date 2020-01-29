@@ -4,20 +4,23 @@ function pagination( obj, user ) {
     let startPage = 0;
     let pugNum;
     let arrLink;
-    const pageSize = Math.ceil( obj.length/5+1 );
+    const pageSize = Math.ceil( obj.length/5+1 );console.log(pageSize)
     const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';
-
-    while( i < pageSize ) {
-        pugNum = document.createElement( 'a' );
-        pugNum.innerHTML = i;
-        pugBlock.appendChild( pugNum );
-        i++;
+    if ( obj.length > 5 ) {
+        while( i < pageSize ) {
+            pugNum = document.createElement( 'a' );
+            pugNum.innerHTML = i;
+            pugBlock.appendChild( pugNum );
+            i++;
+        };
     };
+
     if (startPage == 0) {
-        renderList(obj.slice(startPage, startPage+2) ,result, user);
-    }
+        renderList(obj.slice(startPage, startPage+5) ,result, user);
+    };
+
     arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
 
     arrLink.forEach( link => {
