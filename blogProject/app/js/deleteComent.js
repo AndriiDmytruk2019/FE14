@@ -1,5 +1,5 @@
 /*Delete coments*/
-function deleteComent( arr, user ) {
+function deleteComent( arr, user, state ) {
     const delElements = [ ...document.querySelectorAll( 'div.coment-block__coment-user > span:last-child' ) ];
     let target,
         blogIndex,
@@ -13,7 +13,7 @@ function deleteComent( arr, user ) {
             if ( blogList[ blogIndex ].coments[ targetId ].user == user ) {
                 blogList[ blogIndex ].coments.splice( targetId, 1 );
                 localStorage.setItem('blogList', JSON.stringify(blogList));
-                renderList( arr, result, user, true );
+                renderList( arr, result, user, state );
             } else {
                 alert('You cannot delete someone else’s comment!')
             };

@@ -5,7 +5,7 @@ function pagination( obj, user ) {
     let pugNum;
     let arrLink;
     const pageSize = Math.ceil( obj.length/5+1 );
-    const mainBlock = document.querySelector( 'main' );
+    // const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';
     if ( obj.length > 5 ) {
@@ -18,7 +18,7 @@ function pagination( obj, user ) {
     };
 
     if (startPage == 0) {
-        renderList(obj.slice(startPage, startPage+5) ,result, false);
+        renderList(obj.slice(startPage, startPage+5), result, user);
     };
 
     arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
@@ -27,7 +27,7 @@ function pagination( obj, user ) {
         link.addEventListener( 'click', e => {
             e.preventDefault();
             startPage = Number( e.target.text );
-            renderList( obj.slice( startPage*5-5, startPage*5 ), result, user, false );
+            renderList( obj.slice( startPage*5-5, startPage*5 ), result, user);
         });
     });
 };

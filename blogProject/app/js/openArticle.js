@@ -1,6 +1,6 @@
 /*Open article*/
 function openArticle( list, elements, user ) {
-    elements.forEach( (el,i) => {
+    elements.forEach( el => {
         el.onclick = (e) => {
             e.preventDefault();
             let selectArticle = list.filter( el => { 

@@ -21,7 +21,7 @@ function editComent( obj, user ) {
                     target = Number( e.target.className );
                     blogIndex = blogList.findIndex( el => el.number == target );
                     targetId = blogList[ blogIndex ].coments.findIndex( el => el.id == Number( e.target.id ) );
-                    // blogList.forEach( ( el, i ) => {
+                    blogList.forEach( ( el, i ) => {
                     if ( blogList[ blogIndex ].number == target && blogList[ blogIndex ].coments[ targetId ].user == user ) {
                         blogList[ blogIndex ].coments[ targetId ].page = textCreate.value;
                         inputRefresh.style.display = 'none';
@@ -29,11 +29,11 @@ function editComent( obj, user ) {
                         localStorage.setItem('blogList', JSON.stringify(blogList));
                         renderList( obj, result, user, true );
                     } else {
-                        alert('You cannot edit someone else’s comment!')
+                        // alert('You cannot edit someone else’s comment!')
                         inputRefresh.style.display = 'none';
                         textCreate.style.display = 'none';
                     };
-                // });
+                });
             };
         };
     });

@@ -7,8 +7,8 @@ function renderList( list, el, user, stateArt ) {
     arrArticle = [ ...document.querySelectorAll( '.article-block > h2' ) ];
     openArticle( list, arrArticle, user );
     liker( list, user, stateArt );
-   	comentator( list, user );
-    deleteComent( list, user );
+   	comentator( list, user, stateArt );
+    deleteComent( list, user, stateArt );
     editComent( list, user );
     articleState( stateArt );
 };

@@ -5,7 +5,7 @@ function signIn( button, input, signBlock, regBlock ) {
         if ( input[ 0 ].value !== '' && input[ 1 ].value !== '' && boolean == false ) {
             for( let i = 0; i < localStorage.length; i++ ) {
                 objPars = JSON.parse( localStorage[ localStorage.key( i ) ] );
-                if ( localStorage.key( i ) == input[ 0 ].value && objPars.pass == input[ 1 ].value ||  objPars.email == input[ 0 ].value ) {
+                if ( localStorage.key( i ) == input[ 0 ].value && objPars.pass == input[ 1 ].value ) {
                     boolean = true;
                     userLogged = localStorage.key( i );
                     signBlock.style.display = 'none';

@@ -1,5 +1,5 @@
 /*Add Coments*/
-function comentator( list, user ) {
+function comentator( list, user, state ) {
     let article = [ ...document.querySelectorAll( 'div.coment-block > textarea' ) ];
     let comentBtn = [ ...document.querySelectorAll( 'button.coment-block__btn' ) ];
     let obj;
@@ -19,7 +19,7 @@ function comentator( list, user ) {
                 }
                 list[ i ][ 'coments' ].push( obj );
                 localStorage.setItem('blogList', JSON.stringify(blogList));
-                renderList( list, result, user, true );
+                renderList( list, result, user, state );
             };
         });
     });
