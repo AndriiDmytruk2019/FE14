@@ -475,6 +475,7 @@
       main .add-article input[type="text"],
       main .add-article textarea {
         font-size: 11px;
+        font-weight: bold;
         letter-spacing: 10px;
         width: 90%;
         margin: 8px;
@@ -542,18 +543,21 @@
         main #result .result__render-article .article-block h2 {
           color: #3bb6ee59;
           cursor: pointer; }
+          main #result .result__render-article .article-block h2:hover {
+            text-decoration: underline; }
         main #result .result__render-article .article-block .time {
           font-size: 11px; }
         main #result .result__render-article .article-block .article {
           padding-top: 10px;
           border-top: 1px solid #727272;
-          height: 100px;
+          height: 90px;
           margin-bottom: 0;
           overflow: hidden; }
         main #result .result__render-article .article-block span {
           display: block;
           text-align: right;
-          margin: 10px 0 20px; }
+          margin: 10px 0 20px;
+          cursor: pointer; }
           main #result .result__render-article .article-block span:after {
             content: '\2764';
             margin-left: 3px; }
@@ -1101,6 +1105,7 @@
       main .add-article input[type="text"],
       main .add-article textarea {
         font-size: 11px;
+        font-weight: bold;
         letter-spacing: 10px;
         width: 90%;
         margin: 8px;
@@ -1168,18 +1173,21 @@
         main #result .result__render-article .article-block h2 {
           color: #3bb6ee59;
           cursor: pointer; }
+          main #result .result__render-article .article-block h2:hover {
+            text-decoration: underline; }
         main #result .result__render-article .article-block .time {
           font-size: 11px; }
         main #result .result__render-article .article-block .article {
           padding-top: 10px;
           border-top: 1px solid #727272;
-          height: 100px;
+          height: 90px;
           margin-bottom: 0;
           overflow: hidden; }
         main #result .result__render-article .article-block span {
           display: block;
           text-align: right;
-          margin: 10px 0 20px; }
+          margin: 10px 0 20px;
+          cursor: pointer; }
           main #result .result__render-article .article-block span:after {
             content: '\2764';
             margin-left: 3px; }
@@ -1727,6 +1735,7 @@
       main .add-article input[type="text"],
       main .add-article textarea {
         font-size: 11px;
+        font-weight: bold;
         letter-spacing: 10px;
         width: 90%;
         margin: 8px;
@@ -1794,18 +1803,21 @@
         main #result .result__render-article .article-block h2 {
           color: #3bb6ee59;
           cursor: pointer; }
+          main #result .result__render-article .article-block h2:hover {
+            text-decoration: underline; }
         main #result .result__render-article .article-block .time {
           font-size: 11px; }
         main #result .result__render-article .article-block .article {
           padding-top: 10px;
           border-top: 1px solid #727272;
-          height: 100px;
+          height: 90px;
           margin-bottom: 0;
           overflow: hidden; }
         main #result .result__render-article .article-block span {
           display: block;
           text-align: right;
-          margin: 10px 0 20px; }
+          margin: 10px 0 20px;
+          cursor: pointer; }
           main #result .result__render-article .article-block span:after {
             content: '\2764';
             margin-left: 3px; }

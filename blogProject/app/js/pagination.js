@@ -18,7 +18,7 @@ function pagination( obj, user ) {
     };
 
     if (startPage == 0) {
-        renderList(obj.slice(startPage, startPage+5) ,result, user);
+        renderList(obj.slice(startPage, startPage+5) ,result, false);
     };
 
     arrLink = [ ...pugBlock.querySelectorAll( 'a' ) ];
@@ -27,7 +27,7 @@ function pagination( obj, user ) {
         link.addEventListener( 'click', e => {
             e.preventDefault();
             startPage = Number( e.target.text );
-            renderList( obj.slice( startPage*5-5, startPage*5 ), result, user );
+            renderList( obj.slice( startPage*5-5, startPage*5 ), result, user, false );
         });
     });
 };

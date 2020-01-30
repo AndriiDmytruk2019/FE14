@@ -27,9 +27,7 @@ function editComent( obj, user ) {
                         inputRefresh.style.display = 'none';
                         textCreate.style.display = 'none';
                         localStorage.setItem('blogList', JSON.stringify(blogList));
-                        renderList( obj, result, user );
-                        document.querySelector( '.coment-block' ).style.display = 'block';
-                        document.querySelector( 'p.article' ).style.height = '100%';
+                        renderList( obj, result, user, true );
                     } else {
                         alert('You cannot edit someone else’s comment!')
                         inputRefresh.style.display = 'none';

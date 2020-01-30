@@ -8,16 +8,15 @@ if( localStorage.getItem( 'LogOn') !== 'null' ) {
     localStorage.setItem( 'LogOn', JSON.stringify( null ) );
 };
 
-function stateStatus( state = false, user = 'Anonim' ) {
+function stateStatus( state = false, user = 'Anonim', stateArticleOpen = false ) {
     const userName = document.getElementsByClassName( 'header-block__user-name' )[ 0 ];
     const articleArr = [ ...document.querySelectorAll( 'div' ) ];
     const main = document.querySelector( 'main' );
-
     registeredUser( user );
     if ( state == true ) {
         btnHide();
         pagination( blogList, user );
-        renderList( blogList.slice( 0, 5 ), result, user );
+        renderList( blogList.slice( 0, 5 ), result, user, stateArticleOpen );
     } else {
         main.style.display = 'none';
         userName.innerHTML = '';

@@ -13,9 +13,7 @@ function deleteComent( arr, user ) {
             if ( blogList[ blogIndex ].coments[ targetId ].user == user ) {
                 blogList[ blogIndex ].coments.splice( targetId, 1 );
                 localStorage.setItem('blogList', JSON.stringify(blogList));
-                renderList( arr, result, user );
-                document.querySelector( '.coment-block' ).style.display = 'block';
-                document.querySelector( 'p.article' ).style.height = '100%';
+                renderList( arr, result, user, true );
             } else {
                 alert('You cannot delete someone else’s comment!')
             };
