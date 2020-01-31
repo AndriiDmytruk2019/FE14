@@ -13,12 +13,11 @@ function selectHeading( user, state ) {
         if ( getValueSelect( e.target.id ) == 'Select topic') {
             renderList( blogList.slice( 0, 5 ), result, user, state );
             pagination( blogList, user );
-        } else {
+        } else if ( getValueSelect( e.target.id ) == 'Show all' ) {
+            renderList( blogList, result, user, state );
+        } else if (getValueSelect( e.target.id ) !== 'Select topic') {
             renderList( new_arr_heading, result, user, state);
             pagination( new_arr_heading, user );
-        };
-        if ( getValueSelect( e.target.id ) == 'Show all' ) {
-            renderList( blogList, result, user, state );
         };
     });
 };

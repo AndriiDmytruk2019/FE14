@@ -1,0 +1,82 @@
+main {
+	.add-article {
+		input[type="text"],
+		textarea {
+			width: 65%;
+		}
+		select {
+			width: 67%;
+		}
+	    button {
+	        width: 35%;
+	        margin-top: 8px;
+	        height: 10px;
+	        font-size: 0;
+	        border: 0;
+	        border-radius: 4px;
+	        background-color: #282727;
+	        color: #797878;
+	        cursor: pointer;
+	    }
+	}
+	.filter-article {
+		label {
+			font-size: 16px;
+			display: block;
+    		text-align: center;
+		}
+		select {
+			font-size: 11px;
+			letter-spacing: 5px;
+			width: 30%;
+			padding: 8px;
+			transition: .30s ease-in-out;
+			border: none;
+			border-bottom: .5px solid $main-color;
+			background: #000;
+			color: #fff;
+			option {
+				letter-spacing: 3px;
+			}
+		}
+	}
+	#result {
+	    width: 90%;
+	    height: 100%;
+   		margin: 0 auto;
+   		box-shadow: 0 -20px 14px -17px #d2c4c4;
+		.result__render-article {
+			padding-top: 10px;
+			box-shadow: 0 -20px 14px -17px #d2c4c4;
+			.article-block {
+				h2 {
+					color: #3bb6ee59;
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			    .time {
+	    			font-size: 11px;
+	    		}
+	    		.article {
+	    			padding-top: 10px;
+   			    	border-top: 1px solid $main-color;
+	    			height: 90px;
+	    			margin-bottom: 0;
+	    			overflow: hidden;
+	    		}
+	    		span {
+	    			display: block;
+	    			text-align: right;
+				    margin: 10px 0 20px;
+				    cursor: pointer;
+	    			&:after {
+	    				content: '\2764';
+	    				margin-left: 3px;
+	    			}
+	    		}
+    		}
+		}
+	}
+}

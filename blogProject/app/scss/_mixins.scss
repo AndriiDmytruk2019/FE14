@@ -1,5 +1,8 @@
 @mixin registrations-batton-header {
-      text-align: center;
+      flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      align-items: center;
       input[type=text]:focus,
       input[type=email]:focus {
         font-size: 11px;
@@ -14,7 +17,7 @@
       input[type="text"],
       input[type="password"],
       input[type="email"] {
-          width: 256px;
+          width: 90%;
           margin: 8px;
           padding: 10px;
           font-size: 11px;
@@ -23,6 +26,9 @@
           border-bottom: .5px solid $main-color;
           background: #000;
           color: #fff;
+          &::placeholder {
+            letter-spacing: 7px;      
+        }
       }
 
       input[type="password"]:focus,
@@ -37,8 +43,8 @@
       button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;

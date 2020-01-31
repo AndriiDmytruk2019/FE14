@@ -1,10 +1,13 @@
 .contact_inform {
-  height: 90vh;
+  height: 100%;;
   margin: 0;
   background: #070707;
   color: $main-color;
   .contact_inform__inform-about-us{
     text-align: center;
+    h2 {
+        border-bottom: 1px solid #c40d0d75;
+    }
   }
 
   .contact_inform__map-responsive {

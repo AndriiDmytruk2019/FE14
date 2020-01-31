@@ -1,0 +1,38 @@
+main {
+	.filter-article {
+		.header-block__search{
+			display: block;
+			    margin-top: 40px;
+			form {
+				position: relative;
+				width: 35%;
+				margin: 0 auto;
+				input {
+				    font-size: 11px;
+				    font-weight: bold;
+				    resize: none;
+					width: 90%;
+					margin: 8px;
+					padding: 10px;
+					transition: .30s ease-in-out;
+					border: none;
+					border-bottom: .5px solid #03a9f4d1;
+					background: #000;
+					color: #fff;
+					&::placeholder {
+					   letter-spacing: 10px;  	
+					}
+					&:focus{
+			        border-bottom: .5px solid $main-color;
+			        border-left: none;
+			        border-right: none;
+			        border-top: none;
+			        outline: none;
+			        background: #282727;
+			        box-shadow: 0 0 10px 2px $main-color;
+			    	}
+				}		
+			}
+		}
+	}
+}

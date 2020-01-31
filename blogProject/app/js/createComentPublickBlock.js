@@ -5,6 +5,7 @@ function createBlogBlock( list, el, user ) {
         time = document.createElement( 'p' ),
         linkWriter = document.createElement( 'a' ),
         title = document.createElement( 'h2' ),
+        image = document.createElement( 'img' ),
         page = document.createElement( 'p' ),
         like = document.createElement( 'span' ),
         sentBlock = document.createElement( 'div' ),
@@ -14,15 +15,17 @@ function createBlogBlock( list, el, user ) {
         btnComent = document.createElement( 'button' );
         new_block.className = 'result__render-article';
         title.className = obj.number;
-        time.className = 'time'
+        image.setAttribute( 'src', obj.image);
+        time.className = 'time';
         like.className = obj.number;
-        page.className = 'article'
+        page.className = 'article';
         coment.className = 'coment-block';
         btnComent.className = 'coment-block__btn';
-        sentBlock.className = 'article-block'
+        sentBlock.className = 'article-block';
         forComent.name = obj.number;
         btnComent.name = obj.number;
         sentBlock.appendChild( title );
+        sentBlock.appendChild( image )
         sentBlock.appendChild(linkWriter);
         sentBlock.appendChild( time );
         sentBlock.appendChild( page );

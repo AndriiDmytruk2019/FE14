@@ -70,15 +70,17 @@
   font-weight: 500;
   src: url(../fonts/Roboto-Medium.woff2) format("woff2"); }
 
-@media (min-width: 320px) and (max-width: 375px) {
+@media (min-width: 320px) {
   body {
     margin: 0; }
   header .header-block {
+    position: relative;
     background-color: #000;
     background-size: cover;
     height: 100vh; }
     header .header-block #header-block__logo {
-      height: 110px; }
+      height: 110px;
+      padding-top: 10px; }
       header .header-block #header-block__logo a img {
         height: 60px;
         position: absolute;
@@ -97,11 +99,12 @@
           left: 110%;
           font-size: 14px;
           font-weight: bold;
+          letter-spacing: 5px;
           color: #797878; }
         header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 10px;
-          font-size: 0;
+          width: 90%;
+          height: 15px;
+          font-size: 5px;
           margin-bottom: 10px;
           border: 0;
           border-radius: 4px;
@@ -123,7 +126,17 @@
           display: none; }
     header .header-block #header-block__sign {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__sign input[type=text]:focus,
       header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
@@ -138,7 +151,7 @@
       header .header-block #header-block__sign input[type="text"],
       header .header-block #header-block__sign input[type="password"],
       header .header-block #header-block__sign input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -149,6 +162,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__sign input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-moz-placeholder, header .header-block #header-block__sign input[type="password"]::-moz-placeholder, header .header-block #header-block__sign input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::placeholder,
+        header .header-block #header-block__sign input[type="password"]::placeholder,
+        header .header-block #header-block__sign input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__sign input[type="password"]:focus,
       header .header-block #header-block__sign input[type="email"]:focus {
         font-size: 11px;
@@ -161,8 +186,8 @@
       header .header-block #header-block__sign button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -183,7 +208,17 @@
           outline: none; }
     header .header-block #header-block__registration {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__registration input[type=text]:focus,
       header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
@@ -198,7 +233,7 @@
       header .header-block #header-block__registration input[type="text"],
       header .header-block #header-block__registration input[type="password"],
       header .header-block #header-block__registration input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -209,6 +244,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__registration input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-moz-placeholder, header .header-block #header-block__registration input[type="password"]::-moz-placeholder, header .header-block #header-block__registration input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::placeholder,
+        header .header-block #header-block__registration input[type="password"]::placeholder,
+        header .header-block #header-block__registration input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__registration input[type="password"]:focus,
       header .header-block #header-block__registration input[type="email"]:focus {
         font-size: 11px;
@@ -221,8 +268,8 @@
       header .header-block #header-block__registration button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -278,11 +325,12 @@
       width: 100%;
       height: 100%;
       display: none;
-      padding: 130px 0;
+      padding: 0;
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131ed; }
+      background: #523131ed;
+      z-index: 2; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -290,6 +338,7 @@
         list-style-type: none;
         height: 60px;
         margin: 0 auto;
+        padding-top: 100px;
         width: 140px; }
         header .header-block .header-block__nav-menu-480-320 li:hover {
           width: 200px;
@@ -306,36 +355,6 @@
             padding-bottom: 3px;
             border-bottom: 2px solid;
             letter-spacing: 5px; }
-    header .header-block .header-block__search {
-      display: none; }
-      header .header-block .header-block__search form {
-        position: relative;
-        width: 230px;
-        margin: 0 auto; }
-        header .header-block .header-block__search form input {
-          width: 100%;
-          height: 30px;
-          padding-left: 10px;
-          border: 2px solid #7BA7AB;
-          border-radius: 5px;
-          outline: none;
-          background: #F9F0DA;
-          color: #9E9C9C; }
-        header .header-block .header-block__search form button {
-          position: absolute;
-          right: 0;
-          width: 30px;
-          height: 30px;
-          border: none;
-          background: #7BA7AB;
-          border-radius: 0 5px 5px 0;
-          cursor: pointer; }
-          header .header-block .header-block__search form button:before {
-            background: url("../img/search-icon.png") no-repeat;
-            content: "";
-            height: 20px;
-            display: block;
-            background-size: 16px; }
   header .header-block__under-logo {
     position: absolute;
     bottom: 5px;
@@ -429,30 +448,6 @@
   main {
     background: #000;
     color: #727272; }
-    main button {
-      width: 140px;
-      margin-top: 8px;
-      margin-left: 140px;
-      height: 10px;
-      font-size: 0;
-      border: 0;
-      border-radius: 4px;
-      background-color: #282727;
-      color: #797878;
-      cursor: pointer; }
-      main button:hover {
-        width: 160px;
-        height: 35px;
-        font-size: 11px;
-        border-radius: 10px;
-        background-color: #ffffff3b;
-        color: #fffffff0;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      main button:focus {
-        border: none;
-        outline: none; }
     main .add-article {
       text-align: center;
       width: 90%;
@@ -477,7 +472,7 @@
       main .add-article textarea {
         font-size: 11px;
         font-weight: bold;
-        letter-spacing: 10px;
+        resize: none;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -488,6 +483,17 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .add-article input[type="text"]::-webkit-input-placeholder, main .add-article textarea::-webkit-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-moz-placeholder, main .add-article textarea::-moz-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]:-ms-input-placeholder, main .add-article textarea:-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-ms-input-placeholder, main .add-article textarea::-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::placeholder,
+        main .add-article textarea::placeholder {
+          letter-spacing: 10px; }
       main .add-article select {
         font-size: 11px;
         letter-spacing: 10px;
@@ -501,7 +507,7 @@
         background: #000;
         color: #fff; }
       main .add-article button {
-        width: 140px;
+        width: 35%;
         margin-top: 8px;
         height: 10px;
         font-size: 0;
@@ -531,6 +537,8 @@
         color: #fff; }
         main .filter-article select option {
           letter-spacing: 3px; }
+      main .filter-article .header-block__search {
+        display: none; }
     main #result {
       width: 90%;
       height: 100%;
@@ -564,6 +572,29 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block button {
+            width: 35%;
+            margin-top: 8px;
+            margin-left: 62%;
+            height: 15px;
+            font-size: 5px;
+            border: 0;
+            border-radius: 4px;
+            background-color: #282727;
+            color: #797878;
+            cursor: pointer; }
+            main #result .result__render-article .coment-block button:hover {
+              height: 35px;
+              font-size: 11px;
+              border-radius: 10px;
+              background-color: #ffffff3b;
+              color: #fffffff0;
+              -webkit-transition: 1s;
+              -o-transition: 1s;
+              transition: 1s; }
+            main #result .result__render-article .coment-block button:focus {
+              border: none;
+              outline: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -577,7 +608,7 @@
                     box-shadow: 0 0 10px 2px #727272; }
           main #result .result__render-article .coment-block input[type="text"],
           main #result .result__render-article .coment-block textarea {
-            width: 200px;
+            width: 97%;
             margin: 10px 0 0 15px;
             padding: 10px;
             padding-bottom: 0;
@@ -587,7 +618,8 @@
             border: none;
             border-bottom: 0.5px solid #727272;
             background: #000;
-            color: #fff; }
+            color: #fff;
+            resize: none; }
           main #result .result__render-article .coment-block .coment-block__coment-user {
             position: relative;
             -webkit-box-shadow: 0 -16px 23px -18px #d2c4c4;
@@ -650,12 +682,14 @@
           border-top: 1px solid #5c00ffba;
           border-bottom: 1px solid #5c00ffba; }
   .contact_inform {
-    height: 90vh;
+    height: 100%;
     margin: 0;
     background: #070707;
     color: #727272; }
     .contact_inform .contact_inform__inform-about-us {
       text-align: center; }
+      .contact_inform .contact_inform__inform-about-us h2 {
+        border-bottom: 1px solid #c40d0d75; }
     .contact_inform .contact_inform__map-responsive iframe {
       height: 275px;
       width: 99%; }
@@ -705,11 +739,13 @@
   body {
     margin: 0; }
   header .header-block {
+    position: relative;
     background-color: #000;
     background-size: cover;
     height: 100vh; }
     header .header-block #header-block__logo {
-      height: 110px; }
+      height: 110px;
+      padding-top: 10px; }
       header .header-block #header-block__logo a img {
         height: 60px;
         position: absolute;
@@ -728,11 +764,12 @@
           left: 110%;
           font-size: 14px;
           font-weight: bold;
+          letter-spacing: 5px;
           color: #797878; }
         header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 10px;
-          font-size: 0;
+          width: 90%;
+          height: 15px;
+          font-size: 5px;
           margin-bottom: 10px;
           border: 0;
           border-radius: 4px;
@@ -754,7 +791,17 @@
           display: none; }
     header .header-block #header-block__sign {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__sign input[type=text]:focus,
       header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
@@ -769,7 +816,7 @@
       header .header-block #header-block__sign input[type="text"],
       header .header-block #header-block__sign input[type="password"],
       header .header-block #header-block__sign input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -780,6 +827,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__sign input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-moz-placeholder, header .header-block #header-block__sign input[type="password"]::-moz-placeholder, header .header-block #header-block__sign input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::placeholder,
+        header .header-block #header-block__sign input[type="password"]::placeholder,
+        header .header-block #header-block__sign input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__sign input[type="password"]:focus,
       header .header-block #header-block__sign input[type="email"]:focus {
         font-size: 11px;
@@ -792,8 +851,8 @@
       header .header-block #header-block__sign button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -814,7 +873,17 @@
           outline: none; }
     header .header-block #header-block__registration {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__registration input[type=text]:focus,
       header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
@@ -829,7 +898,7 @@
       header .header-block #header-block__registration input[type="text"],
       header .header-block #header-block__registration input[type="password"],
       header .header-block #header-block__registration input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -840,6 +909,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__registration input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-moz-placeholder, header .header-block #header-block__registration input[type="password"]::-moz-placeholder, header .header-block #header-block__registration input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::placeholder,
+        header .header-block #header-block__registration input[type="password"]::placeholder,
+        header .header-block #header-block__registration input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__registration input[type="password"]:focus,
       header .header-block #header-block__registration input[type="email"]:focus {
         font-size: 11px;
@@ -852,8 +933,8 @@
       header .header-block #header-block__registration button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -909,11 +990,12 @@
       width: 100%;
       height: 100%;
       display: none;
-      padding: 130px 0;
+      padding: 0;
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131ed; }
+      background: #523131ed;
+      z-index: 2; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -921,6 +1003,7 @@
         list-style-type: none;
         height: 60px;
         margin: 0 auto;
+        padding-top: 100px;
         width: 140px; }
         header .header-block .header-block__nav-menu-480-320 li:hover {
           width: 200px;
@@ -937,36 +1020,6 @@
             padding-bottom: 3px;
             border-bottom: 2px solid;
             letter-spacing: 5px; }
-    header .header-block .header-block__search {
-      display: none; }
-      header .header-block .header-block__search form {
-        position: relative;
-        width: 230px;
-        margin: 0 auto; }
-        header .header-block .header-block__search form input {
-          width: 100%;
-          height: 30px;
-          padding-left: 10px;
-          border: 2px solid #7BA7AB;
-          border-radius: 5px;
-          outline: none;
-          background: #F9F0DA;
-          color: #9E9C9C; }
-        header .header-block .header-block__search form button {
-          position: absolute;
-          right: 0;
-          width: 30px;
-          height: 30px;
-          border: none;
-          background: #7BA7AB;
-          border-radius: 0 5px 5px 0;
-          cursor: pointer; }
-          header .header-block .header-block__search form button:before {
-            background: url("../img/search-icon.png") no-repeat;
-            content: "";
-            height: 20px;
-            display: block;
-            background-size: 16px; }
   header .header-block__under-logo {
     position: absolute;
     bottom: 5px;
@@ -1060,30 +1113,6 @@
   main {
     background: #000;
     color: #727272; }
-    main button {
-      width: 140px;
-      margin-top: 8px;
-      margin-left: 140px;
-      height: 10px;
-      font-size: 0;
-      border: 0;
-      border-radius: 4px;
-      background-color: #282727;
-      color: #797878;
-      cursor: pointer; }
-      main button:hover {
-        width: 160px;
-        height: 35px;
-        font-size: 11px;
-        border-radius: 10px;
-        background-color: #ffffff3b;
-        color: #fffffff0;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      main button:focus {
-        border: none;
-        outline: none; }
     main .add-article {
       text-align: center;
       width: 90%;
@@ -1108,7 +1137,7 @@
       main .add-article textarea {
         font-size: 11px;
         font-weight: bold;
-        letter-spacing: 10px;
+        resize: none;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -1119,6 +1148,17 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .add-article input[type="text"]::-webkit-input-placeholder, main .add-article textarea::-webkit-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-moz-placeholder, main .add-article textarea::-moz-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]:-ms-input-placeholder, main .add-article textarea:-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-ms-input-placeholder, main .add-article textarea::-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::placeholder,
+        main .add-article textarea::placeholder {
+          letter-spacing: 10px; }
       main .add-article select {
         font-size: 11px;
         letter-spacing: 10px;
@@ -1132,7 +1172,7 @@
         background: #000;
         color: #fff; }
       main .add-article button {
-        width: 140px;
+        width: 35%;
         margin-top: 8px;
         height: 10px;
         font-size: 0;
@@ -1162,6 +1202,8 @@
         color: #fff; }
         main .filter-article select option {
           letter-spacing: 3px; }
+      main .filter-article .header-block__search {
+        display: none; }
     main #result {
       width: 90%;
       height: 100%;
@@ -1195,6 +1237,29 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block button {
+            width: 35%;
+            margin-top: 8px;
+            margin-left: 62%;
+            height: 15px;
+            font-size: 5px;
+            border: 0;
+            border-radius: 4px;
+            background-color: #282727;
+            color: #797878;
+            cursor: pointer; }
+            main #result .result__render-article .coment-block button:hover {
+              height: 35px;
+              font-size: 11px;
+              border-radius: 10px;
+              background-color: #ffffff3b;
+              color: #fffffff0;
+              -webkit-transition: 1s;
+              -o-transition: 1s;
+              transition: 1s; }
+            main #result .result__render-article .coment-block button:focus {
+              border: none;
+              outline: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -1208,7 +1273,7 @@
                     box-shadow: 0 0 10px 2px #727272; }
           main #result .result__render-article .coment-block input[type="text"],
           main #result .result__render-article .coment-block textarea {
-            width: 200px;
+            width: 97%;
             margin: 10px 0 0 15px;
             padding: 10px;
             padding-bottom: 0;
@@ -1218,7 +1283,8 @@
             border: none;
             border-bottom: 0.5px solid #727272;
             background: #000;
-            color: #fff; }
+            color: #fff;
+            resize: none; }
           main #result .result__render-article .coment-block .coment-block__coment-user {
             position: relative;
             -webkit-box-shadow: 0 -16px 23px -18px #d2c4c4;
@@ -1281,12 +1347,14 @@
           border-top: 1px solid #5c00ffba;
           border-bottom: 1px solid #5c00ffba; }
   .contact_inform {
-    height: 90vh;
+    height: 100%;
     margin: 0;
     background: #070707;
     color: #727272; }
     .contact_inform .contact_inform__inform-about-us {
       text-align: center; }
+      .contact_inform .contact_inform__inform-about-us h2 {
+        border-bottom: 1px solid #c40d0d75; }
     .contact_inform .contact_inform__map-responsive iframe {
       height: 275px;
       width: 99%; }
@@ -1330,17 +1398,65 @@
             color: #ffffffc4;
             -webkit-transition: 1s;
             -o-transition: 1s;
-            transition: 1s; } }
+            transition: 1s; }
+  header .header-block #header-block__registration {
+    height: 200px; }
+  header .header-block #header-block__sign {
+    height: 200px; }
+  .slide_box {
+    height: 480px; }
+  main .filter-article .header-block__search {
+    display: block;
+    margin-top: 40px; }
+    main .filter-article .header-block__search form {
+      position: relative;
+      width: 35%;
+      margin: 0 auto; }
+      main .filter-article .header-block__search form input {
+        font-size: 11px;
+        font-weight: bold;
+        resize: none;
+        width: 90%;
+        margin: 8px;
+        padding: 10px;
+        -webkit-transition: .30s ease-in-out;
+        -o-transition: .30s ease-in-out;
+        transition: .30s ease-in-out;
+        border: none;
+        border-bottom: .5px solid #03a9f4d1;
+        background: #000;
+        color: #fff; }
+        main .filter-article .header-block__search form input::-webkit-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::-moz-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input:-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input:focus {
+          border-bottom: 0.5px solid #727272;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          outline: none;
+          background: #282727;
+          -webkit-box-shadow: 0 0 10px 2px #727272;
+                  box-shadow: 0 0 10px 2px #727272; } }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   body {
     margin: 0; }
   header .header-block {
+    position: relative;
     background-color: #000;
     background-size: cover;
     height: 100vh; }
     header .header-block #header-block__logo {
-      height: 110px; }
+      height: 110px;
+      padding-top: 10px; }
       header .header-block #header-block__logo a img {
         height: 60px;
         position: absolute;
@@ -1359,11 +1475,12 @@
           left: 110%;
           font-size: 14px;
           font-weight: bold;
+          letter-spacing: 5px;
           color: #797878; }
         header .header-block #header-block__logo div button {
-          width: 95%;
-          height: 10px;
-          font-size: 0;
+          width: 90%;
+          height: 15px;
+          font-size: 5px;
           margin-bottom: 10px;
           border: 0;
           border-radius: 4px;
@@ -1385,7 +1502,17 @@
           display: none; }
     header .header-block #header-block__sign {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__sign input[type=text]:focus,
       header .header-block #header-block__sign input[type=email]:focus {
         font-size: 11px;
@@ -1400,7 +1527,7 @@
       header .header-block #header-block__sign input[type="text"],
       header .header-block #header-block__sign input[type="password"],
       header .header-block #header-block__sign input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -1411,6 +1538,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__sign input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__sign input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-moz-placeholder, header .header-block #header-block__sign input[type="password"]::-moz-placeholder, header .header-block #header-block__sign input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]:-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="password"]::-ms-input-placeholder, header .header-block #header-block__sign input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__sign input[type="text"]::placeholder,
+        header .header-block #header-block__sign input[type="password"]::placeholder,
+        header .header-block #header-block__sign input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__sign input[type="password"]:focus,
       header .header-block #header-block__sign input[type="email"]:focus {
         font-size: 11px;
@@ -1423,8 +1562,8 @@
       header .header-block #header-block__sign button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -1445,7 +1584,17 @@
           outline: none; }
     header .header-block #header-block__registration {
       display: none;
-      text-align: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 57%;
+      margin: 0 auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       header .header-block #header-block__registration input[type=text]:focus,
       header .header-block #header-block__registration input[type=email]:focus {
         font-size: 11px;
@@ -1460,7 +1609,7 @@
       header .header-block #header-block__registration input[type="text"],
       header .header-block #header-block__registration input[type="password"],
       header .header-block #header-block__registration input[type="email"] {
-        width: 256px;
+        width: 90%;
         margin: 8px;
         padding: 10px;
         font-size: 11px;
@@ -1471,6 +1620,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        header .header-block #header-block__registration input[type="text"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="password"]::-webkit-input-placeholder, header .header-block #header-block__registration input[type="email"]::-webkit-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-moz-placeholder, header .header-block #header-block__registration input[type="password"]::-moz-placeholder, header .header-block #header-block__registration input[type="email"]::-moz-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]:-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]:-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="password"]::-ms-input-placeholder, header .header-block #header-block__registration input[type="email"]::-ms-input-placeholder {
+          letter-spacing: 7px; }
+        header .header-block #header-block__registration input[type="text"]::placeholder,
+        header .header-block #header-block__registration input[type="password"]::placeholder,
+        header .header-block #header-block__registration input[type="email"]::placeholder {
+          letter-spacing: 7px; }
       header .header-block #header-block__registration input[type="password"]:focus,
       header .header-block #header-block__registration input[type="email"]:focus {
         font-size: 11px;
@@ -1483,8 +1644,8 @@
       header .header-block #header-block__registration button {
         width: 140px;
         margin-top: 8px;
-        height: 10px;
-        font-size: 0;
+        height: 15px;
+        font-size: 5px;
         border: 0;
         border-radius: 4px;
         background-color: #282727;
@@ -1540,11 +1701,12 @@
       width: 100%;
       height: 100%;
       display: none;
-      padding: 130px 0;
+      padding: 0;
       margin: 0;
       text-align: center;
       font-size: 20px;
-      background: #523131ed; }
+      background: #523131ed;
+      z-index: 2; }
       header .header-block .header-block__nav-menu-480-320 li {
         display: block;
         -webkit-box-sizing: border-box;
@@ -1552,6 +1714,7 @@
         list-style-type: none;
         height: 60px;
         margin: 0 auto;
+        padding-top: 100px;
         width: 140px; }
         header .header-block .header-block__nav-menu-480-320 li:hover {
           width: 200px;
@@ -1568,36 +1731,6 @@
             padding-bottom: 3px;
             border-bottom: 2px solid;
             letter-spacing: 5px; }
-    header .header-block .header-block__search {
-      display: none; }
-      header .header-block .header-block__search form {
-        position: relative;
-        width: 230px;
-        margin: 0 auto; }
-        header .header-block .header-block__search form input {
-          width: 100%;
-          height: 30px;
-          padding-left: 10px;
-          border: 2px solid #7BA7AB;
-          border-radius: 5px;
-          outline: none;
-          background: #F9F0DA;
-          color: #9E9C9C; }
-        header .header-block .header-block__search form button {
-          position: absolute;
-          right: 0;
-          width: 30px;
-          height: 30px;
-          border: none;
-          background: #7BA7AB;
-          border-radius: 0 5px 5px 0;
-          cursor: pointer; }
-          header .header-block .header-block__search form button:before {
-            background: url("../img/search-icon.png") no-repeat;
-            content: "";
-            height: 20px;
-            display: block;
-            background-size: 16px; }
   header .header-block__under-logo {
     position: absolute;
     bottom: 5px;
@@ -1691,30 +1824,6 @@
   main {
     background: #000;
     color: #727272; }
-    main button {
-      width: 140px;
-      margin-top: 8px;
-      margin-left: 140px;
-      height: 10px;
-      font-size: 0;
-      border: 0;
-      border-radius: 4px;
-      background-color: #282727;
-      color: #797878;
-      cursor: pointer; }
-      main button:hover {
-        width: 160px;
-        height: 35px;
-        font-size: 11px;
-        border-radius: 10px;
-        background-color: #ffffff3b;
-        color: #fffffff0;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      main button:focus {
-        border: none;
-        outline: none; }
     main .add-article {
       text-align: center;
       width: 90%;
@@ -1739,7 +1848,7 @@
       main .add-article textarea {
         font-size: 11px;
         font-weight: bold;
-        letter-spacing: 10px;
+        resize: none;
         width: 90%;
         margin: 8px;
         padding: 10px;
@@ -1750,6 +1859,17 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+        main .add-article input[type="text"]::-webkit-input-placeholder, main .add-article textarea::-webkit-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-moz-placeholder, main .add-article textarea::-moz-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]:-ms-input-placeholder, main .add-article textarea:-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::-ms-input-placeholder, main .add-article textarea::-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .add-article input[type="text"]::placeholder,
+        main .add-article textarea::placeholder {
+          letter-spacing: 10px; }
       main .add-article select {
         font-size: 11px;
         letter-spacing: 10px;
@@ -1763,7 +1883,7 @@
         background: #000;
         color: #fff; }
       main .add-article button {
-        width: 140px;
+        width: 35%;
         margin-top: 8px;
         height: 10px;
         font-size: 0;
@@ -1793,6 +1913,8 @@
         color: #fff; }
         main .filter-article select option {
           letter-spacing: 3px; }
+      main .filter-article .header-block__search {
+        display: none; }
     main #result {
       width: 90%;
       height: 100%;
@@ -1826,6 +1948,29 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block button {
+            width: 35%;
+            margin-top: 8px;
+            margin-left: 62%;
+            height: 15px;
+            font-size: 5px;
+            border: 0;
+            border-radius: 4px;
+            background-color: #282727;
+            color: #797878;
+            cursor: pointer; }
+            main #result .result__render-article .coment-block button:hover {
+              height: 35px;
+              font-size: 11px;
+              border-radius: 10px;
+              background-color: #ffffff3b;
+              color: #fffffff0;
+              -webkit-transition: 1s;
+              -o-transition: 1s;
+              transition: 1s; }
+            main #result .result__render-article .coment-block button:focus {
+              border: none;
+              outline: none; }
           main #result .result__render-article .coment-block input[type=text]:focus,
           main #result .result__render-article .coment-block textarea:focus,
           main #result .result__render-article .coment-block select:focus {
@@ -1839,7 +1984,7 @@
                     box-shadow: 0 0 10px 2px #727272; }
           main #result .result__render-article .coment-block input[type="text"],
           main #result .result__render-article .coment-block textarea {
-            width: 200px;
+            width: 97%;
             margin: 10px 0 0 15px;
             padding: 10px;
             padding-bottom: 0;
@@ -1849,7 +1994,8 @@
             border: none;
             border-bottom: 0.5px solid #727272;
             background: #000;
-            color: #fff; }
+            color: #fff;
+            resize: none; }
           main #result .result__render-article .coment-block .coment-block__coment-user {
             position: relative;
             -webkit-box-shadow: 0 -16px 23px -18px #d2c4c4;
@@ -1912,12 +2058,14 @@
           border-top: 1px solid #5c00ffba;
           border-bottom: 1px solid #5c00ffba; }
   .contact_inform {
-    height: 90vh;
+    height: 100%;
     margin: 0;
     background: #070707;
     color: #727272; }
     .contact_inform .contact_inform__inform-about-us {
       text-align: center; }
+      .contact_inform .contact_inform__inform-about-us h2 {
+        border-bottom: 1px solid #c40d0d75; }
     .contact_inform .contact_inform__map-responsive iframe {
       height: 275px;
       width: 99%; }
@@ -1961,4 +2109,172 @@
             color: #ffffffc4;
             -webkit-transition: 1s;
             -o-transition: 1s;
-            transition: 1s; } }
+            transition: 1s; }
+  header .header-block #header-block__registration {
+    height: 200px; }
+  header .header-block #header-block__sign {
+    height: 200px; }
+  .slide_box {
+    height: 480px; }
+  main .filter-article .header-block__search {
+    display: block;
+    margin-top: 40px; }
+    main .filter-article .header-block__search form {
+      position: relative;
+      width: 35%;
+      margin: 0 auto; }
+      main .filter-article .header-block__search form input {
+        font-size: 11px;
+        font-weight: bold;
+        resize: none;
+        width: 90%;
+        margin: 8px;
+        padding: 10px;
+        -webkit-transition: .30s ease-in-out;
+        -o-transition: .30s ease-in-out;
+        transition: .30s ease-in-out;
+        border: none;
+        border-bottom: .5px solid #03a9f4d1;
+        background: #000;
+        color: #fff; }
+        main .filter-article .header-block__search form input::-webkit-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::-moz-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input:-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::-ms-input-placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input::placeholder {
+          letter-spacing: 10px; }
+        main .filter-article .header-block__search form input:focus {
+          border-bottom: 0.5px solid #727272;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          outline: none;
+          background: #282727;
+          -webkit-box-shadow: 0 0 10px 2px #727272;
+                  box-shadow: 0 0 10px 2px #727272; }
+  main .add-article input[type="text"],
+  main .add-article textarea {
+    width: 65%; }
+  main .add-article select {
+    width: 67%; }
+  main .add-article button {
+    width: 35%;
+    margin-top: 8px;
+    height: 10px;
+    font-size: 0;
+    border: 0;
+    border-radius: 4px;
+    background-color: #282727;
+    color: #797878;
+    cursor: pointer; }
+  main .filter-article label {
+    font-size: 16px;
+    display: block;
+    text-align: center; }
+  main .filter-article select {
+    font-size: 11px;
+    letter-spacing: 5px;
+    width: 30%;
+    padding: 8px;
+    -webkit-transition: .30s ease-in-out;
+    -o-transition: .30s ease-in-out;
+    transition: .30s ease-in-out;
+    border: none;
+    border-bottom: 0.5px solid #727272;
+    background: #000;
+    color: #fff; }
+    main .filter-article select option {
+      letter-spacing: 3px; }
+  main #result {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 -20px 14px -17px #d2c4c4;
+            box-shadow: 0 -20px 14px -17px #d2c4c4; }
+    main #result .result__render-article {
+      padding-top: 10px;
+      -webkit-box-shadow: 0 -20px 14px -17px #d2c4c4;
+              box-shadow: 0 -20px 14px -17px #d2c4c4; }
+      main #result .result__render-article .article-block h2 {
+        color: #3bb6ee59;
+        cursor: pointer; }
+        main #result .result__render-article .article-block h2:hover {
+          text-decoration: underline; }
+      main #result .result__render-article .article-block .time {
+        font-size: 11px; }
+      main #result .result__render-article .article-block .article {
+        padding-top: 10px;
+        border-top: 1px solid #727272;
+        height: 90px;
+        margin-bottom: 0;
+        overflow: hidden; }
+      main #result .result__render-article .article-block span {
+        display: block;
+        text-align: right;
+        margin: 10px 0 20px;
+        cursor: pointer; }
+        main #result .result__render-article .article-block span:after {
+          content: '\2764';
+          margin-left: 3px; }
+  header .header-block .header-block__menue-button {
+    display: none; }
+  header .header-block .header-block__search {
+    top: 20px; }
+  header .header-block .header-block__nav_menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    width: 59%;
+    top: 20px;
+    font-weight: bold;
+    padding-left: 5%; }
+    header .header-block .header-block__nav_menu li {
+      margin-right: 5%;
+      list-style-type: none; }
+      header .header-block .header-block__nav_menu li a {
+        text-decoration: none; }
+        header .header-block .header-block__nav_menu li a span {
+          color: #797878;
+          letter-spacing: 2px; }
+          header .header-block .header-block__nav_menu li a span:hover {
+            border-bottom: 1px solid #03a9f491; }
+    header .header-block .header-block__nav_menu .header-block__nav_menu__two-line {
+      position: relative; }
+      header .header-block .header-block__nav_menu .header-block__nav_menu__two-line a span {
+        color: #03a9f491; }
+      header .header-block .header-block__nav_menu .header-block__nav_menu__two-line:hover .header-block__nav_menu__sub-menu {
+        display: block;
+        position: absolute;
+        padding: 10px 0 0 0;
+        width: 200px; }
+      header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu {
+        display: none; }
+        header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu .header-block__nav_menu__sub-menu__roll {
+          position: relative; }
+          header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu .header-block__nav_menu__sub-menu__roll:hover .header-block__nav_menu__sub-menu__price {
+            display: block;
+            position: absolute; }
+          header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu .header-block__nav_menu__sub-menu__roll .header-block__nav_menu__sub-menu__price {
+            display: none;
+            padding: 10px 0 0 0;
+            width: 300px; }
+        header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu li {
+          position: relative;
+          display: inline-block;
+          margin-left: 45px;
+          height: 27px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+          list-style-type: none; }
+          header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu li a {
+            text-decoration: none;
+            color: #797878; }
+            header .header-block .header-block__nav_menu .header-block__nav_menu__two-line .header-block__nav_menu__sub-menu li a span {
+              color: #797878; }
+  .slide_box {
+    height: 615px; } }

@@ -1,7 +1,7 @@
 /*Logo Slide*/
 setTimeout( () => {
     const logo = [ ...document.querySelectorAll( 'div#header-block__logo > a > img' ) ];
-    logo[ 0 ].style.left = '40%';
+    logo[ 0 ].style.left = '50%';
     logo[ 0 ].style.transition = '1.2s';
     logo[ 0 ].style.transform = 'rotate( 0deg )';
 }, 1500 );

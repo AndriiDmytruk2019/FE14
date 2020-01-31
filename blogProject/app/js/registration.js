@@ -10,10 +10,10 @@ function registration() {
 
     logoBtn[ 1 ].onclick = () => {
         signBlock.style.display = 'none';
-        regBlock.style.display = 'block';
+        regBlock.style.display = 'flex';
     }
     logoBtn[ 0 ].onclick = () => {
-        signBlock.style.display = 'block';
+        signBlock.style.display = 'flex';
         regBlock.style.display = 'none';
     }
     regProcess( regInput, regBtn );
