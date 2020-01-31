@@ -1,4 +1,29 @@
 main {
+	#result {
+		.result__render-article {
+			.article-block {
+				position: relative;
+				h2 {
+					width: 70%;
+					height: 105px;
+					color: #3bb6ee59;
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				img {
+					 display: block;
+					position: absolute;
+				    right: 0;
+				    top: 0;
+				    height: 125px;
+				    width: 175px;
+				    margin: 0 0 0 auto;
+				}
+    		}
+		}
+	}
 	.filter-article {
 		.header-block__search{
 			display: block;

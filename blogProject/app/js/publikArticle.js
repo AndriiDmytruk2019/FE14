@@ -2,6 +2,11 @@
 function publickArticle( user ) {
     const pushBtn = document.getElementById( 'push_article' );
     const newTitle = document.getElementById( 'add-article__title' );
+    const newImage = document.getElementById( 'add-article__image' );
+    console.log(newImage.value.split('\\').reverse()[0]);
+    // const reg = /C:\\fakepath/;
+    // let newstr = newImage.value.replace(reg, '');
+    let newImgSrc = newImage.value.split('\\').reverse()[0];
     const newPage = document.getElementById( 'add-article__page' );
     const selectValue = document.getElementById( 'select_heading' );
     let indexSelect = document.getElementById( 'add-article__select_heading' );
@@ -11,13 +16,14 @@ function publickArticle( user ) {
         'number': blogList.length,
         'userPublicated': user,
         'topic': select.options[ indexSelect.options.selectedIndex ].text,
+        'image': '../img/' + newImgSrc,
         'title': newTitle.value,
         'time': new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds(),
         'like': 0,
         'coments': [],
         'page': newPage.value,
     };
-    blogList.unshift( newArticle );
+    blogList.unshift( newArticle );console.log(blogList)
     localStorage.setItem('blogList', JSON.stringify(blogList));
     if ( newArticle[ 'topic' ] == getValueSelect( selectValue.id ) ) {
         newTitle.value = '';

@@ -96,11 +96,15 @@ main {
 			box-shadow: 0 -20px 14px -17px #d2c4c4;
 			.article-block {
 				h2 {
+					width: 100%;
 					color: #3bb6ee59;
 					cursor: pointer;
 					&:hover {
 						text-decoration: underline;
 					}
+				}
+				img {
+					display: none;
 				}
 			    .time {
 	    			font-size: 11px;
