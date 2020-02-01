@@ -10,5 +10,5 @@ function renderList( list, el, user, stateArt ) {
    	comentator( list, user, stateArt );
     deleteComent( list, user, stateArt );
     editComent( list, user );
-    articleState( stateArt );
+    articleState( stateArt, user );
 };

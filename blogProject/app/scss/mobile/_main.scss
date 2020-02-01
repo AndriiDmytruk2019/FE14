@@ -4,7 +4,7 @@ main {
 	.add-article {
 		text-align: center;
 		width: 90%;
-		height: 200px;
+		height: 230px;
     	margin: 0 auto;
     	padding-top: 25px;
     	box-shadow: 0 33px 14px -14px #d2c4c4;
@@ -47,6 +47,20 @@ main {
 			border-bottom: .5px solid $main-color;
 			background: #000;
 			color: #fff;
+		}
+		 label {
+			display: block;
+		    border-bottom: 1px solid $main-color;
+		    color: #03a9f469;
+		    width: 49%;
+		    padding: 6px 12px;
+		    margin: 0 auto;
+		    letter-spacing: 10px;
+		    font-size: 13px;
+		    cursor: pointer;
+		    input[type="file"] {
+				display: none;
+			}
 		}
 	    button {
 	        width: 35%;
@@ -129,6 +143,10 @@ main {
     		}
 		   	.coment-block {
 		   		display: none;
+		   		a{
+		   			text-decoration: underline;
+    				color: #03a9f475;
+		   		}
 		   		button {
 		   			width: 35%;
 				    margin-top: 8px;

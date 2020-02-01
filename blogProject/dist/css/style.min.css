@@ -451,7 +451,7 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      height: 200px;
+      height: 230px;
       margin: 0 auto;
       padding-top: 25px;
       -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
@@ -506,6 +506,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article label {
+        display: block;
+        border-bottom: 1px solid #727272;
+        color: #03a9f469;
+        width: 49%;
+        padding: 6px 12px;
+        margin: 0 auto;
+        letter-spacing: 10px;
+        font-size: 13px;
+        cursor: pointer; }
+        main .add-article label input[type="file"] {
+          display: none; }
       main .add-article button {
         width: 35%;
         margin-top: 8px;
@@ -575,6 +587,9 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block a {
+            text-decoration: underline;
+            color: #03a9f475; }
           main #result .result__render-article .coment-block button {
             width: 35%;
             margin-top: 8px;
@@ -1119,7 +1134,7 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      height: 200px;
+      height: 230px;
       margin: 0 auto;
       padding-top: 25px;
       -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
@@ -1174,6 +1189,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article label {
+        display: block;
+        border-bottom: 1px solid #727272;
+        color: #03a9f469;
+        width: 49%;
+        padding: 6px 12px;
+        margin: 0 auto;
+        letter-spacing: 10px;
+        font-size: 13px;
+        cursor: pointer; }
+        main .add-article label input[type="file"] {
+          display: none; }
       main .add-article button {
         width: 35%;
         margin-top: 8px;
@@ -1243,6 +1270,9 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block a {
+            text-decoration: underline;
+            color: #03a9f475; }
           main #result .result__render-article .coment-block button {
             width: 35%;
             margin-top: 8px;
@@ -1850,7 +1880,7 @@
     main .add-article {
       text-align: center;
       width: 90%;
-      height: 200px;
+      height: 230px;
       margin: 0 auto;
       padding-top: 25px;
       -webkit-box-shadow: 0 33px 14px -14px #d2c4c4;
@@ -1905,6 +1935,18 @@
         border-bottom: 0.5px solid #727272;
         background: #000;
         color: #fff; }
+      main .add-article label {
+        display: block;
+        border-bottom: 1px solid #727272;
+        color: #03a9f469;
+        width: 49%;
+        padding: 6px 12px;
+        margin: 0 auto;
+        letter-spacing: 10px;
+        font-size: 13px;
+        cursor: pointer; }
+        main .add-article label input[type="file"] {
+          display: none; }
       main .add-article button {
         width: 35%;
         margin-top: 8px;
@@ -1974,6 +2016,9 @@
             margin-left: 3px; }
         main #result .result__render-article .coment-block {
           display: none; }
+          main #result .result__render-article .coment-block a {
+            text-decoration: underline;
+            color: #03a9f475; }
           main #result .result__render-article .coment-block button {
             width: 35%;
             margin-top: 8px;
