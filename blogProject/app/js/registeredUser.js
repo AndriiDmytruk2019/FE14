@@ -5,7 +5,7 @@ function registeredUser( user ) {
     userName.innerHTML = user;
     userName.style.display = 'block';
     userName.style.top = '5px';
-    userName.style.left = '35%';
+    userName.style.left = '39%';
     userName.style.transition = '1.2s'
     main.style.display = 'block';
 };

@@ -3,7 +3,7 @@ function publickArticle( user ) {
     const pushBtn = document.getElementById( 'push_article' );
     const newTitle = document.getElementById( 'add-article__title' );
     const newImage = document.getElementById( 'add-article__image' );
-    console.log(newImage.value.split('\\').reverse()[0]);
+    // console.log(newImage.value.split('\\').reverse()[0]);
     // const reg = /C:\\fakepath/;
     // let newstr = newImage.value.replace(reg, '');
     let newImgSrc = newImage.value.split('\\').reverse()[0];
@@ -42,5 +42,7 @@ function publickArticle( user ) {
     pushBtn.style.height = '10px'
     pushBtn.style.fontSize = '0'
     pushBtn.style.transition = '1s'
+    newImage.value = '';
+    pushBtn.disabled = true;
 };
 document.getElementById( 'push_article' ).onclick = () => publickArticle( userLogged, blogList );
