@@ -1,19 +1,15 @@
 function signIn( button, input, signBlock, regBlock ) {
-    let boolean = false;
     let objPars;
     button.onclick = () => {
-        if ( input[ 0 ].value !== '' && input[ 1 ].value !== '' && boolean == false ) {
-            for( let i = 0; i < localStorage.length; i++ ) {
-                objPars = JSON.parse( localStorage[ localStorage.key( i ) ] );
-                if ( localStorage.key( i ) == input[ 0 ].value && objPars.pass == input[ 1 ].value ) {
-                    boolean = true;
-                    userLogged = localStorage.key( i );
+        if ( input[ 0 ].value !== '' && input[ 1 ].value !== '' ) {
+            objPars = input[ 0 ].value.toLowerCase() in localStorage ? 
+                JSON.parse( localStorage[ input[ 0 ].value.toLowerCase() ] ) : '';
+            if ( objPars !== '' && objPars.pass == input[ 1 ].value ) {
+                    userLogged = input[ 0 ].value.toUpperCase();
                     signBlock.style.display = 'none';
                     localStorage.setItem( 'LogOn', JSON.stringify( userLogged ) );
                     stateStatus ( true, userLogged );
-                }
-            }
-            if ( boolean == false ) {
+            } else {
                 alert('User not registered(')
                 regBlock.style.display = 'block';
                 signBlock.style.display = 'none';
@@ -22,5 +18,5 @@ function signIn( button, input, signBlock, regBlock ) {
         } else {
             input.forEach( el => el.value == '' ? el.placeholder = 'Fill field' : el.value );
         }
-    }
+    };
 };

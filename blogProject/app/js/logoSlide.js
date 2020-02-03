@@ -1,9 +1,7 @@
 /*Logo Slide*/
 setTimeout( () => {
     const logo = [ ...document.querySelectorAll( 'div#header-block__logo > a > img' ) ];
-    logo[ 0 ].style.left = '50%';
-    logo[ 0 ].style.transition = '1.2s';
-    logo[ 0 ].style.transform = 'rotate( 0deg )';
+    logo[ 0 ].style = 'left:50%; transition:1.2s; transform: rotate( 0deg )';
 }, 1500 );
 
 // setTimeout( () => {
@@ -29,6 +27,5 @@ setTimeout( () => {
 
 setTimeout( () => {
     const menueBtn = document.querySelector( 'div.header-block__menue-button' );
-    menueBtn.style.left = '5%';
-    menueBtn.style.transition = '1.2s';
+    menueBtn.style = 'left: 5%; transition: 1.2s';
 }, 1000 );

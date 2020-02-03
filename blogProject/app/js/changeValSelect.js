@@ -15,7 +15,8 @@ function selectHeading( user, state ) {
             pagination( blogList, user );
         } else if ( getValueSelect( e.target.id ) == 'Show all' ) {
             renderList( blogList, result, user, state );
-        } else if (getValueSelect( e.target.id ) !== 'Select topic') {
+            document.getElementById('pagination-block').innerHTML = '';
+        } else {
             renderList( new_arr_heading, result, user, state);
             pagination( new_arr_heading, user );
         };
@@ -27,11 +28,13 @@ function selectTime( user, state ) {
         e.preventDefault();
         const indexSelect = document.getElementById( 'select_heading' );
         const new_arr_time = filterVal( getValueSelect( indexSelect.id ), blogList );
-
         if ( getValueSelect( indexSelect.id ) == 'Select topic' ) {
             sortTime( blogList, getValueSelect( e.target.id ) );
-            renderList( blogList.slice( 0, 5 ),result, user, state );
+            renderList( blogList.slice( 0, 5 ), result, user, state );
             pagination( blogList, user );
+        } else if ( getValueSelect( indexSelect.id ) == 'Show all' ) {
+            sortTime( blogList, getValueSelect( e.target.id ) );
+            renderList( blogList, result, user, state );
         } else {
             sortTime( new_arr_time, getValueSelect( e.target.id ) );
             renderList( new_arr_time, result, user, state);

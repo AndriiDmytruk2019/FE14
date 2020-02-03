@@ -11,7 +11,7 @@ function publickArticle( user ) {
     const selectValue = document.getElementById( 'select_heading' );
     let indexSelect = document.getElementById( 'add-article__select_heading' );
     const select = document.getElementById( 'add-article__select_heading' );
-    let addInTopic = filterVal( getValueSelect( selectValue.id ), blogList );
+    let addInTopic;
     const newArticle = {
         'number': blogList.length,
         'userPublicated': user,
@@ -23,14 +23,15 @@ function publickArticle( user ) {
         'coments': [],
         'page': newPage.value,
     };
-    blogList.unshift( newArticle );console.log(blogList)
+    blogList.unshift( newArticle );
     localStorage.setItem('blogList', JSON.stringify(blogList));
     if ( newArticle[ 'topic' ] == getValueSelect( selectValue.id ) ) {
+        addInTopic = filterVal( getValueSelect( selectValue.id ), blogList );
         newTitle.value = '';
         newPage.value = '';
         indexSelect.options.selectedIndex = 0;
-        renderList( addInTopic, result, user );
         pagination( addInTopic, user );
+        renderList( addInTopic, result, user );
     } else if ( getValueSelect( selectValue.id ) == 'Select topic' ) {
         newTitle.value = '';
         newPage.value = '';

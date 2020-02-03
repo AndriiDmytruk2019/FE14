@@ -5,7 +5,6 @@ function pagination( obj, user ) {
     let pugNum;
     let arrLink;
     const pageSize = Math.ceil( obj.length/5+1 );
-    // const mainBlock = document.querySelector( 'main' );
     const pugBlock = document.getElementById( 'pagination-block' );
           pugBlock.innerHTML = '';
     if ( obj.length > 5 ) {

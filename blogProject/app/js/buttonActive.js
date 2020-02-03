@@ -6,9 +6,7 @@ function btnActive() {
         newTitle = document.getElementById( 'add-article__title' ).value,
         newPage = document.getElementById( 'add-article__page' ).value;
     if (newTitle !== '' && newPage !== '' && select !== 'Select topic') {
-        btnPush.style.height = '35px'
-        btnPush.style.fontSize = '11px'
-        btnPush.style.transition = '1s'
+        btnPush.style = 'height: 35px; fontSize: 11px; transition: 1s;'
         btnPush.disabled = false
     };
 };
