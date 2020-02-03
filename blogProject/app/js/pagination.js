@@ -10,12 +10,11 @@ function pagination( obj, user ) {
     if ( obj.length > 5 ) {
         while( i < pageSize ) {
             pugNum = document.createElement( 'a' );
-            pugNum.innerHTML = i;
+            pugNum.innerText = i;
             pugBlock.appendChild( pugNum );
             i++;
         };
     };
-
     if (startPage == 0) {
         renderList(obj.slice(startPage, startPage+5), result, user);
     };

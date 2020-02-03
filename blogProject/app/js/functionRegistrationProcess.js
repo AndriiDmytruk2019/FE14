@@ -13,8 +13,8 @@ function regProcess( input, btn ) {
                 localStorage.setItem( newUser, JSON.stringify( objUser ) );
                 alert( 'You have successfully registered!' );
                 regBlock.style.display = 'none';
-                localStorage.setItem( 'LogOn', JSON.stringify( newUser ) );
-                stateStatus( true, newUser );
+                localStorage.setItem( 'LogOn', JSON.stringify( newUser.toUpperCase() ) );
+                stateStatus( true, newUser.toUpperCase() );
             } else {
                 alert( 'Password fields do not match' );
             }

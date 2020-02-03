@@ -14,7 +14,7 @@ function comentator( list, user, state ) {
                 comentObj = {
                     'id': list[ i ][ 'coments' ].length,
                     'user': user,
-                    'timePublic': new Date().getFullYear() + '-' + new Date().getMonth()+1 + '-' + new Date().getDate()+ ' ' + new Date().getHours() + ':' + new Date().getMinutes()+ ':' + new Date().getSeconds(),
+                    'timePublic': new Date().getFullYear() + '-' + new Date().getMonth() + 1 + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds(),
                     'page': article[ i ].value,
                 };
                 list[ i ][ 'coments' ].push( comentObj );

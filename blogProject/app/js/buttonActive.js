@@ -10,4 +10,4 @@ function btnActive() {
         btnPush.disabled = false
     };
 };
-document.getElementById( 'add-article__select_heading' ).onchange= () => btnActive();
+document.getElementById( 'add-article__select_heading' ).onchange = () => btnActive();
