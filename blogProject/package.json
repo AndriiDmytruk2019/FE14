@@ -11,7 +11,7 @@
     "gulp-pngquant": "^1.0.12",
     "gulp-sass": "^4.0.2",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.4"
   },
   "devDependencies": {
